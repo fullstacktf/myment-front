@@ -8,10 +8,19 @@
 		"dev": "parcel src/index.html",
 		"clean": "rm -rf .cache dist"
 	},
+	"alias": {
+		"vue": "./node_modules/vue/dist/vue.esm"
+	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"parcel-bundler": "^1.12.3"
+		"parcel-bundler": "^1.12.3",
+		"vue": "^2.6.10",
+		"vue-hot-reload-api": "^2.3.3"
+	},
+	"devDependencies": {
+		"@vue/component-compiler-utils": "^3.0.0",
+		"vue-template-compiler": "^2.6.10"
 	}
 }

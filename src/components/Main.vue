@@ -1,0 +1,38 @@
+<template>
+  <div>
+    <div class="welcome">
+      <img src="../assets/M.png" alt="myment-logo" class="logo" />
+      <span>Welcome to your plan!</span>
+    </div>
+    <div class="container"></div>
+  </div>
+</template>
+
+
+<script>
+export default {
+  name: "Main"
+};
+</script>
+
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+  background-color: #255060;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+}
+.container {
+  width: 990px;
+  height: 900px;
+  background-color: #79f0a5;
+}
+.welcome {
+  font-family: roboto, sans-serif;
+}
+</style>
