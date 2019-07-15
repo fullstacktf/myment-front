@@ -1,12 +1,26 @@
 {
-  "name": "myment-front",
-  "version": "1.0.0",
-  "description": "This repo contain the front API for the web application myment.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+	"name": "myment-front",
+	"version": "1.0.0",
+	"description": "This repo contain the front API for the web application myment.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "parcel src/index.html",
+		"clean": "rm -rf .cache dist"
+	},
+	"alias": {
+		"vue": "./node_modules/vue/dist/vue.esm"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"parcel-bundler": "^1.12.3",
+		"vue": "^2.6.10",
+		"vue-hot-reload-api": "^2.3.3"
+	},
+	"devDependencies": {
+		"@vue/component-compiler-utils": "^3.0.0",
+		"vue-template-compiler": "^2.6.10"
+	}
 }
