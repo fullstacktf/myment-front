@@ -12340,14 +12340,14 @@ var _default = {
   name: "Main"
 };
 exports.default = _default;
-        var $f9b0fd = exports.default || module.exports;
+        var $5494bc = exports.default || module.exports;
       
-      if (typeof $f9b0fd === 'function') {
-        $f9b0fd = $f9b0fd.options;
+      if (typeof $5494bc === 'function') {
+        $5494bc = $5494bc.options;
       }
     
         /* template */
-        Object.assign($f9b0fd, (function () {
+        Object.assign($5494bc, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -12395,9 +12395,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$f9b0fd', $f9b0fd);
+            api.createRecord('$5494bc', $5494bc);
           } else {
-            api.reload('$f9b0fd', $f9b0fd);
+            api.reload('$5494bc', $5494bc);
           }
         }
 
@@ -12431,14 +12431,14 @@ var _default = {
   }
 };
 exports.default = _default;
-        var $4d6fd7 = exports.default || module.exports;
+        var $acc491 = exports.default || module.exports;
       
-      if (typeof $4d6fd7 === 'function') {
-        $4d6fd7 = $4d6fd7.options;
+      if (typeof $acc491 === 'function') {
+        $acc491 = $acc491.options;
       }
     
         /* template */
-        Object.assign($4d6fd7, (function () {
+        Object.assign($acc491, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -12465,9 +12465,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$4d6fd7', $4d6fd7);
+            api.createRecord('$acc491', $acc491);
           } else {
-            api.reload('$4d6fd7', $4d6fd7);
+            api.reload('$acc491', $acc491);
           }
         }
 
@@ -12516,7 +12516,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37561" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41481" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
