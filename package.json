@@ -4,7 +4,8 @@
 	"description": "This repo contain the front API for the web application myment.",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "jest",
+		"test:coverage": "jest --coverage",
 		"dev": "parcel src/index.html",
 		"clean": "rm -rf .cache dist"
 	},
