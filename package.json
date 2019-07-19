@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "jest",
+		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",
 		"dev": "parcel src/index.html",
 		"clean": "rm -rf .cache dist"
@@ -22,7 +23,20 @@
 	},
 	"devDependencies": {
 		"@vue/component-compiler-utils": "^3.0.0",
+		"@vue/server-test-utils": "^1.0.0-beta.29",
+		"@vue/test-utils": "^1.0.0-beta.29",
+		"babel-core": "^6.26.3",
+		"babel-jest": "^24.8.0",
+		"babel-preset-env": "^1.7.0",
+		"eslint": "^6.0.1",
+		"eslint-config-airbnb-base": "^13.2.0",
+		"eslint-config-prettier": "^6.0.0",
+		"eslint-plugin-prettier": "^3.1.0",
+		"eslint-plugin-vue": "^5.2.3",
 		"jest": "^24.8.0",
+		"prettier": "^1.18.2",
+		"vue-jest": "^3.0.4",
+		"vue-server-renderer": "^2.6.10",
 		"vue-template-compiler": "^2.6.10"
 	}
 }
