@@ -1,12 +1,25 @@
-import { mount } from '@vue/test-utils'
+import { shallowMount } from '@vue/test-utils'
 import Main from '../Main'
 
-describe('Main', () => {
-  const wrapper = mount(Main)
-  test('Mount component', () => {
-    expect(wrapper.html()).toContain('<span class="count">0</span>')
+describe('Main Component', () => {
+  let wrapper
+  beforeEach(() => {
+    wrapper = shallowMount(Main, {
+      propsData: {},
+      mocks: {},
+      stubs: {},
+      methods: {},
+    })
   })
-  test('Contain title', () => {
-    expect(wrapper.html()).toContain('<span class="count">0</span>')
+
+  afterEach(() => {
+    wrapper.destroy()
+  })
+
+  test('Mount component', () => {
+    expect(wrapper.isVueInstance).toBeTruthy()
+  })
+  test('Contain Welcome message', () => {
+    expect(wrapper.html()).toContain('<span>Welcome to your plan!</span>')
   })
 })

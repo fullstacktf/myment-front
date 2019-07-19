@@ -4,6 +4,7 @@
 	"description": "This repo contain the front API for the web application myment.",
 	"main": "index.js",
 	"scripts": {
+		"serve":"",
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",
