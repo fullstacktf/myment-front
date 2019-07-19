@@ -4,7 +4,7 @@
 	"description": "This repo contain the front API for the web application myment.",
 	"main": "index.js",
 	"scripts": {
-		"serve":"",
+		"serve": "",
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",
@@ -38,6 +38,8 @@
 		"prettier": "^1.18.2",
 		"vue-jest": "^3.0.4",
 		"vue-server-renderer": "^2.6.10",
-		"vue-template-compiler": "^2.6.10"
+		"vue-template-compiler": "^2.6.10",
+		"webpack": "^4.36.1",
+		"webpack-cli": "^3.3.6"
 	}
 }

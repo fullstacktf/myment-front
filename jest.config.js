@@ -5,7 +5,12 @@ module.exports = {
     '.*\\.(vue)$': 'vue-jest',
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
   },
-  collectCoverage: false,
-  collectCoverageFrom: ['src/components/*.{js,vue}', '!**/node_modules/**'],
+  collectCoverage: true,
+  collectCoverageFrom: [
+    'src/**/*.{js,vue}',
+    '!src/index.js',
+    '!**/node_modules/**',
+  ],
   coverageReporters: ['html', 'text-summary'],
+  testURL: 'http://localhost/tests',
 }
