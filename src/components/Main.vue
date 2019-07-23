@@ -1,7 +1,13 @@
+<script>
+export default {
+  name: "Main"
+};
+</script>
+
 <template>
   <div>
     <div class="welcome">
-      <img src="../assets/M.png" alt="myment-logo" class="logo" />
+      <img src="../../public/assets/M.png" alt="myment-logo" class="logo" />
       <span>Welcome to your plan!</span>
     </div>
     <div class="container"></div>
@@ -9,11 +15,6 @@
 </template>
 
 
-<script>
-export default {
-  name: "Main"
-};
-</script>
 
 <style>
 body {
