@@ -1,7 +1,7 @@
 <template>
     <div class="headerNav">
-        <img src="../assets/M.png" alt="our coolest logo">
-        <newsBar class = "news"></newsBar>
+        <img src="../assets/M.png" alt="our coolest logo"/>
+        <newsBar class = "news"></newsBar> 
     </div>
 </template>
 
