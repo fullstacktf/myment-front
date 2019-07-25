@@ -126,7 +126,7 @@ While the prerequisites above must be satisfied prior to having your pull reques
 
 ### Git Commit Messages
 
-* Use the present tense ("Add feature" not "Added feature")
+* Use the past tense ("Added feature" not "Add feature")
 * Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
 * Limit the first line to 72 characters or less
 * Reference issues and pull requests liberally after the first line
@@ -217,7 +217,7 @@ The labels are loosely grouped by their purpose, but it's not required that ever
 #### Type of Issue and Issue State
 
 | Label name | `myment-front` :mag_right: | Description |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | `enhancement`<span style="background-color:#83b8e8">__</span>| [search][search-myment-front-label-enhancement]   | Feature requests. |
 | `bug`<span style="background-color:#CC0000">__</span> | [search][search-myment-front-label-bug] | Confirmed bugs or reports that are very likely to be bugs. |
 | `question`<span style="background-color:#cd237b">__</span>| [search][search-myment-front-label-question]   | Questions more than bug reports or feature requests (e.g. how do I do X). |
@@ -233,7 +233,7 @@ The labels are loosely grouped by their purpose, but it's not required that ever
 #### Pull Request Labels
 
 | Label name | `myment-front` :mag_right: | Description
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | `work-in-progress`<span style="background-color:#6F04FA">__</span> | [search][search-myment-front-label-work-in-progress]   | Pull requests which are still being worked on, more changes will follow. |
 | `needs-review`<span style="background-color:#FA0425">__</span> | [search][search-myment-front-label-needs-review]   | Pull requests which need code review, and approval from maintainers or FullStacktf core team. |
 | `under-review`<span style="background-color:#04FAFA">__</span> | [search][search-myment-front-label-under-review]   | Pull requests being reviewed by maintainers or FullStacktf core team. |
