@@ -1,5 +1,5 @@
 <template>
-    <button class="Button" > {{funcionality}}
+    <button class="Button" > {{name}}
     </button>
 </template>
 
@@ -7,7 +7,7 @@
 export default {
 
   props: {
-    funcionality: { //Generate, add or examine
+    name: { //Generate, add or examine
       type: String,
       required: true,
       default: 'generate'
@@ -25,7 +25,9 @@ export default {
    }
   },
   methods: {
-    Redirect(){}
+    Redirect(){
+      
+    }
   }
 
   }

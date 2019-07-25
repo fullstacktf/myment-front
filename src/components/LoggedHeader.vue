@@ -20,6 +20,7 @@ export default {
     height: 60px;
 }
 .headerNav{
+    width: 100%;
     display:flex;
     border: 1px solid black;
 }

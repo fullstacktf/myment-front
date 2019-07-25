@@ -1,17 +1,31 @@
 <template>
   <div>
     <div class="welcome">
-      <img src="../assets/M.png" alt="myment-logo" class="logo" />
       <span>Welcome to your plan!</span>
     </div>
-    <div class="container"></div>
+    <div class="container">
+    <Logged-Header></Logged-Header>
+    <chachi-button name = "random"></chachi-button>
+    <chachi-button name = "generate"></chachi-button>
+    <chachi-button name = "loquequieras"></chachi-button>
+
+
+    </div>
   </div>
 </template>
 
 
 <script>
+import chachiHeader from './LoggedHeader';
+import  Button from "./Button";
+
 export default {
-  name: "Main"
+  name: "Main",
+    components: {
+    "Logged-Header": chachiHeader,
+    "chachi-button": Button
+
+  }
 };
 </script>
 

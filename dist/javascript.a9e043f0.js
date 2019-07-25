@@ -12318,7 +12318,7 @@ function patchScopedSlots (instance) {
   }
 }
 
-},{}],"components/Main.vue":[function(require,module,exports) {
+},{}],"components/NewsBar.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12331,48 +12331,312 @@ exports.default = void 0;
 //
 //
 //
+var _default = {
+  props: {
+    newNews: {
+      type: String,
+      required: true,
+      default: "if you are watching it, some error may has happened or its just a random text for test it. Use the 'newNews' prop for change me. We will show in this bar some useful stuff"
+    }
+  }
+};
+exports.default = _default;
+        var $40ea36 = exports.default || module.exports;
+      
+      if (typeof $40ea36 === 'function') {
+        $40ea36 = $40ea36.options;
+      }
+    
+        /* template */
+        Object.assign($40ea36, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "containerBar marquee" }, [
+    _c("h6", [_vm._v(_vm._s(_vm.newNews))])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$40ea36', $40ea36);
+          } else {
+            api.reload('$40ea36', $40ea36);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.esm.js"}],"components/LoggedHeader.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _NewsBar = _interopRequireDefault(require("./NewsBar"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
 //
 //
 //
 //
 //
 var _default = {
-  name: "Main"
+  components: {
+    'newsBar': _NewsBar.default
+  }
 };
 exports.default = _default;
-        var $5494bc = exports.default || module.exports;
+        var $f0744f = exports.default || module.exports;
       
-      if (typeof $5494bc === 'function') {
-        $5494bc = $5494bc.options;
+      if (typeof $f0744f === 'function') {
+        $f0744f = $f0744f.options;
       }
     
         /* template */
-        Object.assign($5494bc, (function () {
+        Object.assign($f0744f, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c(
+    "div",
+    { staticClass: "headerNav" },
+    [
+      _c("img", {
+        attrs: {
+          src: "/M.0d9b0bc0.png",
+          alt: "our coolest logo"
+        }
+      }),
+      _vm._v(" "),
+      _c("newsBar", { staticClass: "news" })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$f0744f', $f0744f);
+          } else {
+            api.reload('$f0744f', $f0744f);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"./NewsBar":"components/NewsBar.vue","./../assets/M.png":[["M.0d9b0bc0.png","assets/M.png"],"assets/M.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.esm.js"}],"components/Button.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+var _default = {
+  props: {
+    name: {
+      //Generate, add or examine
+      type: String,
+      required: true,
+      default: 'generate'
+    },
+    route: {
+      type: String,
+      required: false,
+      default: ''
+    }
+  },
+  name: 'Button',
+  data: function data() {
+    return {};
+  },
+  methods: {
+    Redirect: function Redirect() {}
+  }
+};
+exports.default = _default;
+        var $949eff = exports.default || module.exports;
+      
+      if (typeof $949eff === 'function') {
+        $949eff = $949eff.options;
+      }
+    
+        /* template */
+        Object.assign($949eff, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("button", { staticClass: "Button" }, [
+    _vm._v(" " + _vm._s(_vm.name) + "\n")
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$949eff', $949eff);
+          } else {
+            api.reload('$949eff', $949eff);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.esm.js"}],"components/Main.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _LoggedHeader = _interopRequireDefault(require("./LoggedHeader"));
+
+var _Button = _interopRequireDefault(require("./Button"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  name: "Main",
+  components: {
+    "Logged-Header": _LoggedHeader.default,
+    "chachi-button": _Button.default
+  }
+};
+exports.default = _default;
+        var $1a7669 = exports.default || module.exports;
+      
+      if (typeof $1a7669 === 'function') {
+        $1a7669 = $1a7669.options;
+      }
+    
+        /* template */
+        Object.assign($1a7669, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "container" },
+      [
+        _c("Logged-Header"),
+        _vm._v(" "),
+        _c("chachi-button", { attrs: { name: "random" } }),
+        _vm._v(" "),
+        _c("chachi-button", { attrs: { name: "generate" } }),
+        _vm._v(" "),
+        _c("chachi-button", { attrs: { name: "loquequieras" } })
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "welcome" }, [
-        _c("img", {
-          staticClass: "logo",
-          attrs: {
-            src: "/M.0d9b0bc0.png",
-            alt: "myment-logo"
-          }
-        }),
-        _vm._v(" "),
-        _c("span", [_vm._v("Welcome to your plan!")])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "container" })
+    return _c("div", { staticClass: "welcome" }, [
+      _c("span", [_vm._v("Welcome to your plan!")])
     ])
   }
 ]
@@ -12395,9 +12659,9 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$5494bc', $5494bc);
+            api.createRecord('$1a7669', $1a7669);
           } else {
-            api.reload('$5494bc', $5494bc);
+            api.reload('$1a7669', $1a7669);
           }
         }
 
@@ -12408,7 +12672,7 @@ render._withStripped = true
       
       }
     })();
-},{"./../assets/M.png":[["M.0d9b0bc0.png","assets/M.png"],"assets/M.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.esm.js"}],"App.vue":[function(require,module,exports) {
+},{"./LoggedHeader":"components/LoggedHeader.vue","./Button":"components/Button.vue","_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.esm.js"}],"App.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12418,8 +12682,16 @@ exports.default = void 0;
 
 var _Main = _interopRequireDefault(require("./components/Main"));
 
+var _NewsBar = _interopRequireDefault(require("./components/NewsBar"));
+
+var _LoggedHeader = _interopRequireDefault(require("./components/LoggedHeader"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
+//
+//
 //
 //
 //
@@ -12427,23 +12699,25 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = {
   name: "App",
   components: {
-    "main-page": _Main.default
+    "main-page": _Main.default,
+    "LoggedHeader": _LoggedHeader.default,
+    "News": _NewsBar.default
   }
 };
 exports.default = _default;
-        var $acc491 = exports.default || module.exports;
+        var $464af3 = exports.default || module.exports;
       
-      if (typeof $acc491 === 'function') {
-        $acc491 = $acc491.options;
+      if (typeof $464af3 === 'function') {
+        $464af3 = $464af3.options;
       }
     
         /* template */
-        Object.assign($acc491, (function () {
+        Object.assign($464af3, (function () {
           var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("main-page")
+  return _c("div", [_c("main-page"), _vm._v(" "), _c("LoggedHeader")], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -12465,16 +12739,16 @@ render._withStripped = true
         if (api.compatible) {
           module.hot.accept();
           if (!module.hot.data) {
-            api.createRecord('$acc491', $acc491);
+            api.createRecord('$464af3', $464af3);
           } else {
-            api.reload('$acc491', $acc491);
+            api.reload('$464af3', $464af3);
           }
         }
 
         
       }
     })();
-},{"./components/Main":"components/Main.vue","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.esm.js"}],"javascript/index.js":[function(require,module,exports) {
+},{"./components/Main":"components/Main.vue","./components/NewsBar":"components/NewsBar.vue","./components/LoggedHeader":"components/LoggedHeader.vue","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.esm.js"}],"javascript/index.js":[function(require,module,exports) {
 "use strict";
 
 var _vue = _interopRequireDefault(require("vue"));
@@ -12516,7 +12790,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41481" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46497" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
