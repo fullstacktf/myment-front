@@ -62,6 +62,18 @@
   background-image: linear-gradient(to bottom, #061636, #092038);
   text-decoration: none;  
 }
+.fastLink {
+    color: white;
+    background: black;
+    border-radius: 60px;
+    width: 100%;
+    text-align: center;
+}
+.menucontainer{
+    width: 400px;
+    height: 400px;
+    
+}
 body {
   display: flex;
   justify-content: center;

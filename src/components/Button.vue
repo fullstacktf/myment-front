@@ -1,6 +1,5 @@
 <template>
-    <button class="Button" > {{name}}
-    </button>
+    <button class="Button" > {{name}}</button>
 </template>
 
 <script>
@@ -17,6 +16,7 @@ export default {
       required: false,
       default: ''
     },
+
 
   },
   name: 'Button', 

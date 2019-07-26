@@ -12487,7 +12487,6 @@ exports.default = void 0;
 //
 //
 //
-//
 var _default = {
   props: {
     name: {
@@ -12524,7 +12523,7 @@ exports.default = _default;
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("button", { staticClass: "Button" }, [
-    _vm._v(" " + _vm._s(_vm.name) + "\n")
+    _vm._v(" " + _vm._s(_vm.name))
   ])
 }
 var staticRenderFns = []
@@ -12560,7 +12559,179 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.esm.js"}],"components/Main.vue":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.esm.js"}],"components/SingleMenuLink.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+var _default = {
+  props: {
+    name: {
+      //Generate, add or examine
+      type: String,
+      required: true,
+      default: 'generate short'
+    },
+    route: {
+      type: String,
+      required: false,
+      default: ''
+    }
+  },
+  data: function data() {
+    return {};
+  }
+};
+exports.default = _default;
+        var $f80ebf = exports.default || module.exports;
+      
+      if (typeof $f80ebf === 'function') {
+        $f80ebf = $f80ebf.options;
+      }
+    
+        /* template */
+        Object.assign($f80ebf, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "fastLink" }, [_vm._v(_vm._s(_vm.name))])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$f80ebf', $f80ebf);
+          } else {
+            api.reload('$f80ebf', $f80ebf);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.esm.js"}],"components/InstantMenu.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _SingleMenuLink = _interopRequireDefault(require("./SingleMenuLink"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  props: {
+    name: {
+      //Generate, add or examine
+      type: String,
+      required: false,
+      default: 'generate'
+    },
+    components: {
+      "single-element": _SingleMenuLink.default
+    }
+  }
+};
+exports.default = _default;
+        var $f4e244 = exports.default || module.exports;
+      
+      if (typeof $f4e244 === 'function') {
+        $f4e244 = $f4e244.options;
+      }
+    
+        /* template */
+        Object.assign($f4e244, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "menucontainer" },
+    [
+      _c("single-element", { attrs: { name: "generate short" } }),
+      _vm._v(" "),
+      _c("single-element", { attrs: { name: "Upload myment" } }),
+      _vm._v(" "),
+      _c("single-element", { attrs: { name: "Add activity" } }),
+      _vm._v(" "),
+      _c("single-element", { attrs: { name: "share deep and cool state" } })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$f4e244', $f4e244);
+          } else {
+            api.reload('$f4e244', $f4e244);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"./SingleMenuLink":"components/SingleMenuLink.vue","_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.esm.js"}],"components/Main.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12571,6 +12742,10 @@ exports.default = void 0;
 var _LoggedHeader = _interopRequireDefault(require("./LoggedHeader"));
 
 var _Button = _interopRequireDefault(require("./Button"));
+
+var _SingleMenuLink = _interopRequireDefault(require("./SingleMenuLink"));
+
+var _InstantMenu = _interopRequireDefault(require("./InstantMenu"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12595,7 +12770,9 @@ var _default = {
   name: "Main",
   components: {
     "Logged-Header": _LoggedHeader.default,
-    "chachi-button": _Button.default
+    "chachi-button": _Button.default,
+    "single-element": _SingleMenuLink.default,
+    "instant-menu": _InstantMenu.default
   }
 };
 exports.default = _default;
@@ -12624,7 +12801,11 @@ exports.default = _default;
         _vm._v(" "),
         _c("chachi-button", { attrs: { name: "generate" } }),
         _vm._v(" "),
-        _c("chachi-button", { attrs: { name: "loquequieras" } })
+        _c("chachi-button", { attrs: { name: "loquequieras" } }),
+        _vm._v(" "),
+        _c("single-element", { attrs: { name: "hola" } }),
+        _vm._v(" "),
+        _c("instant-menu")
       ],
       1
     )
@@ -12672,7 +12853,7 @@ render._withStripped = true
       
       }
     })();
-},{"./LoggedHeader":"components/LoggedHeader.vue","./Button":"components/Button.vue","_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.esm.js"}],"App.vue":[function(require,module,exports) {
+},{"./LoggedHeader":"components/LoggedHeader.vue","./Button":"components/Button.vue","./SingleMenuLink":"components/SingleMenuLink.vue","./InstantMenu":"components/InstantMenu.vue","_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"../node_modules/vue-hot-reload-api/dist/index.js","vue":"../node_modules/vue/dist/vue.esm.js"}],"App.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -12688,7 +12869,6 @@ var _LoggedHeader = _interopRequireDefault(require("./components/LoggedHeader"))
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//
 //
 //
 //
@@ -12717,7 +12897,7 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("main-page"), _vm._v(" "), _c("LoggedHeader")], 1)
+  return _c("div", [_c("main-page")], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -12790,7 +12970,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46497" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34479" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

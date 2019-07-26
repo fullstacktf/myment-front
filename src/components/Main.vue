@@ -4,12 +4,11 @@
       <span>Welcome to your plan!</span>
     </div>
     <div class="container">
-    <Logged-Header></Logged-Header>
-    <chachi-button name = "random"></chachi-button>
-    <chachi-button name = "generate"></chachi-button>
-    <chachi-button name = "loquequieras"></chachi-button>
-
-
+      <Logged-Header></Logged-Header>
+      <chachi-button name = "random"></chachi-button>
+      <chachi-button name = "generate"></chachi-button>
+      <chachi-button name = "loquequieras"></chachi-button>
+      <single-element name= "hola"> </single-element>
     </div>
   </div>
 </template>
@@ -18,12 +17,17 @@
 <script>
 import chachiHeader from './LoggedHeader';
 import  Button from "./Button";
+import  Single from "./SingleMenuLink";
+
+
 
 export default {
   name: "Main",
     components: {
     "Logged-Header": chachiHeader,
-    "chachi-button": Button
+    "chachi-button": Button,
+    "single-element": Single,
+
 
   }
 };
