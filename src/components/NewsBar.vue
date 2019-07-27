@@ -23,7 +23,7 @@ export default {
 .marquee {
     display:flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 25px;
     width: 100%;
     height: 50px;
 	background-color: rgb(0, 0, 0);
@@ -31,7 +31,6 @@ export default {
     white-space: nowrap;
     overflow: hidden;
     box-sizing: border-box;
-    border: double 3px grey;
     box-shadow: inset 3px 3px 4px white, inset -3px -3px 4px white;
 }
 .marquee h6 {

@@ -17,17 +17,17 @@ export default {
 
 <style>
 .news{
-    height: 60px;
+    height: 100%;
 }
 .headerNav{
     width: 100%;
-    display:flex;
-    border: 1px solid black;
+    height: 100%;
+    display:grid;
+    grid-template-columns: 12% 88%;
 }
 .headerNav img {
-    border: 1px solid black;
-    width: 60px;
-    height: 60px;
+    width: 100%;
+    height: 100%;
 }
 
 </style>
