@@ -5,7 +5,7 @@
         <div class="midZone">
             <div class="ranking"></div>
             <div class="interact">
-                <custom-image> </custom-image>
+                <custom-image source = "../assets/map.jpg"> </custom-image>
                 <div class="buttonsGrid">
                     <chachi-button name = "Generate"></chachi-button>
                     <chachi-button name = "Add"></chachi-button>

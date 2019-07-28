@@ -1,6 +1,6 @@
 <template> <!-- Just a cool way to show our news -->
     <div class="containerBar marquee" >
-        <h6 >{{newNews}}</h6>
+        <div >{{newNews}}</div>
     </div>
 </template>
 
@@ -33,7 +33,7 @@ export default {
     box-sizing: border-box;
     box-shadow: inset 3px 3px 4px white, inset -3px -3px 4px white;
 }
-.marquee h6 {
+.marquee div {
     display: inline-block;
     padding-left: 100%;
     animation: marquee 15s linear infinite;

@@ -1,6 +1,6 @@
 <template>
   <div class="imageContainer">
-    <img class = "map" src="../assets/map.jpg" alt="an example map image"/>
+    <img class = "map" src=source alt="an example map image"/>
   </div>
 </template>
 
@@ -13,7 +13,12 @@ export default {
       type: String,
       required: true,
       default: 'generate short'
-    }
+    },
+    source: { //Generate, add or examine
+      type: String,
+      required: true,
+      default: "../assets/map.jpg"
+    },
   }, 
 
   data() {
@@ -23,7 +28,6 @@ export default {
   }
 
   }
-
   
 
 </script>
