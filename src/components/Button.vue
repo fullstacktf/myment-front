@@ -1,43 +1,53 @@
 <template>
-    <button class="Button" > {{name}}</button>
+  <button class="Button" :style="style">{{name}}</button>
 </template>
 
 <script>
 export default {
-
   props: {
-    name: { //Generate, add or examine
+    name: {
+      //Generate, add or examine
       type: String,
       required: true,
-      default: 'generate'
+      default: 'generate',
     },
-      route: {
+    route: {
       type: String,
       required: false,
-      default: ''
+      default: '',
     },
-  
-
-
+    customWidth: {
+      type: String,
+      required: false,
+      default: '100px',
+    },
+    customHeight: {
+      type: String,
+      required: false,
+      default: '70px',
+    },
   },
-  name: 'Button', 
+  name: 'Button',
   data() {
     return {
-   }
+      cWidth: this.customWidth,
+      cHeight: this.customHeight,
+    };
   },
   methods: {
-    Redirect(){
-      
-    }
-  }
-
-  }
-
+    Redirect() {},
+  },
+  computed: {
+    style() {
+      return 'width: ' + this.cWidth + ';' + 'height: ' + this.cHeight + ';';
+    },
+  },
+};
 </script>
 
-<style > 
+<style >
 .Button {
-  color:white;
+  color: white;
   background: #454647;
   background-image: -webkit-linear-gradient(top, #454647, #000000);
   background-image: -moz-linear-gradient(top, #454647, #000000);
@@ -52,9 +62,8 @@ export default {
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   box-shadow: 2px 2px #454647;
-
 }
-.Button:hover{
+.Button:hover {
   color: white;
   background: #061636;
   background-image: -webkit-linear-gradient(top, #061636, #092038);
@@ -62,9 +71,8 @@ export default {
   background-image: -ms-linear-gradient(top, #061636, #092038);
   background-image: -o-linear-gradient(top, #061636, #092038);
   background-image: linear-gradient(to bottom, #061636, #092038);
-  text-decoration: none;  
+  text-decoration: none;
 }
-
 </style>
 
   
