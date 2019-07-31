@@ -6,7 +6,6 @@
           <customized-map></customized-map>
           <div class="sidemenu">side menu</div>
     </div>
-    <custom-footer> </custom-footer>
   </div>
 </template>
 
@@ -38,7 +37,7 @@ export default {
   margin: auto;
   margin-top: 0;
   display: grid;
-  grid-template-rows: 7% 89% 4%;
+  grid-template-rows: 9% 91%;
   width: 100vw;
   height: 100vh;
   background-color: #79f0a5;

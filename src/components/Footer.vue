@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
 .footerContainer{
     background: black;
     color: white;
