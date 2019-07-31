@@ -5,7 +5,7 @@
     </div>
     <div class="rightZone">
       <anim-logo></anim-logo>
-      <to-short name="Let's beggin" customWidth="250px" customHeight="100px"></to-short>
+      <short-button name="Let's beggin" customWidth="250px" customHeight="100px" action = "generate"></short-button>
     </div>
   </div>
 </template>
@@ -13,14 +13,14 @@
 <script>
 import LoginMenu from '../../components/LoginMenu';
 import AnimLogo from '../../components/AnimLogo';
-import ToShort from '../../components/Button';
+import Button from '../../components/Button';
 
 export default {
   name: 'LandingPage',
   components: {
     'log-menu': LoginMenu,
     'anim-logo': AnimLogo,
-    'to-short': ToShort,
+    'short-button': Button,
   },
 };
 </script>

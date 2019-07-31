@@ -1,5 +1,5 @@
 <template>
-    <div class="container"> {{copyright}} {{author}}  {{year}}</div>
+    <div class="footerContainer"> {{copyright}} {{author}}  {{year}}</div>
 </template>
 
 <script>
@@ -15,15 +15,13 @@ export default {
 </script>
 
 <style scoped>
-.container{
+.footerContainer{
     background: black;
     color: white;
     width: 100%;
     height: 100%;
     font-size: 12px;
     text-align: center;
-
-
-}
+    }
 
 </style>

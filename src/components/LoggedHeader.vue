@@ -1,6 +1,6 @@
 <template>
     <div class="headerNav">
-        <img src="../assets/M.png" alt="our coolest logo"/>
+        <img src="../../public/assets/M.png" alt="our coolest logo"/>
         <newsBar class = "news"></newsBar> 
     </div>
 </template>
@@ -16,6 +16,8 @@ export default {
 </script>
 
 <style>
+body{
+    text-align: center}
 .news{
     height: 100%;
 }
@@ -23,7 +25,7 @@ export default {
     width: 100%;
     height: 100%;
     display:grid;
-    grid-template-columns: 12% 88%;
+    grid-template-columns: 10% 90%;
 }
 .headerNav img {
     width: 100%;

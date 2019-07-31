@@ -37,6 +37,7 @@ export default {
     display: inline-block;
     padding-left: 100%;
     animation: marquee 15s linear infinite;
+    vertical-align: center;
 }
 @keyframes marquee {
     0%   { transform: translate(0, 0); }

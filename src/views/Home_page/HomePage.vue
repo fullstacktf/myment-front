@@ -1,39 +1,55 @@
-<script>
-export default {
-  name: 'Main',
-};
-</script>
-
 <template>
-  <div>
-    <div class="welcome">
-      <img src="public/assets/M.png" alt="myment-logo" class="logo" />
-      <span>Welcome to your plan!</span>
+  <div class="globalContainer">
+    <logged-header></logged-header>
+    <div class="container">
+          <div class="ghostRanking">FakeRanking</div>
+          <customized-map></customized-map>
+          <div class="sidemenu">side menu</div>
     </div>
-    <div class="container"></div>
+    <custom-footer> </custom-footer>
   </div>
 </template>
 
+<script>
+import map from '../../components/Map'
+import LoggedHeader from '../../components/LoggedHeader'
+import newsBar from '../../components/NewsBar';
+import Footer from '../../components/Footer';
+export default {
+  name: 'Home',
+  components: {
+  'customized-map': map,
+  'logged-header': LoggedHeader,
+  'news-bar': newsBar,
+  'custom-footer': Footer
+  }
+};
+</script>
 
+<style scoped>
 
-<style>
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 1000px;
+/*.globalContainer .container{
+  margin-left: auto;
+  margin-right: auto;
+}*/
+
+.globalContainer {
   background-color: #255060;
-}
-.logo {
-  width: 150px;
-  height: 150px;
-}
-.container {
-  width: 990px;
-  height: 900px;
+  margin: auto;
+  margin-top: 0;
+  display: grid;
+  grid-template-rows: 7% 89% 4%;
+  width: 100vw;
+  height: 100vh;
   background-color: #79f0a5;
+
+
 }
-.welcome {
-  font-family: roboto, sans-serif;
-}
+.sidemenu{background: red;}
+.container{
+  display: grid;
+  grid-template-columns: 20% 65% 15%;
+  background: grey;
+  }
+
 </style>

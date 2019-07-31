@@ -7,6 +7,14 @@
 <script>
 export default {
   name: 'App',
-  components: {},
+  components: {
+    
+  },
 };
 </script>
+
+<style>
+  body {
+    margin: 0;
+  }
+</style>
