@@ -1,14 +1,16 @@
 <template>
-  <main-page></main-page>
+  <land-page></land-page>
 </template>
     
 <script>
-import Main from "./components/Main";
+import Main from './components/Main';
+import LandingPage from './components/LandingPage';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    "main-page": Main
-  }
+    'main-page': Main,
+    'land-page': LandingPage,
+  },
 };
 </script>

@@ -1,20 +1,20 @@
 <template>
   <div class="menu">
-    <form action="POST">
-      <label for>Nick:</label>
-      <input type="text" placeholder="El viajero" />
-      <label for>Password:</label>
-      <input type="text" placeholder="********" />
-      <label for>Confirm password:</label>
-      <input type="text" placeholder="--------" />
-      <input type="submit" />
-    </form>
+    <log-in></log-in>
+    <sign-in></sign-in>
   </div>
 </template>
 
 <script>
+import Login from './Login';
+import Signin from './Signin';
+
 export default {
   name: 'LoginMenu',
+  components: {
+    'log-in': Login,
+    'sign-in': Signin,
+  },
 };
 </script>
 
