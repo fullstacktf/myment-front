@@ -5,7 +5,7 @@
     </div>
     <div class="rightZone">
       <anim-logo></anim-logo>
-      <to-short name="Let's beggin" customWidth="250px" customHeight="100px"></to-short>
+      <to-short name="Let's beggin"></to-short>
     </div>
   </div>
 </template>
