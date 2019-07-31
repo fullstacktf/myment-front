@@ -10,6 +10,20 @@
     </div>
     <div class="itinerary">
       <idea-item></idea-item>
+
+      <idea-item></idea-item>
+
+      <idea-item></idea-item>
+
+      <idea-item></idea-item>
+
+      <idea-item></idea-item>
+
+      <idea-item></idea-item>
+
+      <idea-item></idea-item>
+
+      <idea-item></idea-item>
     </div>
     <time-line></time-line>
   </div>
@@ -30,7 +44,7 @@ export default {
     'option-button': Button,
     'generate-button': GenButton,
     'tag-adder': TagAdder,
-    'idea-item:': IdeaItem,
+    'idea-item': IdeaItem,
     'time-line': Timeline,
   },
 };
@@ -39,13 +53,13 @@ export default {
 <style scoped>
 .generatorContainer {
   display: grid;
-  width: 99vw;
-  height: 100vh;
-  justify-items: center;
+  width: 97vw;
+  height: 90vh;
   grid-template-rows: 20% 80% 10%;
 }
 .topZone {
   width: 100%;
+  margin: auto;
   display: grid;
   grid-template-rows: 60% 40%;
   justify-items: center;
@@ -59,9 +73,14 @@ export default {
   z-index: 1;
 }
 .itinerary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   padding: 50px;
   border: 1px solid grey;
   z-index: 3;
+  overflow: hidden scroll;
 }
 </style>

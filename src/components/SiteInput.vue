@@ -1,5 +1,7 @@
 <template>
-  <div class="placeContainer">here goes the place input</div>
+  <div class="placeContainer">
+    <h1>HERE GOES THE PLACE YOU WANT</h1>
+  </div>
 </template>
 
 <script>

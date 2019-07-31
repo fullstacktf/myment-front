@@ -1,5 +1,5 @@
 <template>
-  <div class="itemContainer">this is an item</div>
+  <div class="itemContainer">hvjvjhvjhvjhvjhvjhv</div>
 </template>
 
 <script>
@@ -9,7 +9,8 @@ export default {
 </script>
 
 <style>
-.item {
+.itemContainer {
+  margin: 50px;
   width: 80%;
   height: 100px;
   background: black;

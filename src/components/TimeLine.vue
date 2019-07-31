@@ -10,7 +10,7 @@ export default {
 
 <style>
 .timeContainer {
-  width: 98%;
+  width: 100%;
   height: 100%;
   border: 1px solid green;
 }
