@@ -1,20 +1,25 @@
-<script>
-export default {
-  name: 'Main',
-};
-</script>
-
 <template>
   <div>
     <div class="welcome">
       <img src="public/assets/M.png" alt="myment-logo" class="logo" />
       <span>Welcome to your plan!</span>
     </div>
-    <div class="container"></div>
+    <div class="container">
+      <side-menu></side-menu>
+    </div>
   </div>
 </template>
 
+<script>
+import SidebarMenu from '../../components/SidebarMenu';
 
+export default {
+  name: 'Main',
+  components: {
+    'side-menu': SidebarMenu,
+  },
+};
+</script>
 
 <style>
 body {
@@ -35,5 +40,10 @@ body {
 }
 .welcome {
   font-family: roboto, sans-serif;
+}
+
+.v-sidebar-menu.vsm-collapsed {
+  width: 100000px;
+  height: 100%;
 }
 </style>
