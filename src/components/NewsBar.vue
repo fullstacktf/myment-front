@@ -23,7 +23,7 @@ export default {
 .marquee {
     display:flex;
     align-items: center;
-    font-size: 25px;
+    font-size: 17px;
     width: 100%;
     height: 50px;
 	background-color: rgb(0, 0, 0);

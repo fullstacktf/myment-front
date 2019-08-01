@@ -2,9 +2,18 @@
   <div class="globalContainer">
     <logged-header></logged-header>
     <div class="container">
-          <div class="ghostRanking">FakeRanking</div>
-          <customized-map></customized-map>
-          <div class="sidemenu">side menu</div>
+          <div class="sidemenu"><div class="customSM"></div></div>
+          <div class="midZone">
+            <div class="map">
+              <customized-map></customized-map>
+            </div>
+            <div class="buttonbar">
+              <custom-button customWidth = "120px" name = "Generate"></custom-button>
+              <custom-button name = "Add"></custom-button>
+              <custom-button customWidth = "120px" name = "Examine"></custom-button>
+            </div>
+          </div>
+          <div class="ghostRanking">Ghost ranking</div>
     </div>
   </div>
 </template>
@@ -14,13 +23,15 @@ import map from '../../components/Map'
 import LoggedHeader from '../../components/LoggedHeader'
 import newsBar from '../../components/NewsBar';
 import Footer from '../../components/Footer';
+import Button from '../../components/Button'; 
 export default {
   name: 'Home',
   components: {
   'customized-map': map,
   'logged-header': LoggedHeader,
   'news-bar': newsBar,
-  'custom-footer': Footer
+  'custom-footer': Footer,
+  'custom-button': Button
   }
 };
 </script>
@@ -37,18 +48,69 @@ export default {
   margin: auto;
   margin-top: 0;
   display: grid;
-  grid-template-rows: 9% 91%;
+  grid-template-rows: 5% 95%;
   width: 100vw;
   height: 100vh;
   background-color: #79f0a5;
+  
 
 
 }
-.sidemenu{background: red;}
+
+.map{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: black;
+
+}
+.buttonbar{
+
+}
 .container{
   display: grid;
-  grid-template-columns: 20% 65% 15%;
-  background: grey;
+  grid-template-columns: 20% 60% 20%;
+  background: #66838C;
+  
+  
   }
+.sidemenu{
+  display: flex;
+  align-items: center;
+  }
+.customSM{
+  width: 300px;
+  height: 600px;
+  background: #255060;
+
+}
+.midZone{
+  display: grid;
+  grid-template-rows: 70% 30%;
+  background: white;
+  height: 85%;
+  margin-top: 45px;
+  margin-right: 45px;
+  margin-left: 45px;
+  box-shadow: 8px 8px 13px #255060, -8px -8px 13px #255060;
+    border-radius: 35px;
+    overflow: hidden;
+}
+
+
+.buttonbar{
+display: flex;
+align-items: center;
+justify-content: space-around;
+
+
+}
+.buttonbar:hover{
+  background: #12345D;
+  
+}
+
 
 </style>

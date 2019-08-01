@@ -1,5 +1,5 @@
 <template>
-        <img src="../../public/assets/exampleMap.jpg" alt="map example">
+        <img src="../../public/assets/map.png" alt="map example">
 </template>
 
 <script>
@@ -11,9 +11,11 @@ export default {
 <style scoped>
 
 img{
-height: 100%;
-width: 100%;
+margin: auto;
+height: 400px;
+width: 500px;
 border: 1px solid black;
+max-width: 100%;
 }
 
 

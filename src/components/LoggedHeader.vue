@@ -25,11 +25,10 @@ body{
     width: 100%;
     height: 100%;
     display:grid;
-    grid-template-columns: 10% 90%;
-}
+    grid-template-columns: 4% 96%;}
 .headerNav img {
-    width: 100%;
-    height: 100%;
+    width: 80px;
+    height: 50px;
 }
 
 </style>
