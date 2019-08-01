@@ -10,10 +10,12 @@ export default {
 
 <style>
 .logo {
-  justify-self: center;
-  align-self: center;
-  width: 700px;
-  height: 700px;
+  width: 50%;
+  height: 70%;
   border: 4px solid grey;
+  background-image: url('../../public/assets/provitional_plane.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: -100px;
 }
 </style>

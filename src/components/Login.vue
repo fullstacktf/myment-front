@@ -9,4 +9,7 @@ export default {
 </script>
 
 <style>
+.login {
+  color: white;
+}
 </style>
