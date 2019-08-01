@@ -1,10 +1,10 @@
 <template>
-  <div class="short"></div>
+  <div class="genArea">button</div>
 </template>
 
 <script>
 export default {
-  name: 'ToShort',
+  name: 'GenButton',
 };
 </script>
 

@@ -1,14 +1,12 @@
 <template>
-  <land-page></land-page>
+  <div class="masterContainer">
+    <router-view />
+  </div>
 </template>
     
 <script>
-import LandingPage from './components/LandingPageView';
-
 export default {
   name: 'App',
-  components: {
-    'land-page': LandingPage,
-  },
+  components: {},
 };
 </script>
