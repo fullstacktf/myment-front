@@ -47,6 +47,8 @@
 		"jest": "^24.8.0",
 		"mini-css-extract-plugin": "^0.8.0",
 		"prettier": "^1.18.2",
+		"ts-jest": "^24.0.2",
+		"typescript": "^3.5.3",
 		"vue-jest": "^3.0.4",
 		"vue-loader": "^15.7.1",
 		"vue-server-renderer": "^2.6.10",

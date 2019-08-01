@@ -1,11 +1,12 @@
-import { GeoJsonObject } from "geojson";
+import { GeoJsonObject, FeatureCollection, Feature } from "geojson";
 
 
 export interface MockIdea{
     name: string,
     description: string,
-    startTime:  number,
-    endTime: number,
+    coordinates: Feature
+    startTime:  number[],
+    endTime: number[],
     link: string
 }
 export interface MockCategory{
@@ -14,12 +15,13 @@ export interface MockCategory{
 }
 
 export interface MockZone{
+    coordinates: Feature
     lodging: MockCategory,
     food: MockCategory,
     leisure: MockCategory
 }
 
-export interface MockCity{
-    city: MockZone[]
-    coordinates: GeoJsonObject
+export interface MockCity {
+    coordinates: Feature,
+    zone: MockZone[]
 }
