@@ -9,20 +9,7 @@
       </div>
     </div>
     <div class="itinerary">
-      <idea-item></idea-item>
-
-      <idea-item></idea-item>
-
-      <idea-item></idea-item>
-
-      <idea-item></idea-item>
-
-      <idea-item></idea-item>
-
-      <idea-item></idea-item>
-
-      <idea-item></idea-item>
-
+      <!-- <idea-item v-for="idea in ideaStructure" :name="idea.name"></idea-item> -->
       <idea-item></idea-item>
     </div>
     <time-line></time-line>
@@ -46,6 +33,22 @@ export default {
     'tag-adder': TagAdder,
     'idea-item': IdeaItem,
     'time-line': Timeline,
+  },
+  data() {
+    return {
+      ideaStructure: [
+        {
+          name: 'first',
+          description: 'lorem ipsum ...',
+          time: 198273213,
+        },
+        {
+          name: 'second',
+          description: 'lorem ipsum ...',
+          time: 1298379123,
+        },
+      ],
+    };
   },
 };
 </script>

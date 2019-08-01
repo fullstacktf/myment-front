@@ -1,5 +1,5 @@
 <template>
-  <div class="itemContainer">hvjvjhvjhvjhvjhvjhv</div>
+  <div class="itemContainer">algo</div>
 </template>
 
 <script>
@@ -13,6 +13,6 @@ export default {
   margin: 50px;
   width: 80%;
   height: 100px;
-  background: black;
+  background: white;
 }
 </style>
