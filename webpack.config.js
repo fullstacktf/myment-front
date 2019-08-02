@@ -1,9 +1,9 @@
-const path = require('path')
-const webpack = require('webpack')
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const HtmlPlugin = require('html-webpack-plugin')
-const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
+const path = require('path');
+const webpack = require('webpack');
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const HtmlPlugin = require('html-webpack-plugin');
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: path.join(__dirname, 'src', 'index'),
@@ -72,7 +72,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif|ttf|eot|svg|ttf|woff|woff2?)$/,
         use: ['file-loader'],
       },
     ],
@@ -87,4 +87,4 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new FriendlyErrorsPlugin(),
   ],
-}
+};

@@ -25,6 +25,11 @@ export default new Router({
 			path: '/idea-add',
 			name: 'IdeaAdd',
 			component: () => import('./views/Idea_adder/IdeaAdder.vue')
+		},
+		{
+			path: '/pablo-example',
+			name: 'IdeaAdd',
+			component: () => import('./views/Idea_adder/IdeaAdder.vue')
 		}
 	]
 });
