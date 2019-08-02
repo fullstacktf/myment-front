@@ -1,17 +1,6 @@
 
 <template>
-  <slide-menu>
-    <router-link to="/home">
-      <p>LETS GO TO LOBY</p>
-    </router-link>
-    <sign-in></sign-in>
-    <input type="submit" />
-    <log-in></log-in>
-    <input type="submit" />
-    <router-link to="/">
-      <p>EXIT</p>
-    </router-link>
-  </slide-menu>
+  <slide-menu>WIP</slide-menu>
 </template>
 
 <script>

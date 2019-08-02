@@ -3,18 +3,10 @@
   <slide-menu disableOutsideClick>
     <h1>MENU</h1>
     <div class="signInContainer">
-      <form action="post">
-        <input type="text" name id placeholder="your nick name" />
-        <input type="text" placeholder="introduce password" />
-        <input type="text" placeholder="repeat password" />
-      </form>
+      <login-form></login-form>
     </div>
-    <input type="submit" value="sign up" />
     <div class="signInContainer">
-      <form action="post">
-        <input type="text" name id placeholder="your nick name" />
-        <input type="text" placeholder="introduce password" />
-      </form>
+      <login-form></login-form>
     </div>
     <div class="home">
       <input type="submit" value="log in" />
@@ -32,11 +24,14 @@
 <script>
 import { Slide } from 'vue-burger-menu';
 import Button from './Button';
+import Login from './Login';
+
 export default {
   name: 'SidebarMenu',
   components: {
     'slide-menu': Slide,
     'use-button': Button,
+    'login-form': Login,
   },
 };
 </script>

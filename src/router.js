@@ -28,8 +28,8 @@ export default new Router({
 		},
 		{
 			path: '/pablo-example',
-			name: 'IdeaAdd',
-			component: () => import('./views/Idea_adder/IdeaAdder.vue')
+			name: 'PabloEx',
+			component: () => import('./views/Example_view/PabloEx.vue')
 		}
 	]
 });
