@@ -5,15 +5,15 @@
     </div>
     <div class="rightZone">
       <anim-logo></anim-logo>
-      <to-short name="Let's beggin" customWidth="250px" customHeight="100px"></to-short>
+      <to-short name="Let's beggin"></to-short>
     </div>
   </div>
 </template>
 
 <script>
-import LoginMenu from './LoginMenu';
-import AnimLogo from './AnimLogo';
-import ToShort from './Button';
+import LoginMenu from '../../components/LoginMenu';
+import AnimLogo from '../../components/AnimLogo';
+import ToShort from '../../components/Button';
 
 export default {
   name: 'LandingPage',

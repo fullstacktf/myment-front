@@ -1,16 +1,12 @@
 <template>
-  <land-page></land-page>
+  <section class="content">
+    <router-view />
+  </section>
 </template>
     
 <script>
-import Main from './components/Main';
-import LandingPage from './components/LandingPage';
-
 export default {
   name: 'App',
-  components: {
-    'main-page': Main,
-    'land-page': LandingPage,
-  },
+  components: {},
 };
 </script>

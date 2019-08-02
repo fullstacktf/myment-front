@@ -1,11 +1,12 @@
 module.exports = {
   verbose: true,
-  moduleFileExtensions: ['js', 'json', 'vue'],
+  moduleFileExtensions: ['js', 'json', 'vue', 'ts'],
   transform: {
     '.*\\.(vue)$': 'vue-jest',
     '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
+    '^.+\\.ts$': 'ts-jest',
   },
-  collectCoverage: true,
+  collectCoverage: false,
   collectCoverageFrom: [
     'src/**/*.{js,vue}',
     '!src/index.js',
@@ -13,4 +14,4 @@ module.exports = {
   ],
   coverageReporters: ['html', 'text-summary'],
   testURL: 'http://localhost/tests',
-}
+};
