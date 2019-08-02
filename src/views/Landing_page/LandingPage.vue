@@ -1,7 +1,7 @@
 <template>
   <div class="landing">
     <div class="leftZone">
-      <log-menu></log-menu>
+      <sign-menu></sign-menu>
     </div>
     <div class="rightZone">
       <anim-logo></anim-logo>
@@ -13,14 +13,14 @@
 </template>
 
 <script>
-import LoginMenu from '../../components/LoginMenu';
+import SignUpMenu from '../../components/SignUpMenu';
 import AnimLogo from '../../components/AnimLogo';
 import ToShort from '../../components/Button';
 
 export default {
   name: 'LandingPage',
   components: {
-    'log-menu': LoginMenu,
+    'sign-menu': SignUpMenu,
     'anim-logo': AnimLogo,
     'to-short': ToShort,
   },

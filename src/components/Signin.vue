@@ -1,5 +1,18 @@
 <template>
-  <div class="signin">||signin form||</div>
+  <sui-form>
+    <sui-form-field>
+      <label>Nickname</label>
+      <input placeholder="introduce nickname" />
+    </sui-form-field>
+
+    <sui-form-field>
+      <label>Password</label>
+      <input placeholder="**********" />
+    </sui-form-field>
+    <sui-button type="submit">Sign In</sui-button>
+
+    <a href="#">forgot pasword ?</a>
+  </sui-form>
 </template>
 
 <script>
@@ -9,7 +22,10 @@ export default {
 </script>
 
 <style>
-.signin {
+a {
+  margin-top: 40px;
+  display: block;
+  text-decoration: none;
   color: white;
 }
 </style>

@@ -14,14 +14,10 @@
 </template>
 
 <script>
-import Menu from '../../components/SidebarMenu';
-import Login from '../../components/Login';
-import SignIn from '../../components/Signin';
+import Menu from '../../components/QuickActionsMenu';
 export default {
   name: 'Main',
   components: {
-    'log-in': Login,
-    'sign-in': SignIn,
     'side-menu': Menu,
   },
 };
