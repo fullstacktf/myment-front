@@ -1,18 +1,13 @@
 <template>
-  <sui-form>
-    <sui-form-field>
-      <label>Nickname</label>
-      <input placeholder="introduce nickname" />
-    </sui-form-field>
+  <section>
+    <b-field label="Username">
+      <b-input value="johnsilver" maxlength="30"></b-input>
+    </b-field>
 
-    <sui-form-field>
-      <label>Password</label>
-      <input placeholder="**********" />
-    </sui-form-field>
-    <sui-button type="submit">Sign In</sui-button>
-
-    <a href="#">forgot pasword ?</a>
-  </sui-form>
+    <b-field label="Password">
+      <b-input type="password" value="iwantmytreasure" password-reveal></b-input>
+    </b-field>
+  </section>
 </template>
 
 <script>

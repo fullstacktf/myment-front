@@ -3,11 +3,7 @@
   <slide-menu disableOutsideClick>
     <h3>MENU</h3>
     <div class="signInContainer">
-      <sui-dropdown class="teal" disableOutsideClick text="Sign up" button floating>
-        <sui-dropdown-menu>
-          <signup-form></signup-form>
-        </sui-dropdown-menu>
-      </sui-dropdown>
+      <signup-form></signup-form>
     </div>
 
     <div class="signInContainer">

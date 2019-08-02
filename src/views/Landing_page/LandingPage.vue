@@ -6,7 +6,7 @@
     <div class="rightZone">
       <anim-logo></anim-logo>
       <router-link to="/short">
-        <to-short name="Let's beggin" ></to-short>
+        <short-button name="Let's beggin" customWidth="200px" customheight="50px"></short-button>
       </router-link>
     </div>
   </div>
