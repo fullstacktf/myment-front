@@ -10,10 +10,10 @@
             <div class="buttonbar">
               <custom-button customWidth = "120px" name = "Generate"></custom-button>
               <custom-button name = "Add"></custom-button>
-              <custom-button customWidth = "120px" name = "Examine"></custom-button>
+              <custom-button customWidth = "120px" name = "Explore"></custom-button>
             </div>
           </div>
-          <div class="ghostRanking">Ghost ranking</div>
+          <div class="ghostRanking"><leader-board></leader-board></div>
     </div>
   </div>
 </template>
@@ -24,6 +24,7 @@ import LoggedHeader from '../../components/LoggedHeader'
 import newsBar from '../../components/NewsBar';
 import Footer from '../../components/Footer';
 import Button from '../../components/Button'; 
+import FakeLeaderboard from '../../components/FakeLeaderboard'
 export default {
   name: 'Home',
   components: {
@@ -31,7 +32,8 @@ export default {
   'logged-header': LoggedHeader,
   'news-bar': newsBar,
   'custom-footer': Footer,
-  'custom-button': Button
+  'custom-button': Button, 
+  'leader-board': FakeLeaderboard
   }
 };
 </script>
@@ -66,9 +68,7 @@ export default {
   background: black;
 
 }
-.buttonbar{
 
-}
 .container{
   display: grid;
   grid-template-columns: 20% 60% 20%;
