@@ -1,50 +1,116 @@
 <template>
-  <div>
-    <div class="welcome">
-      <img src="public/assets/M.png" alt="myment-logo" class="logo" />
-      <span>Welcome to your plan!</span>
-    </div>
-    <div class="bigContainer">
-      <div class="containerSide">
-        <side-menu></side-menu>
-      </div>
-      <div class="containerCenter"></div>
+  <div class="globalContainer">
+    <logged-header></logged-header>
+    <div class="container">
+          <div class="sidemenu"><div class="customSM"></div></div>
+          <div class="midZone">
+            <div class="map">
+              <customized-map></customized-map>
+            </div>
+            <div class="buttonbar">
+              <custom-button customWidth = "120px" name = "Generate"></custom-button>
+              <custom-button name = "Add"></custom-button>
+              <custom-button customWidth = "120px" name = "Explore"></custom-button>
+            </div>
+          </div>
+          <div class="ghostRanking"><leader-board></leader-board></div>
     </div>
   </div>
 </template>
 
 <script>
-import Menu from '../../components/QuickActionsMenu';
+import map from '../../components/Map'
+import LoggedHeader from '../../components/LoggedHeader'
+import newsBar from '../../components/NewsBar';
+import Footer from '../../components/Footer';
+import Button from '../../components/Button'; 
+import FakeLeaderboard from '../../components/FakeLeaderboard'
 export default {
-  name: 'Main',
+  name: 'Home',
   components: {
-    'side-menu': Menu,
-  },
+  'customized-map': map,
+  'logged-header': LoggedHeader,
+  'news-bar': newsBar,
+  'custom-footer': Footer,
+  'custom-button': Button, 
+  'leader-board': FakeLeaderboard
+  }
 };
 </script>
 
-<style>
-.logo {
-  width: 150px;
-  height: 150px;
-}
-.bigContainer {
+<style scoped>
+
+/*.globalContainer .container{
+  margin-left: auto;
+  margin-right: auto;
+}*/
+
+.globalContainer {
+  background-color: #255060;
+  margin: auto;
+  margin-top: 0;
+  display: grid;
+  grid-template-rows: 5% 95%;
   width: 100vw;
   height: 100vh;
-  display: grid;
-  grid-template-columns: 30% 70%;
-}
-.containerCenter {
-  width: 100%;
-  height: 100%px;
-  background-color: black;
-}
-.containerSide {
-  min-width: 10px;
-  min-height: 10px;
   background-color: #79f0a5;
+  
+
+
 }
-.welcome {
-  font-family: roboto, sans-serif;
+
+.map{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: black;
+
 }
+
+.container{
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  background: #66838C;
+  
+  
+  }
+.sidemenu{
+  display: flex;
+  align-items: center;
+  }
+.customSM{
+  width: 300px;
+  height: 600px;
+  background: #255060;
+
+}
+.midZone{
+  display: grid;
+  grid-template-rows: 70% 30%;
+  background: white;
+  height: 85%;
+  margin-top: 45px;
+  margin-right: 45px;
+  margin-left: 45px;
+  box-shadow: 8px 8px 13px #255060, -8px -8px 13px #255060;
+    border-radius: 35px;
+    overflow: hidden;
+}
+
+
+.buttonbar{
+display: flex;
+align-items: center;
+justify-content: space-around;
+
+
+}
+.buttonbar:hover{
+  background: #12345D;
+  
+}
+
+
 </style>

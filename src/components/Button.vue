@@ -1,5 +1,5 @@
 <template>
-    <button class="Button" > {{name}}</button>
+  <button class="Button" @click="clickAction" :style="{ width: customWidth, height: customHeight }">{{name}}</button>
 </template>
 
 <script>
@@ -16,23 +16,40 @@ export default {
       required: false,
       default: ''
     },
-  
-
-
+    action:{
+      type: String,
+      required: false,
+      default: 'generate'
+    }
+    ,
   },
   name: 'Button', 
   data() {
     return {
-   }
+    };
   },
   methods: {
-    Redirect(){
-      
+    clickAction() {
+      if (this.action === 'generate'){
+        this.generate();
+      }
+      if (this.action === 'random') {
+        // this.random();
+      }
+    },
+    generate() {
+      console.log('This is the generate action)');
+    },
+  },
+  computed: {
+  },
+  mounted(){
+    if (this.action === 'generate') {
+      this.$el.classList.add('generateStyle');
     }
+    
   }
-
-  }
-
+};
 </script>
 
 <style > 

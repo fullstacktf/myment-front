@@ -6,7 +6,7 @@
     <div class="rightZone">
       <anim-logo></anim-logo>
       <router-link to="/short">
-        <to-short name="Let's beggin" customWidth="700px" customHeight="60px"></to-short>
+        <to-short name="Let's beggin" ></to-short>
       </router-link>
     </div>
   </div>
@@ -15,14 +15,14 @@
 <script>
 import SignUpMenu from '../../components/SignUpMenu';
 import AnimLogo from '../../components/AnimLogo';
-import ToShort from '../../components/Button';
+import Button from '../../components/Button';
 
 export default {
   name: 'LandingPage',
   components: {
     'sign-menu': SignUpMenu,
     'anim-logo': AnimLogo,
-    'to-short': ToShort,
+    'short-button': Button,
   },
 };
 </script>
