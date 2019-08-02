@@ -4,12 +4,12 @@
 </template>
 
 <script>
-import { Slide } from 'vue-burger-menu';
+import { Push } from 'vue-burger-menu';
 
 export default {
   name: 'SidebarMenu',
   components: {
-    'slide-menu': Slide,
+    'slide-menu': Push,
   },
 };
 </script>
@@ -162,9 +162,11 @@ export default {
 @keyframes slide-animation {
   0% {
     width: 0%;
+    height: 0%;
   }
   100% {
     width: 100%;
+    height: 100%;
   }
 }
 .v-sidebar-menu .vsm-header {
