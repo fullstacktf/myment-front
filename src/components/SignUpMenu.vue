@@ -1,13 +1,23 @@
 
 <template>
   <slide-menu disableOutsideClick>
-    <div class="columns">
-      <div class="column is-full">
-        <signup-form></signup-form>
-      </div>
-      <div class="column">
-        <signin-form></signin-form>
-      </div>
+    <div>
+      <b-collapse :open="false" aria-id="contentIdForA11y1">
+        <button
+          class="button is-warning is-medium"
+          slot="trigger"
+          aria-controls="contentIdForA11y1"
+        >Sign up !</button>
+        <div class="notification">
+          <div class="content">
+            <h3>Sign Up</h3>
+            <signup-form></signup-form>
+          </div>
+        </div>
+      </b-collapse>
+    </div>
+    <div>
+      <signin-form></signin-form>
     </div>
     <div class="routerWrapper">
       <router-link v-if="userLoged" to="/home">
@@ -18,16 +28,6 @@
 </template>
 
 <script>
-/***
- *     <h3>MENU</h3>
-
-    <div class="signInContainer">
-    </div>
-
-    <div class="signInContainer">
-    </div>
- */
-
 import { Push } from 'vue-burger-menu';
 import Button from './Button';
 import SignUp from './SignUp';

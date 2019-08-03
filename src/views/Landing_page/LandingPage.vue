@@ -3,16 +3,17 @@
     <div class="column is-one-fifth">
       <sign-menu></sign-menu>
     </div>
-    <div class="column is-half">
+    <div class="column is-7">
       <div class="columnContent">
         <figure class="image is-square">
           <img src="../../../public/assets/giphy.gif" />
         </figure>
         <router-link to="/short">
-          <a class="button is-large is-fullwidth is-warning">LET'S FLY</a>
+          <a class="button main is-large is-fullwidth is-warning">LET'S FLY</a>
         </router-link>
       </div>
     </div>
+    <div class="column"></div>
   </div>
 </template>
 
@@ -36,7 +37,7 @@ export default {
   width: 700px;
   height: 700px;
 }
-.button {
+.button.main {
   width: 600px !important;
 }
 .columnContent {
