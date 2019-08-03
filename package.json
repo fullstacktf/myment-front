@@ -19,8 +19,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"buefy": "^0.8.1",
-		"semantic-ui-css": "^2.4.1",
-		"semantic-ui-vue": "^0.8.1",
+		"bulma": "^0.7.5",
 		"vue": "^2.6.10",
 		"vue-burger-menu": "^2.0.2",
 		"vue-choropleth": "^0.3.1",

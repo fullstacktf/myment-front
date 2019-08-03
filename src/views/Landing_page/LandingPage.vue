@@ -1,13 +1,17 @@
 <template>
-  <div class="landing">
-    <div class="leftZone">
+  <div class="columns is-centered">
+    <div class="column is-one-fifth">
       <sign-menu></sign-menu>
     </div>
-    <div class="rightZone">
-      <anim-logo></anim-logo>
-      <router-link to="/short">
-        <short-button name="Let's beggin" customWidth="200px" customheight="50px"></short-button>
-      </router-link>
+    <div class="column is-half">
+      <div class="columnContent">
+        <figure class="image is-square">
+          <img src="../../../public/assets/giphy.gif" />
+        </figure>
+        <router-link to="/short">
+          <a class="button is-large is-fullwidth is-warning">LET'S FLY</a>
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -28,17 +32,19 @@ export default {
 </script>
 
 <style>
-.landing {
-  display: grid;
-  grid-template-columns: 20% 80%;
-  width: 100vw;
-  height: 100vh;
-  background-color: #66838c;
+.image {
+  width: 700px;
+  height: 700px;
 }
-.rightZone {
+.button {
+  width: 600px !important;
+}
+.columnContent {
   display: grid;
+  grid-gap: 30px;
+  justify-content: center;
   justify-items: center;
-  align-items: center;
-  grid-template-rows: 80% 20%;
+  align-content: space-around;
+  width: 100%;
 }
 </style>

@@ -1,15 +1,24 @@
 <template>
   <section>
-    <b-field grouped>
-      <b-switch v-model="isRounded">Rounded</b-switch>
-      <b-switch v-model="isOutlined">Outlined</b-switch>
-    </b-field>
-    <b-switch :rounded="isRounded" :outlined="isOutlined">Sample</b-switch>
+    <b-switch :rounded="isRounded" :outlined="isOutlined" is-large>Sign In</b-switch>
   </section>
 </template>
 
-<script>
+<script scoped>
+import { Stream } from 'stream';
 export default {
+  name: 'SignUpInSwitch',
+  props: {
+    name: {
+      type: String,
+      required: true,
+    },
+  },
+  methods: {
+    hello() {
+      console.log('hello');
+    },
+  },
   data() {
     return {
       isRounded: false,

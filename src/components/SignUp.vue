@@ -26,7 +26,7 @@
     </section>
 </template>
 
-<script>
+<script scoped>
 export default {
   name: 'FormExample',
 };

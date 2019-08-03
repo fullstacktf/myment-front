@@ -16,7 +16,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 a {
   margin-top: 40px;
   display: block;
