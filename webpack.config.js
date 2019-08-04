@@ -31,7 +31,7 @@ module.exports = {
 		hot: true,
 		open: true,
 		overlay: true,
-		port: 8001,
+		port: 8000,
 		stats: {
 			normal: true
 		}
