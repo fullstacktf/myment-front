@@ -16,6 +16,11 @@
           <b-taginput maxtags="1"></b-taginput>
         </b-field>
       </div>
+      <b-field>
+        <p class="control">
+          <button class="button is-warning is-fullwidth">lets generate</button>
+        </p>
+      </b-field>
     </div>
     <div class="warning" v-else>
       <router-link to="/short">
