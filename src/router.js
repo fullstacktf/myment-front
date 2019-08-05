@@ -10,11 +10,11 @@ export default new Router({
 			name: 'Landing',
 			component: () => import('./views/Landing_page/LandingPage.vue')
 		},
-		{
-			path: '/home',
-			name: 'Home',
-			component: () => import('./views/Home_page/HomePage.vue')
-		},
+		//{
+		//	path: '/home',
+		//	name: 'Home',
+		//	component: () => import('./views/Home_page/HomePage.vue')
+		//},
 
 		{
 			path: '/short',
@@ -25,11 +25,6 @@ export default new Router({
 			path: '/idea-add',
 			name: 'IdeaAdd',
 			component: () => import('./views/Idea_adder/IdeaAdder.vue')
-		},
-		{
-			path: '/pablo-example',
-			name: 'PabloEx',
-			component: () => import('./views/Example_view/PabloEx.vue')
 		}
 	]
 });

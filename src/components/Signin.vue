@@ -7,6 +7,8 @@
     <b-field label="Password">
       <b-input type="password" value="iwantmytreasure" password-reveal></b-input>
     </b-field>
+
+    <input type="submit" class="button is-success" value="log in" />
   </section>
 </template>
 
