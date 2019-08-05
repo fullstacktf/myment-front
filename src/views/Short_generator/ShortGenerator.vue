@@ -8,8 +8,9 @@
       </router-link>
     </div>
     <div class="column centerzone is-10">
-      <b-field label="Enter your location in 2 tags ">
-        <b-taginput v-model="tags" type="is-dark" placeholder="introduce the destination"></b-taginput>
+      <b-field class="topField">
+        <b-taginput v-model="tags" type="is-dark" placeholder="Enter the location in 2 tags "></b-taginput>
+        <b-radio-button>search location</b-radio-button>
       </b-field>
       <div class="tabWrapper">
         <b-tabs type="is-toggle is-danger " expanded>
@@ -24,14 +25,36 @@
             </div>
           </b-tab-item>
           <b-tab-item label="short" icon="video">
-            <div class="ideaTableShort">
-              <idea-item
-                v-for="idea in ideaStructure"
-                :name="idea.name"
-                :description="idea.description"
-                :start="idea.timeStart"
-                :end="idea.timeEnd"
-              ></idea-item>
+            <div class="masterContent">
+              <!-- this is the component of the itinerary -->
+              <div class="itineraryComponent" v-if="tagsAdded">
+                <div class="ideaTableShort">
+                  <idea-item
+                    v-for="idea in ideaStructure"
+                    :name="idea.name"
+                    :description="idea.description"
+                    :start="idea.timeStart"
+                    :end="idea.timeEnd"
+                  ></idea-item>
+                </div>
+              </div>
+              <!-- this is the component of the tag adder -->
+
+              <div class="columns">
+                <div class="column is-3"></div>
+                <div class="column is-6">
+                  <button
+                    v-if="!tagsAdded"
+                    class="button is-primary is-large is-warning is-fullwidth"
+                    @click="isComponentModalActive = true"
+                  >Generate Itinerary !</button>
+
+                  <b-modal :active.sync="isComponentModalActive" has-modal-card>
+                    <tag-adder></tag-adder>
+                  </b-modal>
+                </div>
+                <div class="column is-3"></div>
+              </div>
             </div>
           </b-tab-item>
         </b-tabs>
@@ -129,6 +152,8 @@ export default {
           timeEnd: 0,
         },
       ],
+      tagsAdded: false,
+      isComponentModalActive: false,
     };
   },
 };
@@ -136,6 +161,10 @@ export default {
 
 <style scoped>
 .bigParent {
+}
+
+.topField {
+  margin-top: 20px;
 }
 
 .void1 {
@@ -161,6 +190,9 @@ export default {
   max-height: 600px;
   overflow: hidden scroll;
   background-color: white;
+}
+.tagComponent {
+  align-self: center;
 }
 
 .ideaTableFree {
