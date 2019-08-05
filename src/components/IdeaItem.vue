@@ -10,7 +10,7 @@
         <div class="content">
           <h3>{{ start }}</h3>
           <p>{{ description }}</p>
-          <a class="button is-info" :href="location">location</a>
+          <a class="button is-info" :href="location" target="_blank">location</a>
           <h3>{{ end }}</h3>
         </div>
       </div>
