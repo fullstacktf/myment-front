@@ -2,7 +2,7 @@
   <div class="ideaWrapper">
     <b-collapse :open="false" aria-id="contentIdForA11y1">
       <button
-        class="button is-rounded is-large is-fullwidth is-focusable"
+        class="button is-dark is-rounded is-large is-fullwidth is-focusable"
         slot="trigger"
         aria-controls="contentIdForA11y1"
       >{{ name }}</button>
@@ -47,6 +47,5 @@ export default {
 <style>
 .ideaWrapper {
   padding: 20px;
-  background-color: #a5bec4;
 }
 </style>
