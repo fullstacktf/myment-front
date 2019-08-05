@@ -10,6 +10,7 @@
         <div class="content">
           <h3>{{ start }}</h3>
           <p>{{ description }}</p>
+          <a class="button is-info" :href="location">location</a>
           <h3>{{ end }}</h3>
         </div>
       </div>
@@ -39,6 +40,11 @@ export default {
       type: Number,
       required: false,
       default: '00',
+    },
+    location: {
+      type: String,
+      required: false,
+      default: '#',
     },
   },
 };
