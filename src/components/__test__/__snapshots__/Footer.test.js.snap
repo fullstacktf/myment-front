@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer render component 1`] = `"<div class=\\"footerContainer\\"> derechos de copyright todos tochos  los seres todopoderosos a los que vosotros, simples usuarios, debéis reverencia  2019</div>"`;

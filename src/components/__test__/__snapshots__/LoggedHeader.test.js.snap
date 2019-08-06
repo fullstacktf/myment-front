@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoggedHeader render component 1`] = `"<div class=\\"headerNav\\"><img src=\\"../../public/assets/M.png\\" alt=\\"our coolest logo\\"> <newsbar-stub newnews=\\"\\" class=\\"news\\"></newsbar-stub></div>"`;
