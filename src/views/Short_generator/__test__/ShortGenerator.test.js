@@ -2,13 +2,8 @@ import ShortGenerator from '../ShortGenerator.vue';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import VueRouter from 'vue-router';
 import Buefy from 'buefy';
-import { mockData } from '../../../test/mockData';
-const mock = {
-  name: mockData.zone[0].food.ideas[0].name,
-  description: mockData.zone[0].food.ideas[0].description,
-  timeStart: mockData.zone[0].food.ideas[0].startTime[0],
-  timeEnd: mockData.zone[0].food.ideas[0].endTime[0],
-};
+import { mock } from '../../../test/mockBack';
+
 describe('ShortGenerator', () => {
   let localVue;
   beforeEach(() => {

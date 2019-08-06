@@ -1,14 +1,8 @@
 import IdeaAdder from '../IdeaItem.vue';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import Buefy from 'buefy';
-import { mockData } from '../../test/mockData';
+import mock from '../../test/mockBack';
 
-const mock = {
-  name: mockData.zone[0].food.ideas[0].name,
-  description: mockData.zone[0].food.ideas[0].description,
-  start: mockData.zone[0].food.ideas[0].startTime[0],
-  end: mockData.zone[0].food.ideas[0].endTime[0],
-};
 describe('IdeaAdder', () => {
   let localVue;
   beforeEach(() => {
