@@ -32,7 +32,6 @@ import { Push } from 'vue-burger-menu';
 import Button from './Button';
 import SignUp from './SignUp';
 import SignIn from './Signin';
-import SwitchUpIn from './SignUpInSwitch';
 
 export default {
   name: 'SidebarMenu',
@@ -41,7 +40,6 @@ export default {
     'use-button': Button,
     'signup-form': SignUp,
     'signin-form': SignIn,
-    'upin-switch': SwitchUpIn,
   },
   data() {
     return {
