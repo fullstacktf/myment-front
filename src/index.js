@@ -8,7 +8,7 @@ import 'buefy/dist/buefy.css';
 Vue.use(Buefy);
 
 new Vue({
-	store,
-	router,
-	render: (h) => h(App)
+  store,
+  router,
+  render: h => h(App),
 }).$mount('#app');

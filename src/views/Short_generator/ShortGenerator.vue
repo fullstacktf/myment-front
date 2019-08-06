@@ -69,18 +69,14 @@
 </template>
 
 <script>
-import SiteInput from '../../components/SiteInput';
 import Button from '../../components/Button';
-import GenButton from '../../components/GenButton';
 import IdeaItem from '../../components/IdeaItem';
 import TagAdder from '../Tag_adder/TagAdder';
 
 export default {
   name: 'Short',
   components: {
-    'site-input': SiteInput,
     'option-button': Button,
-    'generate-button': GenButton,
     'tag-adder': TagAdder,
     'idea-item': IdeaItem,
   },
