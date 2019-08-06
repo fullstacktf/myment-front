@@ -9,12 +9,10 @@ jobs:
       name: "Unit testing"
       script: 
         npm run test
-        npm run test:coverage
     - stage: deploy
       name: "Deploy to gh-pages"
       script: 
         npm run build
-        npm run build:docs
       deploy:
         local_dir: dist
         github_token: $GH_TOKEN
