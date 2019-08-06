@@ -13,7 +13,6 @@ jobs:
       name: "Build with webpack"
       script: 
         npm run build
-        npm run build:docs
     - deploy:
         local_dir: dist
         github_token: $GH_TOKEN
