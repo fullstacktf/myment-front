@@ -1,0 +1,23 @@
+basicos:
+ #8E78C5
+ #91B9C5
+ #A6E5BA
+ #A6E5BA
+
+min saturación:
+ #A297C4
+ #A5BEC4
+ #CAE0CF
+ #634868
+
+max saturación:
+ #6445C4
+ #45ACC4
+ #53E077
+ #590068
+
+max oscuridad:
+ #64557F
+ #66838C
+ #779680
+ #451A4F
