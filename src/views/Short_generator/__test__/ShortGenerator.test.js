@@ -6,8 +6,8 @@ import { mockData } from './mockData';
 const mock = {
   name: mockData.zone[0].food.ideas[0].name,
   description: mockData.zone[0].food.ideas[0].description,
-  timeStart: mockData.zone[0].food.ideas[0].startTime,
-  timeEnd: mockData.zone[0].food.ideas[0].endTime,
+  timeStart: mockData.zone[0].food.ideas[0].startTime[0],
+  timeEnd: mockData.zone[0].food.ideas[0].endTime[0],
 };
 describe('ShortGenerator', () => {
   let localVue;
@@ -18,27 +18,53 @@ describe('ShortGenerator', () => {
     localVue = Vue;
   });
 
-  test('render button', () => {
+  test('render component', () => {
     const wrapper = shallowMount(ShortGenerator, {
       localVue,
     });
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  test('button exist', () => {
+  test('Exist itineraryComponent if tagsAdded is true', () => {
     const wrapper = shallowMount(ShortGenerator, {
       localVue,
-    });
-    const existButton = wrapper.find('.button');
-    expect(existButton).toBeTruthy();
-  });
-
-  test('Check the loggedAdded', () => {
-    const wrapper = shallowMount(ShortGenerator, {
-      localVue,
-      propsData: {
-        ideaStructure: mock,
+      data() {
+        return {
+          tagsAdded: true,
+        };
       },
     });
+
+    expect(wrapper.find('.itineraryComponent').exists()).toBeTruthy();
+  });
+
+  test('Not exist itineraryComponent if tagsAdded is false', () => {
+    const wrapper = shallowMount(ShortGenerator, {
+      localVue,
+      data() {
+        return {
+          tagsAdded: false,
+        };
+      },
+    });
+    expect(wrapper.find('.itineraryComponent').exists()).toBeFalsy();
+  });
+
+  test('Checks ideaItem props', () => {
+    const wrapper = shallowMount(ShortGenerator, {
+      localVue,
+      data() {
+        return {
+          ideaStructure: [mock],
+          tagsAdded: true,
+        };
+      },
+    });
+    const attr = wrapper.find('idea-item-stub').attributes();
+
+    expect(attr.description).toBe(mock.description);
+    expect(attr.end).toBe(mock.timeEnd.toString());
+    expect(attr.start).toBe(mock.timeStart.toString());
+    expect(attr.name).toBe(mock.name);
   });
 });
