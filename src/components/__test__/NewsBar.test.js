@@ -5,6 +5,7 @@ import mock from '../../test/mockBack';
 
 describe('NewsBar', () => {
   let localVue;
+
   beforeEach(() => {
     const Vue = createLocalVue();
     Vue.use(Buefy);
@@ -13,17 +14,14 @@ describe('NewsBar', () => {
   test('render component', () => {
     const wrapper = shallowMount(NewsBar, {
       localVue,
+      propsData: {
+        newNews: "Hi I'm news bar letter",
+      },
     });
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  test('Check props', () => {
-    
-  });
+  test('Check props', () => {});
 
-  test('check Contents props', () => {
-    
-  });
+  test('check Contents props', () => {});
 });
-
-

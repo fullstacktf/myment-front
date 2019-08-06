@@ -13,17 +13,14 @@ describe('Button', () => {
   test('render component', () => {
     const wrapper = shallowMount(Button, {
       localVue,
+      propsData: {
+        name: 'Boton',
+      },
     });
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  test('Check props', () => {
-    
-  });
+  test('Check props', () => {});
 
-  test('check Contents props', () => {
-    
-  });
+  test('check Contents props', () => {});
 });
-
-

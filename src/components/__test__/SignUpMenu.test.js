@@ -1,6 +1,7 @@
 import SignUpMenu from '../SignUpMenu.vue';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import Buefy from 'buefy';
+import VueRouter from 'vue-router';
 import mock from '../../test/mockBack';
 
 describe('SignUpMenu', () => {
@@ -8,6 +9,7 @@ describe('SignUpMenu', () => {
   beforeEach(() => {
     const Vue = createLocalVue();
     Vue.use(Buefy);
+    Vue.use(VueRouter);
     localVue = Vue;
   });
   test('render component', () => {
@@ -17,13 +19,7 @@ describe('SignUpMenu', () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  test('Check props', () => {
-    
-  });
+  test('Check props', () => {});
 
-  test('check Contents props', () => {
-    
-  });
+  test('check Contents props', () => {});
 });
-
-
