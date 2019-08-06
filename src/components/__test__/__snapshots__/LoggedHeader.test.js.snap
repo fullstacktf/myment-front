@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoggedHeader render component 1`] = `"<div class=\\"headerNav\\"><img src=\\"../../public/assets/M.png\\" alt=\\"our coolest logo\\"> <newsbar-stub newnews=\\"if you are watching it, some error may has happened or its just a random text for test it. Use the 'newNews' prop for change me. We will show in this bar some useful stuff\\" class=\\"news\\"></newsbar-stub></div>"`;

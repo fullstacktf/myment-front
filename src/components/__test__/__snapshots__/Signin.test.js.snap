@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signin render component 1`] = `"<section><b-field-stub label=\\"Username\\" addons=\\"true\\"><b-input-stub maxlength=\\"30\\" usehtml5validation=\\"true\\" value=\\"johnsilver\\" type=\\"text\\" hascounter=\\"true\\" customclass=\\"\\"></b-input-stub></b-field-stub> <b-field-stub label=\\"Password\\" addons=\\"true\\"><b-input-stub usehtml5validation=\\"true\\" value=\\"iwantmytreasure\\" type=\\"password\\" passwordreveal=\\"true\\" hascounter=\\"true\\" customclass=\\"\\"></b-input-stub></b-field-stub> <input type=\\"submit\\" value=\\"log in\\" class=\\"button is-success\\"></section>"`;

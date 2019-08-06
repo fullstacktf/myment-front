@@ -1,12 +1,9 @@
----
-to: app/hello.js
----
-import <%= name %> from '../IdeaItem.vue';
+import LoggedHeader from '../LoggedHeader.vue';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import Buefy from 'buefy';
 import mock from '../../test/mockBack';
 
-describe('<%= name %>', () => {
+describe('LoggedHeader', () => {
   let localVue;
   beforeEach(() => {
     const Vue = createLocalVue();
@@ -14,7 +11,7 @@ describe('<%= name %>', () => {
     localVue = Vue;
   });
   test('render component', () => {
-    const wrapper = shallowMount(<%= name %>, {
+    const wrapper = shallowMount(LoggedHeader, {
       localVue,
     });
     expect(wrapper.html()).toMatchSnapshot();
