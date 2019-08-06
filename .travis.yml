@@ -6,14 +6,16 @@ nodejs:
 jobs:
   include:
     - stage: test
-      name: "Testing all components"
+      name: "Unit testing"
       script: 
         npm run test
-    - stage: Build
-      name: "Build with webpack"
+        npm run test:coverage
+    - stage: deploy
+      name: "Deploy to gh-pages"
       script: 
         npm run build
-    - deploy:
+        npm run build:docs
+      deploy:
         local_dir: dist
         github_token: $GH_TOKEN
         provider: pages
