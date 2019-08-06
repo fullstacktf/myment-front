@@ -2,9 +2,7 @@
   <div class="columns bigParent">
     <div class="column void1">
       <router-link to="/home">
-        <span class="icon is-large">
-          <i class="fas fa-home"></i>
-        </span>
+        <span class="icon is-large">home</span>
       </router-link>
     </div>
     <div class="column centerzone is-10">
@@ -14,28 +12,29 @@
       </b-field>
       <div class="tabWrapper">
         <b-tabs type="is-toggle is-danger " expanded>
-          <b-tab-item label="free" class="is-danger">
-            <div class="ideaTableFree">
-              <h1>not available</h1>
+          <b-tab-item label="short" class="is-danger">
+            <div class="ideaTableShort">
+              <idea-item
+                v-for="idea in ideaStructure"
+                :name="idea.name"
+                :description="idea.description"
+                :start="idea.timeStart"
+                :end="idea.timeEnd"
+                :location="idea.location"
+              ></idea-item>
             </div>
           </b-tab-item>
           <b-tab-item label="custom" icon="library-music">
             <div class="ideaTableCustom">
-              <h1>not available</h1>
+              <h1>custom itinerary not available</h1>
             </div>
           </b-tab-item>
-          <b-tab-item label="short" icon="video">
+          <b-tab-item label="free" icon="video">
             <div class="masterContent">
               <!-- this is the component of the itinerary -->
               <div class="itineraryComponent" v-if="tagsAdded">
-                <div class="ideaTableShort">
-                  <idea-item
-                    v-for="idea in ideaStructure"
-                    :name="idea.name"
-                    :description="idea.description"
-                    :start="idea.timeStart"
-                    :end="idea.timeEnd"
-                  ></idea-item>
+                <div class="ideaTableFree">
+                  <h1>free itinerary not available</h1>
                 </div>
               </div>
               <!-- this is the component of the tag adder -->
@@ -89,9 +88,12 @@ export default {
       ideaStructure: [
         {
           name: 'hotel',
-          description: 'lorem ipsum ...',
+          description:
+            'Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipisci[ng] velit, sed quia non numquam [do] eius modi tempora inci[di]dunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur?',
           timeStart: 0,
           timeEnd: 0,
+
+          location: 'https://www.emezeta.com/aulavirtual/',
         },
         {
           name: 'hotel',
@@ -152,7 +154,7 @@ export default {
           timeEnd: 0,
         },
       ],
-      tagsAdded: false,
+      tagsAdded: true,
       isComponentModalActive: false,
     };
   },
