@@ -4,7 +4,7 @@
 	"description": "This repo contain the front API for the web application myment.",
 	"main": "index.js",
 	"scripts": {
-		"build": "cross-env NODE_ENV=production webpack",
+		"build": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
 		"dev": "cross-env NODE_ENV=development webpack-dev-server --progress",
 		"test": "jest",
 		"test:watch": "jest --watch",
@@ -18,7 +18,7 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"buefy": "^0.8.1",
+		"buefy": "^0.8.2",
 		"bulma": "^0.7.5",
 		"fas": "^0.3.6",
 		"font-awesome": "^4.7.0",
@@ -55,10 +55,13 @@
 		"image-process-loader": "^1.1.1",
 		"jest": "^24.8.0",
 		"mini-css-extract-plugin": "^0.8.0",
+		"node-sass": "^4.12.0",
 		"prettier": "^1.18.2",
+		"sass-loader": "^7.1.0",
+		"sharp": "^0.23.0",
+		"style-loader": "^1.0.0",
 		"ts-jest": "^24.0.2",
 		"typescript": "^3.5.3",
-		"sharp": "^0.23.0",
 		"vue-jest": "^3.0.4",
 		"vue-loader": "^15.7.1",
 		"vue-server-renderer": "^2.6.10",
@@ -66,6 +69,7 @@
 		"vue-template-compiler": "^2.6.10",
 		"webpack": "^4.29.0",
 		"webpack-cli": "^3.2.1",
-		"webpack-dev-server": "^3.1.14"
+		"webpack-dev-server": "^3.1.14",
+		"webpack-merge": "^4.2.1"
 	}
 }
