@@ -1,41 +1,51 @@
 <template>
-  <div class="landing">
-    <div class="leftZone">
-      <log-menu></log-menu>
+  <div class="columns is-centered">
+    <div class="column is-one-fifth">
+      <sign-menu></sign-menu>
     </div>
-    <div class="rightZone">
-      <anim-logo></anim-logo>
-      <to-short name="Let's beggin"></to-short>
+    <div class="column is-7">
+      <div class="columnContent">
+        <figure class="image is-square">
+          <img src="../../../public/assets/giphy.gif" />
+        </figure>
+        <router-link to="/short">
+          <a class="button main is-large is-fullwidth is-warning">LET'S FLY</a>
+        </router-link>
+      </div>
     </div>
+    <div class="column"></div>
   </div>
 </template>
 
 <script>
-import LoginMenu from '../../components/LoginMenu';
+import SignUpMenu from '../../components/SignUpMenu';
 import AnimLogo from '../../components/AnimLogo';
-import ToShort from '../../components/Button';
+import Button from '../../components/Button';
 
 export default {
   name: 'LandingPage',
   components: {
-    'log-menu': LoginMenu,
+    'sign-menu': SignUpMenu,
     'anim-logo': AnimLogo,
-    'to-short': ToShort,
+    'short-button': Button,
   },
 };
 </script>
 
 <style>
-.landing {
-  display: grid;
-  grid-template-columns: 20% 80%;
-  width: 100vw;
-  height: 100vh;
+.image {
+  width: 700px;
+  height: 700px;
 }
-.rightZone {
+.button.main {
+  width: 600px !important;
+}
+.columnContent {
   display: grid;
+  grid-gap: 30px;
+  justify-content: center;
   justify-items: center;
-  align-items: center;
-  grid-template-rows: 80% 20%;
+  align-content: space-around;
+  width: 100%;
 }
 </style>

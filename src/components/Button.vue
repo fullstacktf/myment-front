@@ -1,53 +1,60 @@
 <template>
-  <button class="Button" :style="style">{{name}}</button>
+  <button class="Button" @click="clickAction" :style="{ width: customWidth, height: customHeight }">{{name}}</button>
 </template>
 
 <script>
 export default {
+
   props: {
-    name: {
-      //Generate, add or examine
+    name: { //Generate, add or examine
       type: String,
       required: true,
-      default: 'generate',
+      default: 'generate'
     },
-    route: {
+      route: {
       type: String,
       required: false,
-      default: '',
+      default: ''
     },
-    customWidth: {
+    action:{
       type: String,
       required: false,
-      default: '100px',
-    },
-    customHeight: {
-      type: String,
-      required: false,
-      default: '70px',
-    },
+      default: 'generate'
+    }
+    ,
   },
-  name: 'Button',
+  name: 'Button', 
   data() {
     return {
-      cWidth: this.customWidth,
-      cHeight: this.customHeight,
     };
   },
   methods: {
-    Redirect() {},
-  },
-  computed: {
-    style() {
-      return 'width: ' + this.cWidth + ';' + 'height: ' + this.cHeight + ';';
+    clickAction() {
+      if (this.action === 'generate'){
+        this.generate();
+      }
+      if (this.action === 'random') {
+        // this.random();
+      }
+    },
+    generate() {
+      console.log('This is the generate action)');
     },
   },
+  computed: {
+  },
+  mounted(){
+    if (this.action === 'generate') {
+      this.$el.classList.add('generateStyle');
+    }
+    
+  }
 };
 </script>
 
-<style >
+<style > 
 .Button {
-  color: white;
+  color:white;
   background: #454647;
   background-image: -webkit-linear-gradient(top, #454647, #000000);
   background-image: -moz-linear-gradient(top, #454647, #000000);
@@ -62,8 +69,9 @@ export default {
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   box-shadow: 2px 2px #454647;
+
 }
-.Button:hover {
+.Button:hover{
   color: white;
   background: #061636;
   background-image: -webkit-linear-gradient(top, #061636, #092038);
@@ -71,8 +79,9 @@ export default {
   background-image: -ms-linear-gradient(top, #061636, #092038);
   background-image: -o-linear-gradient(top, #061636, #092038);
   background-image: linear-gradient(to bottom, #061636, #092038);
-  text-decoration: none;
+  text-decoration: none;  
 }
+
 </style>
 
   
