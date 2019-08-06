@@ -8,7 +8,7 @@
 import { SidebarMenu } from 'vue-sidebar-menu';
 
 export default {
-  name: IdeaAdder,
+  name: 'IdeaAdder',
   components: {
     'side-menu': SidebarMenu,
   },
