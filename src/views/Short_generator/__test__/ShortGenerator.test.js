@@ -2,7 +2,7 @@ import ShortGenerator from '../ShortGenerator.vue';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import VueRouter from 'vue-router';
 import Buefy from 'buefy';
-import { mockData } from './mockData';
+import { mockData } from '../../../test/mockData';
 const mock = {
   name: mockData.zone[0].food.ideas[0].name,
   description: mockData.zone[0].food.ideas[0].description,
