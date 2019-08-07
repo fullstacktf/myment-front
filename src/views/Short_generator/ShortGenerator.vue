@@ -13,33 +13,21 @@
       <div class="tabWrapper">
         <b-tabs type="is-toggle is-danger " expanded>
           <b-tab-item label="short" class="is-danger">
-            <div class="ideaTableShort">
-              <idea-item
-                v-for="idea in ideaStructure"
-                :name="idea.name"
-                :description="idea.description"
-                :start="idea.timeStart"
-                :end="idea.timeEnd"
-                :location="idea.location"
-              ></idea-item>
-            </div>
-          </b-tab-item>
-          <b-tab-item label="custom" icon="library-music">
-            <div class="ideaTableCustom">
-              <h1>custom itinerary not available</h1>
-            </div>
-          </b-tab-item>
-          <b-tab-item label="free" icon="video">
             <div class="masterContent">
               <!-- this is the component of the itinerary -->
-              <div class="itineraryComponent" v-if="tagsAdded">
-                <div class="ideaTableFree">
-                  <h1>free itinerary not available</h1>
-                </div>
+              <div class="ideaTableShort" v-if="tagsAdded">
+                <idea-item
+                  v-for="idea in ideaStructure"
+                  :key="idea.id"
+                  :name="idea.name"
+                  :description="idea.description"
+                  :start="idea.timeStart"
+                  :end="idea.timeEnd"
+                  :location="idea.location"
+                ></idea-item>
+                <!-- this is the component of the tag adder -->
               </div>
-              <!-- this is the component of the tag adder -->
-
-              <div class="columns">
+              <div class="columns" v-else>
                 <div class="column is-3"></div>
                 <div class="column is-6">
                   <button
@@ -53,6 +41,18 @@
                   </b-modal>
                 </div>
                 <div class="column is-3"></div>
+              </div>
+            </div>
+          </b-tab-item>
+          <b-tab-item label="custom" icon="library-music">
+            <div class="ideaTableCustom">
+              <h1>custom itinerary not available</h1>
+            </div>
+          </b-tab-item>
+          <b-tab-item label="free" icon="video">
+            <div class="itineraryComponent" v-if="tagsAdded">
+              <div class="ideaTableFree">
+                <h1>free itinerary not available</h1>
               </div>
             </div>
           </b-tab-item>
