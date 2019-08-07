@@ -10,11 +10,11 @@ export default new Router({
 			name: 'Landing',
 			component: () => import('./views/Landing_page/LandingPage.vue')
 		},
-		//{
-		//	path: '/home',
-		//	name: 'Home',
-		//	component: () => import('./views/Home_page/HomePage.vue')
-		//},
+		{
+			path: '/home',
+			name: 'Home',
+			component: () => import('./views/Home_view/Home.vue')
+		},
 
 		{
 			path: '/short',
