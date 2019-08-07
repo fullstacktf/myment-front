@@ -23,7 +23,7 @@ export default {
 .marquee {
     display:flex;
     align-items: center;
-    font-size: 25px;
+    font-size: 17px;
     width: 100%;
     height: 50px;
 	background-color: rgb(0, 0, 0);
@@ -37,6 +37,7 @@ export default {
     display: inline-block;
     padding-left: 100%;
     animation: marquee 15s linear infinite;
+    vertical-align: center;
 }
 @keyframes marquee {
     0%   { transform: translate(0, 0); }
