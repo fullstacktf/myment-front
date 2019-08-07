@@ -14,16 +14,6 @@
       </b-field>
       <div class="tabWrapper">
         <b-tabs type="is-toggle is-danger " expanded>
-          <b-tab-item label="free" class="is-danger">
-            <div class="ideaTableFree">
-              <h1>not available</h1>
-            </div>
-          </b-tab-item>
-          <b-tab-item label="custom" icon="library-music">
-            <div class="ideaTableCustom">
-              <h1>not available</h1>
-            </div>
-          </b-tab-item>
           <b-tab-item label="short" icon="video">
             <div class="masterContent">
               <!-- this is the component of the itinerary -->
@@ -32,15 +22,14 @@
                   <idea-item
                     v-for="idea in ideaStructure"
                     :name="idea.name"
+                    :key="idea.id"
                     :description="idea.description"
                     :start="idea.timeStart"
                     :end="idea.timeEnd"
                   ></idea-item>
                 </div>
               </div>
-              <!-- this is the component of the tag adder -->
-
-              <div class="columns">
+              <div class="columns" v-else>
                 <div class="column is-3"></div>
                 <div class="column is-6">
                   <button
@@ -55,6 +44,16 @@
                 </div>
                 <div class="column is-3"></div>
               </div>
+            </div>
+          </b-tab-item>
+          <b-tab-item label="custom" icon="library-music">
+            <div class="ideaTableCustom">
+              <h1>custom itinerary not available</h1>
+            </div>
+          </b-tab-item>
+          <b-tab-item label="free" icon="video">
+            <div class="ideaTableFree">
+              <h1>free itinerary not available</h1>
             </div>
           </b-tab-item>
         </b-tabs>

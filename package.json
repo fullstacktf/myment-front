@@ -6,7 +6,7 @@
 	"scripts": {
 		"build": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
 		"dev": "cross-env NODE_ENV=development webpack-dev-server --progress",
-		"test": "jest",
+		"test": "jest -u",
 		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",
 		"clean": "rm -rf .cache dist"
