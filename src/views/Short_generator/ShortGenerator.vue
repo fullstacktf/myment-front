@@ -14,16 +14,6 @@
       </b-field>
       <div class="tabWrapper">
         <b-tabs type="is-toggle is-danger " expanded>
-          <b-tab-item label="free" class="is-danger">
-            <div class="ideaTableFree">
-              <h1>not available</h1>
-            </div>
-          </b-tab-item>
-          <b-tab-item label="custom" icon="library-music">
-            <div class="ideaTableCustom">
-              <h1>not available</h1>
-            </div>
-          </b-tab-item>
           <b-tab-item label="short" icon="video">
             <div class="masterContent">
               <!-- this is the component of the itinerary -->
