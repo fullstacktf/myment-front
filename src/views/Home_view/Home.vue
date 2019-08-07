@@ -15,7 +15,12 @@
     <div class="homeContainer">
       <div class="columns">
         <div class="column is-3"></div>
-        <div class="column is-6"></div>
+        <div class="column is-6">
+          <div class="centerWrapper">
+            <map-layer></map-layer>
+            <div class="buttons"></div>
+          </div>
+        </div>
         <div class="column is-3"></div>
       </div>
     </div>
@@ -24,11 +29,13 @@
 
 <script>
 import NewsBar from '../../components/NewsBar';
+import MapComponent from '../../components/MapComponent';
 
 export default {
   name: 'Home',
   components: {
     'news-bar': NewsBar,
+    'map-layer': MapComponent,
   },
 };
 </script>
