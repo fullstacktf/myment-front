@@ -19,11 +19,11 @@ describe('<%= name %>', () => {
       localVue,
     });
     expect(wrapper.html()).toMatchSnapshot();
-  });a
+  }),
 
   test('Check props', () => {
     
-  });
+  }),
 
   test('check Contents props', () => {
     

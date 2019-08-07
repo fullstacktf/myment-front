@@ -52,10 +52,8 @@
             </div>
           </b-tab-item>
           <b-tab-item label="free" icon="video">
-            <div class="itineraryComponent">
-              <div class="ideaTableFree">
-                <h1>free itinerary not available</h1>
-              </div>
+            <div class="ideaTableFree">
+              <h1>free itinerary not available</h1>
             </div>
           </b-tab-item>
         </b-tabs>
