@@ -14,7 +14,7 @@ jobs:
       script: 
         npm run build
       deploy:
-        local_dir: dist
+        local_dir: /dist
         github_token: $GITHUB_TOKEN
         provider: pages
         on:
