@@ -1,5 +1,5 @@
 export default {
-	getUserState(context) {
-		return false;
-	}
+  getUserState(context) {
+    context.commit('changeUserState');
+  },
 };

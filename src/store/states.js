@@ -1,5 +1,7 @@
 export default {
-	state: {
-		userLogged: false
-	}
+  state: {
+    userLogged: false,
+    tagAdded: false,
+    locationAdded: false,
+  },
 };

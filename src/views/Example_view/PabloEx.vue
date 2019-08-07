@@ -2,6 +2,7 @@
   <div class="wrapper">
     <idea-item
       v-for="idea in ideaStructure"
+      :key="idea.id"
       :name="idea.name"
       :description="idea.description"
       :start="idea.timeStart"

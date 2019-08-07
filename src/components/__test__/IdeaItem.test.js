@@ -3,7 +3,7 @@ import { shallowMount, createLocalVue } from '@vue/test-utils';
 import Buefy from 'buefy';
 import mock from '../../test/mockBack';
 
-describe('IdeaAdder', () => {
+describe('IdeaItem', () => {
   let localVue;
   beforeEach(() => {
     const Vue = createLocalVue();
@@ -20,7 +20,7 @@ describe('IdeaAdder', () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  test('check button props', () => {
+  test('check name props', () => {
     const wrapper = shallowMount(IdeaAdder, {
       localVue,
       propsData: {
@@ -28,7 +28,7 @@ describe('IdeaAdder', () => {
       },
     });
     const button = wrapper.find('button');
-    expect(button.text()).toBe('Guachinche Ivan');
+    expect(button.text()).toBe(mock.name);
   });
 
   test('check Contents props', () => {
