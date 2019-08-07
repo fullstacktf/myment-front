@@ -98,8 +98,8 @@ export const mockData: MockCity =
             food: {
                 color: "green",
                     ideas: [{
-                            name: "idea name",
-                            description: "lorem ipsum dolor sit amet ...",
+                            name: "Guachinche Ivan",
+                            description: "Go to Guachinche Ivan in La Laguna and take a rabbit",
                             coordinates:{
                               "type": "Feature",
                               "properties": {},
@@ -112,7 +112,7 @@ export const mockData: MockCity =
                               }
                             },
                             startTime:[9,0],
-                            endTime:[15,0],
+                            endTime:[11,0],
                             link: "http://..."
                         }]
             },

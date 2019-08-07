@@ -1,7 +1,7 @@
 <template>
     <div class="headerNav">
         <img src="../../public/assets/M.png" alt="our coolest logo"/>
-        <newsBar class = "news"></newsBar> 
+        <newsBar class="news" :newNews="newsLetter"></newsBar> 
     </div>
 </template>
 
@@ -10,6 +10,11 @@ import newsBar from './NewsBar';
 export default {
     components:{
         'newsBar': newsBar
+    },
+    data(){
+        return {
+            newsLetter:''
+        }
     }
 
 }

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FakeLeaderboard render component 1`] = `"<div class=\\"containerRanking\\"><div class=\\"titleWrapper\\"><h3>RANKING</h3></div> <div class=\\"containerLeader\\"><div class=\\"section\\">Pos 1: </div> <div class=\\"section\\">user 2</div> <div class=\\"section\\">user 3</div> <div class=\\"section\\">user 4</div> <div class=\\"section\\">user 5</div> <div class=\\"section\\">user 6</div> <div class=\\"section\\">user 7</div> <div class=\\"section\\">user 8</div> <div class=\\"section\\">user 9</div> <div class=\\"section\\">user 10</div></div></div>"`;
