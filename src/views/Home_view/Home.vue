@@ -7,7 +7,7 @@
         <div class="column is-2 is-fullwidth is-gapless">
           <router-link to="/">
             <figure class="image is-128x128 centering is-hidden-tablet">
-              <img src="https://bulma.io/images/placeholders/128x128.png" />
+              <img src="../../../public/assets/myment-logo.png" />
             </figure>
           </router-link>
         </div>
@@ -17,7 +17,7 @@
         <div class="column is-1 is-hidden-mobile">
           <router-link to="/">
             <figure class="image is-128x128 centering">
-              <img src="https://bulma.io/images/placeholders/128x128.png" />
+              <img src="../../../public/assets/myment-logo.png">
             </figure>
           </router-link>
         </div>
@@ -82,7 +82,7 @@ export default {
 .homeHeader {
   display: flex;
   min-height: 15%;
-  background-color: #cae0cf;
+  background-color: #64557F;
   box-shadow: -40px -40px black;
 }
 
