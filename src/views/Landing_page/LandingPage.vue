@@ -17,14 +17,13 @@
 
 <script>
 import SignUpMenu from '../../components/SignUpMenu';
-import AnimLogo from '../../components/AnimLogo';
+
 import Button from '../../components/Button';
 
 export default {
   name: 'LandingPage',
   components: {
     'sign-menu': SignUpMenu,
-    'anim-logo': AnimLogo,
     'short-button': Button,
   },
 };
