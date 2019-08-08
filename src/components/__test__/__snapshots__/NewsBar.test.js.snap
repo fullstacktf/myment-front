@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NewsBar render component 1`] = `"<div class=\\"containerBar marquee\\"><div>Hi I'm news bar letter</div></div>"`;
+exports[`NewsBar render component 1`] = `"<div><div class=\\"marquee\\"><div>Hi I'm news bar letter</div></div></div>"`;

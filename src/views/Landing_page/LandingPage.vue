@@ -1,9 +1,8 @@
 <template>
   <div class="columns is-centered">
-    <div class="column is-one-fifth">
-      <sign-menu></sign-menu>
-    </div>
-    <div class="column is-7">
+    <sign-menu></sign-menu>
+
+    <main id="page-wrap">
       <div class="columnContent">
         <figure class="image is-square">
           <img src="../../assets/giphy.gif" />
@@ -12,20 +11,17 @@
           <a class="button main is-large is-fullwidth is-warning">LET'S FLY</a>
         </router-link>
       </div>
-    </div>
-    <div class="column"></div>
+    </main>
   </div>
 </template>
 
 <script>
 import SignUpMenu from '../../components/SignUpMenu';
-import Button from '../../components/Button';
 
 export default {
   name: 'LandingPage',
   components: {
     'sign-menu': SignUpMenu,
-    'short-button': Button,
   },
 };
 </script>

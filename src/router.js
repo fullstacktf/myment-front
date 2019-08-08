@@ -4,17 +4,18 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 export default new Router({
+	mode: 'history',
 	routes: [
 		{
 			path: '/',
 			name: 'Landing',
 			component: () => import('./views/Landing_page/LandingPage.vue')
 		},
-		//{
-		//	path: '/home',
-		//	name: 'Home',
-		//	component: () => import('./views/Home_page/HomePage.vue')
-		//},
+		{
+			path: '/home',
+			name: 'Home',
+			component: () => import('./views/Home_view/Home.vue')
+		},
 
 		{
 			path: '/short',
