@@ -1,50 +1,29 @@
 <template>
-  <l-map :center="[-23.752961, -57.854357]" :zoom="6" style="height: 500px;" :options="mapOptions">
-    <l-choropleth-layer
-      :data="pyDepartmentsData"
-      titleKey="department_name"
-      idKey="department_id"
-      :value="value"
-      :extraValues="extraValues"
-      geojsonIdKey="dpto"
-      :geojson="paraguayGeojson"
-      :colorScale="colorScale"
-    >
-      <template slot-scope="props">
-        <l-info-control
-          :item="props.currentItem"
-          :unit="props.unit"
-          title="Department"
-          placeholder="Hover over a department"
-        />
-        <l-reference-chart
-          title="Girls school enrolment"
-          :colorScale="colorScale"
-          :min="props.min"
-          :max="props.max"
-          position="topright"
-        />
-      </template>
-    </l-choropleth-layer>
+  <l-map :center="[-23.752961, -57.854357]" :zoom="6" style="height: 500px;">
+    <l-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-layer>
+    <v-geosearch :options="geosearchOptions"></v-geosearch>
   </l-map>
 </template>
 
 <script>
-import { LMap } from 'vue2-leaflet';
-import { InfoControl, ReferenceChart, ChoroplethLayer } from 'vue-choropleth';
-import 'leaflet/dist/leaflet.css';
-// Register these components in the components
+//};
+
+import * as LeafLet from 'vue2-leaflet';
+import '../../node_modules/leaflet/dist/leaflet.css';
 
 export default {
   name: 'app',
   components: {
-    LMap,
-    'l-info-control': InfoControl,
-    'l-reference-chart': ReferenceChart,
-    'l-choropleth-layer': ChoroplethLayer,
+    'l-map': LeafLet.LMap,
+    'l-layer': LeafLet.LTileLayer,
+  },
+
+  data() {
+    return {};
   },
 };
 </script>
 
 <style>
+@import '~leaflet/dist/leaflet.css';
 </style>

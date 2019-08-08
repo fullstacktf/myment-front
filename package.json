@@ -22,6 +22,8 @@
 		"bulma": "^0.7.5",
 		"fas": "^0.3.6",
 		"font-awesome": "^4.7.0",
+		"leaflet": "^1.5.1",
+		"leaflet-geosearch": "^2.7.0",
 		"vue": "^2.6.10",
 		"vue-burger-menu": "^2.0.2",
 		"vue-choropleth": "^0.3.1",
@@ -29,6 +31,9 @@
 		"vue-hot-reload-api": "^2.3.3",
 		"vue-router": "^3.0.7",
 		"vue-sidebar-menu": "^3.12.2",
+		"vue2-leaflet": "^2.2.1",
+		"vue2-leaflet-geosearch": "^1.0.6",
+		"vue2-leaflet-locatecontrol": "^1.0.1",
 		"vuex": "^3.1.1"
 	},
 	"devDependencies": {
