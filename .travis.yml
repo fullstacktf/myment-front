@@ -18,4 +18,4 @@ jobs:
         github_token: $GITHUB_TOKEN
         provider: pages
         on:
-          branch: master
+          branch: gh-pages
