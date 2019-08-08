@@ -2,9 +2,7 @@
   <div class="columns bigParent">
     <div class="column void1">
       <router-link to="/home">
-        <span class="icon is-large">
-          <i class="fas fa-home"></i>
-        </span>
+        <img src="../../../public/assets/myment-logo.png" alt="MYMENT" />
       </router-link>
     </div>
     <div class="column centerzone is-10">
