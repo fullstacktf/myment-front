@@ -15,9 +15,7 @@ jobs:
         npm run build
       deploy:
         local_dir: dist
-        github_token: $GH_TOKEN
+        github_token: $GITHUB_TOKEN
         provider: pages
-        skip_cleanup: true
-        keep_history: true
         on:
-          branch: gh-pages
+          branch: master

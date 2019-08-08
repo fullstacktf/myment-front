@@ -7,7 +7,6 @@ const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src',
-  watch: true,
   optimization: {
     runtimeChunk: 'single',
     splitChunks: {
@@ -15,27 +14,15 @@ module.exports = {
     },
   },
   output: {
-    path: __dirname + 'dist',
+    path: path.resolve(__dirname + '/dist'),
     publicPath: '/',
     filename: 'index.js',
-    chunkFilename: '[name].js',
+    chunkFilename: '[name].[hash].js',
   },
   resolve: {
     extensions: ['.json', '.js', '.vue'],
   },
-  devtool: 'source-map',
-  devServer: {
-    contentBase: path.join('/dist/'),
-    compress: true,
-    historyApiFallback: true,
-    hot: true,
-    open: true,
-    overlay: true,
-    port: 8000,
-    stats: {
-      normal: true,
-    },
-  },
+
   module: {
     rules: [
       {
@@ -64,12 +51,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          process.env.NODE_ENV !== 'production'
-            ? 'vue-style-loader'
-            : MiniCSSExtractPlugin.loader,
-          'css-loader',
-        ],
+        use: ['vue-style-loader', 'css-loader'],
       },
       {
         test: /\.(png|svg|jpg|gif|ttf|eot|svg|ttf|woff|woff2?)$/,

@@ -18,13 +18,10 @@
 <script>
 import SignUpMenu from '../../components/SignUpMenu';
 
-import Button from '../../components/Button';
-
 export default {
   name: 'LandingPage',
   components: {
     'sign-menu': SignUpMenu,
-    'short-button': Button,
   },
 };
 </script>
