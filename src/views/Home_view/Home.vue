@@ -44,7 +44,7 @@
                 </div>
               </div>
             </div>
-            <div class="column is-1"></div>
+            <div class="column is-1 is-hidden-mobile"></div>
           </div>
         </main>
       </div>
