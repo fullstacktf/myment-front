@@ -154,9 +154,6 @@ export default {
 </script>
 
 <style scoped>
-.bigParent {
-}
-
 .topField {
   margin-top: 20px;
 }
