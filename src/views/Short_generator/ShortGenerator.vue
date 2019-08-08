@@ -1,8 +1,8 @@
 <template>
   <div class="columns bigParent">
     <div class="column void1">
-      <router-link to="/home">
-        <img src="../../../public/assets/myment-logo.png" alt="MYMENT" />
+      <router-link to="/">
+        <img class="is-128x128" src="../../../public/assets/myment-logo.png" alt="MYMENT" />
       </router-link>
     </div>
     <div class="column centerzone is-10">
@@ -58,8 +58,8 @@
       </div>
     </div>
     <div class="column void2">
-      <router-link to="/">
-        <a class="delete is-medium"></a>
+      <router-link to="/home" v-if="userLoged">
+        <a class="delete is-medium is-hoverable is-offset-one-third" v-if="userLoged"></a>
       </router-link>
     </div>
   </div>
@@ -145,6 +145,7 @@ export default {
           timeEnd: 0,
         },
       ],
+      userLoged: true,
       tagsAdded: false,
       isComponentModalActive: false,
     };
@@ -159,7 +160,11 @@ export default {
 .topField {
   margin-top: 20px;
 }
-
+.void2 {
+  padding-top: 1%;
+  display: flex;
+  justify-content: right;
+}
 .void1 {
   padding: 50px;
   display: flex;
