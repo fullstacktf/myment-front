@@ -5,7 +5,7 @@
     <main id="page-wrap">
       <div class="columnContent">
         <figure class="image is-square">
-          <img src="../../../public/assets/giphy.gif" />
+          <img src="../../assets/giphy.gif" />
         </figure>
         <router-link to="/short">
           <a class="button main is-large is-fullwidth is-warning">LET'S FLY</a>
