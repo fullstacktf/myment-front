@@ -12,7 +12,7 @@
         <div class="column is-9 centering is-gapless">
           <news-bar :newNews="hello"></news-bar>
         </div>
-        <div class="column is-1 is-hidden-mobile is-hidden-tablet">
+        <div class="column is-1 is-hidden-mobile">
           <figure class="image is-128x128 centering">
             <img src="https://bulma.io/images/placeholders/128x128.png" />
           </figure>
