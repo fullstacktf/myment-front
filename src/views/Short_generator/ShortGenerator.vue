@@ -24,6 +24,7 @@
                     :description="idea.description"
                     :start="idea.timeStart"
                     :end="idea.timeEnd"
+                    :location="idea.location"
                   ></idea-item>
                 </div>
               </div>
@@ -85,6 +86,7 @@ export default {
           description: 'lorem ipsum ...',
           timeStart: 0,
           timeEnd: 0,
+          location: 'https://www.google.es',
         },
         {
           name: 'hotel',

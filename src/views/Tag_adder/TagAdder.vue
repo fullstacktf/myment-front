@@ -34,7 +34,7 @@ export default {
   name: 'TagAdder',
   data() {
     return {
-      locationAdded: true,
+      locationAdded: false,
     };
   },
 };
