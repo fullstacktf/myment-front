@@ -9,7 +9,6 @@
 //};
 
 import * as LeafLet from 'vue2-leaflet';
-import '../../node_modules/leaflet/dist/leaflet.css';
 
 export default {
   name: 'app',

@@ -5,17 +5,21 @@
 
       <div class="columns">
         <div class="column is-2 is-fullwidth is-gapless">
-          <figure class="image is-128x128 centering is-hidden-tablet">
-            <img src="https://bulma.io/images/placeholders/128x128.png" />
-          </figure>
+          <router-link to="/">
+            <figure class="image is-128x128 centering is-hidden-tablet">
+              <img src="https://bulma.io/images/placeholders/128x128.png" />
+            </figure>
+          </router-link>
         </div>
         <div class="column is-9 centering is-gapless">
           <news-bar :newNews="hello"></news-bar>
         </div>
         <div class="column is-1 is-hidden-mobile">
-          <figure class="image is-128x128 centering">
-            <img src="https://bulma.io/images/placeholders/128x128.png" />
-          </figure>
+          <router-link to="/">
+            <figure class="image is-128x128 centering">
+              <img src="https://bulma.io/images/placeholders/128x128.png" />
+            </figure>
+          </router-link>
         </div>
       </div>
     </div>
@@ -33,13 +37,19 @@
 
                 <div class="columns buttonsWrapper is-hidden-mobile">
                   <div class="column is-4">
-                    <button class="button is-black is-large is-fullwidth">ITINERARIES</button>
+                    <router-link to="/short">
+                      <button class="button is-black is-large is-fullwidth">ITINERARIES</button>
+                    </router-link>
                   </div>
                   <div class="column is-4">
-                    <button class="button is-black is-large is-fullwidth">ADD IDEAS</button>
+                    <router-link to="idea-add">
+                      <button class="button is-black is-large is-fullwidth">ADD IDEAS</button>
+                    </router-link>
                   </div>
                   <div class="column is-4">
-                    <button class="button is-black is-large is-fullwidth">EXPLORE</button>
+                    <router-link to="/">
+                      <button class="button is-black is-large is-fullwidth">EXPLORE</button>
+                    </router-link>
                   </div>
                 </div>
               </div>
@@ -82,6 +92,7 @@ export default {
 }
 
 .buttonsWrapper {
+  margin-left: 5px;
   padding-top: 3%;
 }
 
@@ -91,7 +102,8 @@ export default {
   min-width: 45.5%;
   width: 80vw;
   padding: 30px;
-  justify-content: center;
+  justify-items: center;
+  align-items: center;
   background-color: rgb(146, 207, 177);
   border-radius: 10px;
 }
@@ -100,5 +112,11 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.bm-menu {
+  background-color: #8e78c5 !important ;
+  height: 100% !important;
+  justify-self: center;
 }
 </style>
