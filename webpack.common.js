@@ -52,7 +52,6 @@ module.exports = {
       },
       {
         test: /\.css$/,
-
         use: [
           process.env.NODE_ENV !== 'production'
             ? 'vue-style-loader'
@@ -75,7 +74,7 @@ module.exports = {
     new HtmlPlugin({
       template: 'public/index.html',
       chunksSortMode: 'dependency',
-      favicon: 'img/[hash].ico',
+      favicon: 'public/assets/favicon.ico',
     }),
     new webpack.EnvironmentPlugin(['NODE_ENV']),
     new webpack.HotModuleReplacementPlugin(),
