@@ -4,13 +4,8 @@
 	"description": "This repo contain the front API for the web application myment.",
 	"main": "index.js",
 	"scripts": {
-<<<<<<< HEAD
-		"build": "cross-env NODE_ENV=production webpack",
-		"dev": "cross-env NODE_ENV=development webpack-dev-server --progress",
-=======
 		"build": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
 		"dev": "cross-env NODE_ENV=development webpack-dev-server --config webpack.dev.js --progress",
->>>>>>> master
 		"test": "jest -u",
 		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",
