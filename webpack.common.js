@@ -16,7 +16,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname + '/dist'),
-    publicPath: '/',
+    publicPath: 'myment-front',
     filename: 'js/index.js',
     chunkFilename: 'js/[name].[hash].js',
   },
