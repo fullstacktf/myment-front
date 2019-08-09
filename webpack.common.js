@@ -28,8 +28,6 @@ module.exports = {
       {
         test: /\.vue?$/,
         loader: 'vue-loader',
-        include: [path.resolve(__dirname, 'src')],
-        exclude: [path.resolve(__dirname, 'node_modules')],
       },
       {
         test: /\.js?$/,
