@@ -7,12 +7,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src',
-  optimization: {
-    runtimeChunk: 'single',
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
   output: {
     path: path.resolve(__dirname + '/dist'),
     publicPath: '',
@@ -20,7 +14,14 @@ module.exports = {
     chunkFilename: 'js/[name].[hash].js',
   },
   resolve: {
-    extensions: ['.json', '.js', '.vue'],
+    extensions: ['.js', '.vue'],
+    alias: {
+      vue$:
+        process.env.NODE_ENV === 'development'
+          ? 'vue/dist/vue.js'
+          : 'vue/dist/vue.min.js',
+      '@': path.resolve(__dirname + '/src'),
+    },
   },
 
   module: {
@@ -31,8 +32,6 @@ module.exports = {
       },
       {
         test: /\.js?$/,
-        include: [path.resolve(__dirname, 'src')],
-        exclude: [path.resolve(__dirname, 'node_modules')],
         loader: 'babel-loader',
         query: {
           presets: [

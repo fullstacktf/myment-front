@@ -3,7 +3,13 @@ const common = require('./webpack.common.js');
 const path = require('path');
 module.exports = merge(common, {
   mode: 'development',
-  devtool: 'source-map',
+  devtool: 'cheap-module-eval-source-map',
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
   watch: true,
   devServer: {
     contentBase: path.resolve(__dirname + '/dist'),
