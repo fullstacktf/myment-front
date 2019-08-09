@@ -17,7 +17,7 @@
         <div class="column is-1 is-hidden-mobile">
           <router-link to="/">
             <figure class="image is-128x128 centering">
-              <img src="../../../public/assets/myment-logo.png">
+              <img src="../../../public/assets/myment-logo.png" />
             </figure>
           </router-link>
         </div>
@@ -26,7 +26,9 @@
 
     <div class="homeContainer">
       <div id="app">
-        <desktop-menu left class="is-hidden-mobile"></desktop-menu>
+        <desktop-menu left class="is-hidden-mobile">
+          <quick-menu></quick-menu>
+        </desktop-menu>
 
         <main id="page-wrap">
           <div class="columns">
@@ -66,6 +68,7 @@
 import NewsBar from '../../components/NewsBar';
 import MapComponent from '../../components/MapComponent';
 import { Slide, Push } from 'vue-burger-menu';
+import QuickActionsMenu from '../../components/QuickActionsMenu';
 
 export default {
   name: 'Home',
@@ -74,6 +77,7 @@ export default {
     'map-layer': MapComponent,
     'desktop-menu': Push,
     'mobile-menu': Slide,
+    'quick-menu': QuickActionsMenu,
   },
 };
 </script>
@@ -82,7 +86,7 @@ export default {
 .homeHeader {
   display: flex;
   min-height: 15%;
-  background-color: #64557F;
+  background-color: #64557f;
   box-shadow: -40px -40px black;
 }
 

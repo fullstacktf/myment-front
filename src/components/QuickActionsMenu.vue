@@ -1,20 +1,21 @@
 
-<template>
-  <slide-menu>WIP</slide-menu>
-</template>
+<template></template>
 
 <script>
-import { Push } from 'vue-burger-menu';
-
 export default {
   name: 'SidebarMenu',
-  components: {
-    'slide-menu': Push,
-  },
+  components: {},
 };
 </script>
 
 <style >
+.actionsWrapper {
+  padding-right: 50px;
+}
+.column {
+  background-color: darkgray;
+}
+
 .v-sidebar-menu,
 .v-sidebar-menu * {
   box-sizing: border-box;
