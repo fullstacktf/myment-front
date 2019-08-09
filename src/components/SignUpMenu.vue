@@ -1,6 +1,6 @@
 
 <template>
-  <slide-menu disableOutsideClick>
+  <slide-menu left disableOutsideClick>
     <div>
       <b-collapse :open="false" aria-id="contentIdForA11y1">
         <button
@@ -21,23 +21,21 @@
     </div>
     <div class="routerWrapper">
       <router-link v-if="userLoged" to="/home">
-        <use-button v-if="userLoged" name="TO LOBBY" customWidth="300px" customHeight="60px"></use-button>
+        <button v-if="userLoged" class="button is-dark is-large is-rounded">LOBBY</button>
       </router-link>
     </div>
   </slide-menu>
 </template>
 
 <script>
-import { Push } from 'vue-burger-menu';
-import Button from './Button';
+import { PushRotate } from 'vue-burger-menu';
 import SignUp from './SignUp';
 import SignIn from './Signin';
 
 export default {
   name: 'SidebarMenu',
   components: {
-    'slide-menu': Push,
-    'use-button': Button,
+    'slide-menu': PushRotate,
     'signup-form': SignUp,
     'signin-form': SignIn,
   },
@@ -53,6 +51,7 @@ export default {
 <style >
 .routerWrapper {
   margin: 0 auto;
+  align-self: center;
 }
 .home {
   margin-bottom: 100px;

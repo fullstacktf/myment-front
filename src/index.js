@@ -4,9 +4,9 @@ import store from './store';
 import router from './router';
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
-
+import favicon from '../public/assets/favicon.ico';
+Vue.use(favicon);
 Vue.use(Buefy);
-
 new Vue({
   store,
   router,
