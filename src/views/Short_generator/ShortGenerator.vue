@@ -148,7 +148,7 @@ export default {
         },
       ],
       userLoged: true,
-      tagsAdded: false,
+      tagsAdded: true,
       isComponentModalActive: false,
     };
   },
