@@ -1,9 +1,9 @@
-import IdeaAdder from '../IdeaAdder.vue';
+import IdeaForm from '../IdeaForm.vue';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import Buefy from 'buefy';
-import mock from '../../../test/mockBack';
+import mock from '../../test/mockBack';
 
-describe('IdeaAdder', () => {
+describe('IdeaForm', () => {
   let localVue;
   beforeEach(() => {
     const Vue = createLocalVue();
@@ -11,11 +11,19 @@ describe('IdeaAdder', () => {
     localVue = Vue;
   });
   test('render component', () => {
-    const wrapper = shallowMount(IdeaAdder, {
+    const wrapper = shallowMount(IdeaForm, {
       localVue,
     });
     expect(wrapper.html()).toMatchSnapshot();
   }),
-    test('Check props', () => {}),
-    test('check Contents props', () => {});
+
+  test('Check props', () => {
+    
+  }),
+
+  test('check Contents props', () => {
+    
+  });
 });
+
+
