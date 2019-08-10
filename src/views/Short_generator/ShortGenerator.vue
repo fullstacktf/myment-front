@@ -6,15 +6,20 @@
       </router-link>
     </div>
     <div class="column centerzone is-10">
-      <b-field class="topField">
-        <b-taginput
-          v-model="tags"
-          :value="value"
-          type="is-dark"
-          placeholder="Enter the location in 2 tags "
-        ></b-taginput>
-        <button class="button is-black" v-if="!location" @click="addLocationState">search location</button>
-        <button class="button is-black" v-else @click="removeLocationState">remove location</button>
+      <b-field class="topField is-grouped-centered">
+        <div class="columns">
+          <div class="column is-6 is-gapless">
+            <select-place></select-place>
+          </div>
+          <div class="column is-2 is-gapless">
+            <button
+              class="button is-black"
+              v-if="!location"
+              @click="addLocationState"
+            >search location</button>
+            <button class="button is-black" v-else @click="removeLocationState">remove location</button>
+          </div>
+        </div>
       </b-field>
       <div class="tabWrapper">
         <b-tabs type="is-toggle is-danger " expanded>
@@ -76,6 +81,7 @@
 import Button from '../../components/Button';
 import IdeaItem from '../../components/IdeaItem';
 import TagAdder from '../Tag_adder/TagAdder';
+import SelectPlace from '../../components/SelectPlace';
 
 export default {
   name: 'Short',
@@ -83,6 +89,7 @@ export default {
     'option-button': Button,
     'tag-adder': TagAdder,
     'idea-item': IdeaItem,
+    'select-place': SelectPlace,
   },
   data() {
     return {
@@ -179,6 +186,7 @@ export default {
         message: 'Location removed',
         type: 'is-danger',
       });
+      this.$myStore.commit('falsed');
       this.$myStore.commit('change');
       this.value = '';
     },
@@ -248,3 +256,6 @@ export default {
   overflow: hidden;
 }
 </style>
+
+
+

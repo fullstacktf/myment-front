@@ -12,6 +12,12 @@ export default new Vuex.Store({
     change(state) {
       state.locationAdded = !state.locationAdded;
     },
+    falsed(state) {
+      state.tagsAdded = false;
+    },
+    taggated(state) {
+      state.tagsAdded = !state.tagsAdded;
+    },
   },
   actions: {},
 });
