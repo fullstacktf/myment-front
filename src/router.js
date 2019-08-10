@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-
-import Landing from './views/Landing_page/LandingPage.vue';
+import LandingPage from './views/Landing_page/LandingPage.vue';
 import Home from './views/Home_view/Home.vue';
 import Short from './views/Short_generator/ShortGenerator.vue';
 import IdeaAdd from './views/Idea_adder/IdeaAdder.vue';
@@ -13,7 +12,7 @@ export default new Router({
     {
       path: '/',
       name: 'Landing',
-      component: Landing,
+      component: LandingPage,
     },
     {
       path: '/home',

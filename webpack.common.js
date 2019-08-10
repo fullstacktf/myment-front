@@ -4,24 +4,24 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src',
-  optimization: {
-    runtimeChunk: 'single',
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
   output: {
     path: path.resolve(__dirname + '/dist'),
-    publicPath: '/',
+    publicPath: '',
     filename: 'js/index.js',
     chunkFilename: 'js/[name].[hash].js',
   },
   resolve: {
-    extensions: ['.json', '.js', '.vue'],
+    extensions: ['.js', '.vue'],
+    alias: {
+      vue$:
+        process.env.NODE_ENV === 'development'
+          ? 'vue/dist/vue.js'
+          : 'vue/dist/vue.min.js',
+      '@': path.resolve(__dirname + '/src'),
+    },
   },
 
   module: {
@@ -32,8 +32,6 @@ module.exports = {
       },
       {
         test: /\.js?$/,
-        include: [path.resolve(__dirname, 'src')],
-        exclude: [path.resolve(__dirname, 'node_modules')],
         loader: 'babel-loader',
         query: {
           presets: [
@@ -67,7 +65,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new VueLoaderPlugin(),
     new HtmlPlugin({
       template: 'public/index.html',

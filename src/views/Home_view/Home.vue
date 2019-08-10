@@ -68,7 +68,7 @@
 import NewsBar from '../../components/NewsBar';
 import MapComponent from '../../components/MapComponent';
 import { Slide, Push } from 'vue-burger-menu';
-import Quick from '../../components/QuickActionsMenu';
+import QuickActionsMenu from '../../components/QuickActionsMenu';
 
 export default {
   name: 'Home',
@@ -77,7 +77,7 @@ export default {
     'map-layer': MapComponent,
     'desktop-menu': Push,
     'mobile-menu': Slide,
-    'quick-menu': Quick,
+    'quick-menu': QuickActionsMenu,
   },
 };
 </script>

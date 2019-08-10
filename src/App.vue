@@ -3,12 +3,11 @@
     <router-view />
   </div>
 </template>
-    
+
 <script>
 import Footer from './components/Footer';
 import Vue from 'vue';
 import VueSidebarMenu from 'vue-sidebar-menu';
-import 'vue-sidebar-menu/dist/vue-sidebar-menu.css';
 Vue.use(VueSidebarMenu);
 
 export default {
@@ -31,4 +30,4 @@ export default {
 body {
   margin: 0;
 }
-</style> 
+</style>

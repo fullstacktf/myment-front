@@ -1,7 +1,5 @@
 
-<template>
-  <div class="quickWrapper"></div>
-</template>
+<template></template>
 
 <script>
 export default {
@@ -11,6 +9,13 @@ export default {
 </script>
 
 <style >
+.actionsWrapper {
+  padding-right: 50px;
+}
+.column {
+  background-color: darkgray;
+}
+
 .v-sidebar-menu,
 .v-sidebar-menu * {
   box-sizing: border-box;
