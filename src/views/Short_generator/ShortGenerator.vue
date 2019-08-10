@@ -9,7 +9,7 @@
       <b-field class="topField is-grouped-centered">
         <div class="columns">
           <div class="column is-6 is-gapless">
-            <select-place></select-place>
+            <place-selector></place-selector>
           </div>
           <div class="column is-2 is-gapless">
             <button
@@ -81,7 +81,7 @@
 import Button from '../../components/Button';
 import IdeaItem from '../../components/IdeaItem';
 import TagAdder from '../Tag_adder/TagAdder';
-import SelectPlace from '../../components/SelectPlace';
+import PlaceSelector from '../../components/PlaceSelector';
 
 export default {
   name: 'Short',
@@ -89,7 +89,7 @@ export default {
     'option-button': Button,
     'tag-adder': TagAdder,
     'idea-item': IdeaItem,
-    'select-place': SelectPlace,
+    'place-selector': PlaceSelector,
   },
   data() {
     return {

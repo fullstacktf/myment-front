@@ -39,14 +39,8 @@
         </div>
 
 <script>
-import Multiselect from 'vue-multiselect';
-
 export default {
-  name: ' SelectPlace',
-  components: {
-    'select-city': Multiselect,
-    'select-zone': Multiselect,
-  },
+  name: 'PlaceSelector',
   data() {
     return {
       places: {
