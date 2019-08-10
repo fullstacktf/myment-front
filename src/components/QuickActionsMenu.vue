@@ -12,9 +12,6 @@ export default {
 .actionsWrapper {
   padding-right: 50px;
 }
-.column {
-  background-color: darkgray;
-}
 
 .v-sidebar-menu,
 .v-sidebar-menu * {

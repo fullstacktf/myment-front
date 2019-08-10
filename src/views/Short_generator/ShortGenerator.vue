@@ -6,16 +6,27 @@
       </router-link>
     </div>
     <div class="column centerzone is-10">
-      <b-field class="topField">
-        <b-taginput v-model="tags" type="is-dark" placeholder="Enter the location in 2 tags "></b-taginput>
-        <b-radio-button>search location</b-radio-button>
+      <b-field class="topField is-grouped-centered">
+        <div class="columns">
+          <div class="column is-6 is-gapless">
+            <place-selector></place-selector>
+          </div>
+          <div class="column is-2 is-gapless">
+            <button
+              class="button is-black"
+              v-if="!location"
+              @click="addLocationState"
+            >search location</button>
+            <button class="button is-black" v-else @click="removeLocationState">remove location</button>
+          </div>
+        </div>
       </b-field>
       <div class="tabWrapper">
         <b-tabs type="is-toggle is-danger " expanded>
           <b-tab-item label="short" icon="video">
             <div class="masterContent">
               <!-- this is the component of the itinerary -->
-              <div class="itineraryComponent" v-if="tagsAdded">
+              <div class="itineraryComponent" v-if="tags">
                 <div class="ideaTableShort">
                   <idea-item
                     v-for="idea in ideaStructure"
@@ -32,7 +43,7 @@
                 <div class="column is-3"></div>
                 <div class="column is-6">
                   <button
-                    v-if="!tagsAdded"
+                    v-if="!tags"
                     class="button is-primary is-large is-warning is-fullwidth"
                     @click="isComponentModalActive = true"
                   >Generate Itinerary !</button>
@@ -59,7 +70,7 @@
       </div>
     </div>
     <div class="column void2">
-      <router-link to="/home" v-if="userLoged">
+      <router-link to="/home" v-if="true">
         <a class="delete is-medium is-hoverable is-offset-one-third" v-if="userLoged"></a>
       </router-link>
     </div>
@@ -70,6 +81,7 @@
 import Button from '../../components/Button';
 import IdeaItem from '../../components/IdeaItem';
 import TagAdder from '../Tag_adder/TagAdder';
+import PlaceSelector from '../../components/PlaceSelector';
 
 export default {
   name: 'Short',
@@ -77,6 +89,7 @@ export default {
     'option-button': Button,
     'tag-adder': TagAdder,
     'idea-item': IdeaItem,
+    'place-selector': PlaceSelector,
   },
   data() {
     return {
@@ -147,10 +160,36 @@ export default {
           timeEnd: 0,
         },
       ],
-      userLoged: true,
-      tagsAdded: false,
       isComponentModalActive: false,
     };
+  },
+  computed: {
+    tags() {
+      return this.$myStore.state.tagsAdded;
+    },
+    location() {
+      return this.$myStore.state.locationAdded;
+    },
+  },
+
+  methods: {
+    toast() {},
+    addLocationState() {
+      this.$buefy.toast.open({
+        message: 'Location added successfully',
+        type: 'is-success',
+      });
+      this.$myStore.commit('change');
+    },
+    removeLocationState() {
+      this.$buefy.toast.open({
+        message: 'Location removed',
+        type: 'is-danger',
+      });
+      this.$myStore.commit('falsed');
+      this.$myStore.commit('change');
+      this.value = '';
+    },
   },
 };
 </script>
@@ -217,3 +256,6 @@ export default {
   overflow: hidden;
 }
 </style>
+
+
+

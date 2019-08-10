@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IdeaForm render component 1`] = `
+"<div class=\\"formWrapper\\"><b-field-stub label=\\"Enter some tags\\" horizontal=\\"true\\" addons=\\"true\\"><b-taginput-stub usehtml5validation=\\"true\\" value=\\"city,zone,street,number\\" data=\\"\\" hascounter=\\"true\\" field=\\"value\\" closable=\\"true\\" confirmkeycodes=\\"13,188\\" removeonkeys=\\"8\\" onpasteseparators=\\",\\" beforeadding=\\"function _default() {
+        return true;
+      }\\"></b-taginput-stub></b-field-stub> <b-field-stub label=\\"Idea Name\\" message=\\"Here goes the name of your idea\\" horizontal=\\"true\\" addons=\\"true\\"><b-input-stub expanded=\\"true\\" usehtml5validation=\\"true\\" type=\\"text\\" hascounter=\\"true\\" customclass=\\"\\" name=\\"subject\\"></b-input-stub></b-field-stub> <b-field-stub label=\\"Description\\" horizontal=\\"true\\" addons=\\"true\\"><b-input-stub usehtml5validation=\\"true\\" type=\\"textarea\\" hascounter=\\"true\\" customclass=\\"\\"></b-input-stub></b-field-stub> <div class=\\"columns\\"><div class=\\"column is-2\\"></div> <div class=\\"column is-4\\"><b-field-stub label=\\"Start Time\\" horizontal=\\"true\\" addons=\\"true\\"><b-clockpicker-stub usehtml5validation=\\"true\\" hourformat=\\"12\\" incrementminutes=\\"5\\" incrementseconds=\\"1\\" timeformatter=\\"function _default(date, vm) {
+        if (typeof __chunk_3.config.defaultTimeFormatter === 'function') {
+          return __chunk_3.config.defaultTimeFormatter(date);
+        } else {
+          return defaultTimeFormatter(date, vm);
+        }
+      }\\" timeparser=\\"function _default(date, vm) {
+        if (typeof __chunk_3.config.defaultTimeParser === 'function') {
+          return __chunk_3.config.defaultTimeParser(date);
+        } else {
+          return defaultTimeParser(date, vm);
+        }
+      }\\" mobilenative=\\"true\\" pickersize=\\"290\\" autoswitch=\\"true\\" type=\\"is-primary\\"></b-clockpicker-stub></b-field-stub></div> <div class=\\"column is-4\\"><b-field-stub label=\\"End Time\\" horizontal=\\"true\\" addons=\\"true\\"><b-clockpicker-stub usehtml5validation=\\"true\\" hourformat=\\"12\\" incrementminutes=\\"5\\" incrementseconds=\\"1\\" timeformatter=\\"function _default(date, vm) {
+        if (typeof __chunk_3.config.defaultTimeFormatter === 'function') {
+          return __chunk_3.config.defaultTimeFormatter(date);
+        } else {
+          return defaultTimeFormatter(date, vm);
+        }
+      }\\" timeparser=\\"function _default(date, vm) {
+        if (typeof __chunk_3.config.defaultTimeParser === 'function') {
+          return __chunk_3.config.defaultTimeParser(date);
+        } else {
+          return defaultTimeParser(date, vm);
+        }
+      }\\" mobilenative=\\"true\\" pickersize=\\"290\\" autoswitch=\\"true\\" type=\\"is-primary\\"></b-clockpicker-stub></b-field-stub></div></div> <b-field-stub label=\\"url\\" message=\\"Maybe your idea is linked to a website?\\" horizontal=\\"true\\" addons=\\"true\\"><b-input-stub expanded=\\"true\\" usehtml5validation=\\"true\\" type=\\"text\\" hascounter=\\"true\\" customclass=\\"\\" name=\\"subject\\"></b-input-stub></b-field-stub> <b-field-stub label=\\"Idea type\\" horizontal=\\"true\\" addons=\\"true\\" class=\\"is-fullwidth\\"><b-select-stub usehtml5validation=\\"true\\" placeholder=\\"Select between the types\\"><option value=\\"1\\">Leisure</option> <option value=\\"2\\">Food</option> <option value=\\"3\\">Lodging</option></b-select-stub></b-field-stub> <b-field-stub horizontal=\\"true\\" addons=\\"true\\"><p class=\\"control\\"><button class=\\"button is-primary is-fullwidth\\">share your idea</button></p></b-field-stub></div>"
+`;

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="columns modal-card is-rounded tagContainer" v-if="locationAdded">
+    <div class="columns modal-card is-rounded tagContainer" v-if="location">
       <div class="column">
         <b-field label="hosting tag:">
           <b-taginput maxtags="1"></b-taginput>
@@ -18,7 +18,7 @@
       </div>
       <b-field>
         <p class="control">
-          <button class="button is-warning is-fullwidth">lets generate</button>
+          <button class="button is-warning is-fullwidth" @click="turnTrue">lets generate</button>
         </p>
       </b-field>
     </div>
@@ -34,8 +34,21 @@ export default {
   name: 'TagAdder',
   data() {
     return {
-      locationAdded: false,
+      isSelectOnly: false,
     };
+  },
+  methods: {
+    changeLocationState() {
+      this.$myStore.commit('change');
+    },
+    turnTrue() {
+      this.$myStore.commit('taggated');
+    },
+  },
+  computed: {
+    location() {
+      return this.$myStore.state.locationAdded;
+    },
   },
 };
 </script>
@@ -46,3 +59,5 @@ export default {
   border-radius: 10px;
 }
 </style>
+
+

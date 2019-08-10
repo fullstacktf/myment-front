@@ -1,18 +1,16 @@
-import Home from '../Home.vue';
+import SelectPlace from '../PlaceSelector.vue';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import Buefy from 'buefy';
-import Router from 'vue-router';
 
-describe('Home', () => {
+describe('SelectPlace', () => {
   let localVue;
   beforeEach(() => {
     const Vue = createLocalVue();
     Vue.use(Buefy);
-    Vue.use(Router);
     localVue = Vue;
   });
   test('render component', () => {
-    const wrapper = shallowMount(Home, {
+    const wrapper = shallowMount(SelectPlace, {
       localVue,
     });
     expect(wrapper.html()).toMatchSnapshot();
