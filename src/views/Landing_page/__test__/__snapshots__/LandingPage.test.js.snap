@@ -1,3 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LandingPage render component 1`] = `"<div class=\\"columns is-centered\\"><sign-menu-stub></sign-menu-stub> <main id=\\"page-wrap\\"><div class=\\"columnContent\\"><figure class=\\"image is-square\\"><img src=\\"../../assets/giphy.gif\\"></figure> <router-link-stub to=\\"/short\\" tag=\\"a\\" event=\\"click\\"><a class=\\"button main is-large is-fullwidth is-warning\\">LET'S FLY</a></router-link-stub></div></main></div>"`;
+exports[`LandingPage render component 1`] = `
+"<div class=\\"columns is-centered\\"><sign-menu-stub></sign-menu-stub> <main id=\\"page-wrap\\"><div class=\\"columns\\"><div class=\\"column is-6\\"><div class=\\"columnContent\\"><figure class=\\"image is-square\\"><img src=\\"../../assets/giphy.gif\\"></figure> <h1 class=\\"title is-1 is-white\\">M Y M E N T</h1></div></div> <div class=\\"column is-6\\"><div class=\\"sloganWrapper\\"><h1 class=\\"title is-1 is-white\\">Start your moment right now</h1> <p>Whe are here to make the heavy stuff and let you dream how is it going to be</p> <p>
+            Discover a new planning service
+            in the next city you are going to visit !
+          </p> <router-link-stub to=\\"/short\\" tag=\\"a\\" event=\\"click\\"><a class=\\"button main is-large is-fullwidth is-warning\\">LET'S FLY</a></router-link-stub></div></div></div></main></div>"
+`;

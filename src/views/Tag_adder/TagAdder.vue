@@ -30,15 +30,11 @@
   </div>
 </template>
 <script>
-import data from '../../test/example.json';
-
 export default {
   name: 'TagAdder',
   data() {
     return {
-      filteredTags: data,
       isSelectOnly: false,
-      tags: [],
     };
   },
   methods: {
@@ -47,16 +43,6 @@ export default {
     },
     turnTrue() {
       this.$myStore.commit('taggated');
-    },
-    getFilteredTags(text) {
-      this.filteredTags = data.filter(option => {
-        return (
-          option.user.first_name
-            .toString()
-            .toLowerCase()
-            .indexOf(text.toLowerCase()) >= 0
-        );
-      });
     },
   },
   computed: {

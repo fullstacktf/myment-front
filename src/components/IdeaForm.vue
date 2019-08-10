@@ -47,34 +47,15 @@
 </template>
 
 <script>
-import data from '../test/cities.json';
-import { LocationPicker } from 'vue2-location-picker';
-
 export default {
   name: 'IdeaForm',
-  components: {
-    'location-picker': LocationPicker,
-  },
   data() {
     return {
-      filteredTags: data,
       isSelectOnly: false,
       tags: ['city', 'zone', 'street', 'number'],
       allowNew: true,
       zoom: 7,
     };
-  },
-  methods: {
-    getFilteredTags(text) {
-      this.filteredTags = data.filter(option => {
-        return (
-          option.user.first_name
-            .toString()
-            .toLowerCase()
-            .indexOf(text.toLowerCase()) >= 0
-        );
-      });
-    },
   },
   mounted() {},
 };

@@ -16,14 +16,6 @@ describe('IdeaForm', () => {
     });
     expect(wrapper.html()).toMatchSnapshot();
   }),
-
-  test('Check props', () => {
-    
-  }),
-
-  test('check Contents props', () => {
-    
-  });
+    test('Check props', () => {}),
+    test('check Contents props', () => {});
 });
-
-

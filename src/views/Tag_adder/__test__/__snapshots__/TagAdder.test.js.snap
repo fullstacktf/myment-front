@@ -1,11 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TagAdder render component 1`] = `
-"<div><div class=\\"columns modal-card is-rounded tagContainer\\"><div class=\\"column\\"><b-field-stub label=\\"hosting tag:\\" addons=\\"true\\"><b-taginput-stub usehtml5validation=\\"true\\" value=\\"\\" data=\\"\\" maxtags=\\"1\\" hascounter=\\"true\\" field=\\"value\\" closable=\\"true\\" confirmkeycodes=\\"13,188\\" removeonkeys=\\"8\\" onpasteseparators=\\",\\" beforeadding=\\"function _default() {
-        return true;
-      }\\"></b-taginput-stub></b-field-stub></div> <div class=\\"column\\"><b-field-stub label=\\"food tag:\\" addons=\\"true\\"><b-taginput-stub usehtml5validation=\\"true\\" value=\\"\\" data=\\"\\" maxtags=\\"1\\" hascounter=\\"true\\" field=\\"value\\" closable=\\"true\\" confirmkeycodes=\\"13,188\\" removeonkeys=\\"8\\" onpasteseparators=\\",\\" beforeadding=\\"function _default() {
-        return true;
-      }\\"></b-taginput-stub></b-field-stub></div> <div class=\\"column\\"><b-field-stub label=\\"leisure tag:\\" addons=\\"true\\"><b-taginput-stub usehtml5validation=\\"true\\" value=\\"\\" data=\\"\\" maxtags=\\"1\\" hascounter=\\"true\\" field=\\"value\\" closable=\\"true\\" confirmkeycodes=\\"13,188\\" removeonkeys=\\"8\\" onpasteseparators=\\",\\" beforeadding=\\"function _default() {
-        return true;
-      }\\"></b-taginput-stub></b-field-stub></div> <b-field-stub addons=\\"true\\"><p class=\\"control\\"><button class=\\"button is-warning is-fullwidth\\">lets generate</button></p></b-field-stub></div></div>"
-`;
+exports[`TagAdder render component 1`] = `"<div><div class=\\"warning\\"><router-link to=\\"/short\\"><button class=\\"button is-large is-danger\\">WARNING NO LOCATION ADDED</button></router-link></div></div>"`;
