@@ -1,6 +1,9 @@
 import ShortGenerator from '../ShortGenerator.vue';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import VueRouter from 'vue-router';
+import Vuex from 'vuex';
+import storeConfig from '../../../store/store-index';
+import { cloneDeep } from 'lodash';
 import Buefy from 'buefy';
 import { mock } from '../../../test/mockBack';
 
@@ -9,6 +12,7 @@ describe('ShortGenerator', () => {
   beforeEach(() => {
     const Vue = createLocalVue();
     Vue.use(Buefy);
+    Vue.use(Vuex);
     Vue.use(VueRouter);
     localVue = Vue;
   });
@@ -34,15 +38,12 @@ describe('ShortGenerator', () => {
   });
 
   test('Not exist itineraryComponent if tagsAdded is false', () => {
+    const store = new Vuex.Store(cloneDeep(storeConfig));
     const wrapper = shallowMount(ShortGenerator, {
       localVue,
-      data() {
-        return {
-          tagsAdded: false,
-        };
-      },
+      store,
     });
-    expect(wrapper.find('.itineraryComponent').exists()).toBeFalsy();
+    expect(wrapper.html()).toBeFalsy();
   });
 
   test('Checks ideaItem props', () => {

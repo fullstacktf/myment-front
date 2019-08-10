@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="columns modal-card is-rounded tagContainer" v-if="locationAdded">
+    <div class="columns modal-card is-rounded tagContainer" v-if="location">
       <div class="column">
         <b-field label="hosting tag:">
           <b-taginput maxtags="1"></b-taginput>
@@ -32,10 +32,16 @@
 <script>
 export default {
   name: 'TagAdder',
-  data() {
-    return {
-      locationAdded: false,
-    };
+
+  methods: {
+    changeLocationState() {
+      this.$myStore.commit('change');
+    },
+  },
+  computed: {
+    location() {
+      return this.$myStore.state.locationAdded;
+    },
   },
 };
 </script>

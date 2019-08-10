@@ -24,6 +24,7 @@
 		"font-awesome": "^4.7.0",
 		"leaflet": "^1.5.1",
 		"leaflet-geosearch": "^2.7.0",
+		"lodash": "^4.17.15",
 		"vue": "^2.6.10",
 		"vue-burger-menu": "^2.0.2",
 		"vue-choropleth": "^0.3.1",

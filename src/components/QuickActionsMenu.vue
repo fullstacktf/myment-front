@@ -11,9 +11,6 @@ export default {
 </script>
 
 <style >
-.colored {
-  background-color: red;
-}
 .v-sidebar-menu,
 .v-sidebar-menu * {
   box-sizing: border-box;
