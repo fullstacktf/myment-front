@@ -62,12 +62,12 @@
           </b-tab-item>
           <b-tab-item label="custom" icon="library-music">
             <div class="ideaTableCustom">
-              <h1>custom itinerary not available</h1>
+              <h3>custom itinerary not available</h3>
             </div>
           </b-tab-item>
           <b-tab-item label="free" icon="video">
             <div class="ideaTableFree">
-              <h1>free itinerary not available</h1>
+              <h3>free itinerary not available</h3>
             </div>
           </b-tab-item>
         </b-tabs>
@@ -129,34 +129,6 @@ export default {
           timeStart: 0,
           timeEnd: 0,
         },
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-
         {
           name: 'hotel',
           description: 'lorem ipsum ...',
