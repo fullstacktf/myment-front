@@ -1,7 +1,8 @@
 <template>
   <div class="columns is-centered landingParent">
-    <sign-menu></sign-menu>
-
+    <div class="mustBeOnTop">
+      <sign-menu></sign-menu>
+    </div>
     <main id="page-wrap">
       <div class="columns childWrapper">
         <div class="column is-6">
@@ -60,6 +61,7 @@ p {
 }
 
 .imageWrappergif {
+  z-index: 0;
   margin-bottom: 100px;
 }
 .line-style {
@@ -77,6 +79,7 @@ p {
   background-repeat: no-repeat;
 }
 #page-wrap {
+  z-index: 0;
   width: 100%;
   height: 100%;
   background-image: url('../../../src/assets/back_front.svg');
@@ -84,6 +87,9 @@ p {
   background-repeat: no-repeat;
 }
 
+.mustBeOnTop {
+  z-index: 10000;
+}
 .image {
   width: 700px;
   height: 700px;

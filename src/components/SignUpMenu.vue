@@ -263,6 +263,8 @@ export default {
   background-color: #8e78c5 !important ;
   height: 100% !important;
   justify-self: center;
+
+  z-index: 10000 !important;
 }
 </style>
 
