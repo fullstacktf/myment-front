@@ -21,7 +21,9 @@
               class="subtitle is-4 is-white"
             >Discover that city where you have neber been, now easier with myment, just by adding your preferences. Start now quicker than ever and without loggin.</h2>
             <router-link to="/short">
-              <a class="button main is-large is-fullwidth is-warning is-rounded">LET'S GO FOR IT</a>
+              <a
+                class="button main is-large is-fullwidth is-warning is-rounded is-focused"
+              >LET'S GO FOR IT</a>
             </router-link>
           </div>
         </div>

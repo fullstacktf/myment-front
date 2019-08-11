@@ -1,5 +1,5 @@
 export default {
-  userLogged: false,
+  userLogged: true,
   userHash: '',
   tagsAdded: false,
   locationAdded: false,
