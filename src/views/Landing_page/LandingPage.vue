@@ -54,7 +54,7 @@ p {
 
 .landingParent {
   height: 100vh;
-  background-image: url('../../../public/assets/baack_back.svg');
+  background-image: url('../../../public/assets/back_back.svg');
   background-size: cover;
   background-repeat: no-repeat;
 }
