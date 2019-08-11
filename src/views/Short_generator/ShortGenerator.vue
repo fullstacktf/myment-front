@@ -33,7 +33,7 @@
               <div class="itineraryComponent" v-if="tags">
                 <div class="ideaTableShort">
                   <idea-item
-                    v-for="idea in ideaStructure"
+                    v-for="idea in ideasReceived"
                     :name="idea.name"
                     :key="idea.id"
                     :description="idea.description"
@@ -97,45 +97,6 @@ export default {
   },
   data() {
     return {
-      ideaStructure: [
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-          location: 'https://www.google.es',
-        },
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-      ],
       isComponentModalActive: false,
     };
   },
@@ -148,6 +109,9 @@ export default {
     },
     userLogged() {
       return this.$myStore.state.userLogged;
+    },
+    ideasReceived() {
+      return this.$myStore.state.ideas;
     },
   },
 

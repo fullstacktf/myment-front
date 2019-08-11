@@ -18,6 +18,7 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"axios": "^0.19.0",
 		"buefy": "^0.8.2",
 		"bulma": "^0.7.5",
 		"fas": "^0.3.6",

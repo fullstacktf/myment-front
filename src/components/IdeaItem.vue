@@ -8,6 +8,7 @@
       >{{ name }}</button>
       <div class="notification">
         <div class="content">
+          <h3>{{ start }}</h3>:
           <h3>{{ start }}</h3>
           <p>{{ description }}</p>
           <a class="button is-info" :href="location" target="_blank">location</a>
@@ -32,12 +33,12 @@ export default {
       default: 'no description added',
     },
     start: {
-      type: Number,
+      type: [Number],
       required: false,
       default: '00',
     },
     end: {
-      type: Number,
+      type: [Number],
       required: false,
       default: '00',
     },
