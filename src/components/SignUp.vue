@@ -23,7 +23,7 @@
         </b-field>
 
           <input type="submit" class="button is-success" value="sign up" />
-  
+
     </section>
 </template>
 

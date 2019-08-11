@@ -1,7 +1,18 @@
 
-<template></template>
+<template>
+  <div class="actionsWrapper">
+    <div class="userCard">
+      <b-modal :active.sync="isComponentModalActive" has-modal-card>
+        <user-card></user-card>
+      </b-modal>
+    </div>
+    <button class="button"></button>
+  </div>
+</template>
 
 <script>
+import UserCard from './UserCard';
+
 export default {
   name: 'SidebarMenu',
   components: {},

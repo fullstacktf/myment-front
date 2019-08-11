@@ -1,9 +1,9 @@
-import SignUp from '../SignUp.vue';
+import UserCard from '../UserCard.vue';
 import { shallowMount, createLocalVue } from '@vue/test-utils';
 import Buefy from 'buefy';
 import mock from '../../test/mockBack';
 
-describe('SignUp', () => {
+describe('UserCard', () => {
   let localVue;
   beforeEach(() => {
     const Vue = createLocalVue();
@@ -11,13 +11,19 @@ describe('SignUp', () => {
     localVue = Vue;
   });
   test('render component', () => {
-    const wrapper = shallowMount(SignUp, {
+    const wrapper = shallowMount(UserCard, {
       localVue,
     });
     expect(wrapper.html()).toMatchSnapshot();
+  }),
+
+  test('Check props', () => {
+    
+  }),
+
+  test('check Contents props', () => {
+    
   });
-
-  test('Check props', () => {});
-
-  test('check Contents props', () => {});
 });
+
+
