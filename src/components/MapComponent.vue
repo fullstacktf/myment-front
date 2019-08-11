@@ -25,4 +25,8 @@ export default {
 
 <style>
 @import '~leaflet/dist/leaflet.css';
+
+.vue2leaflet-map {
+  z-index: 0;
+}
 </style>

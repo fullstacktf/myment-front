@@ -26,11 +26,11 @@
 
     <div class="homeContainer">
       <div id="app">
-        <desktop-menu left class="is-hidden-mobile">
+        <desktop-menu disableOutsideClick left class="is-hidden-mobile">
           <quick-menu></quick-menu>
         </desktop-menu>
 
-        <main id="page-wrap">
+        <main id="page-wrap-1">
           <div class="columns">
             <div class="column is-1"></div>
             <div class="column is-8">
