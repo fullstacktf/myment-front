@@ -9,7 +9,7 @@
             <figure class="image is-square">
               <img src="../../assets/giphy.gif" />
             </figure>
-            <h1 class="title is-1 is-white">M Y M E N T</h1>
+            <h1 class="title is-1 is-white myment">M Y M E N T</h1>
           </div>
         </div>
         <div class="column is-6">
@@ -51,7 +51,9 @@ p {
   text-align: left;
   opacity: 0.6;
 }
-
+.myment {
+  margin-top: -70px;
+}
 .landingParent {
   height: 100vh;
   background-image: url('../../../public/assets/back_back.svg');
