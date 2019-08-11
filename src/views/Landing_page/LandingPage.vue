@@ -1,5 +1,5 @@
 <template>
-  <div class="columns is-centered">
+  <div class="columns is-centered landingParent">
     <sign-menu></sign-menu>
 
     <main id="page-wrap">
@@ -50,6 +50,10 @@ p {
   font-size: 25px;
   text-align: left;
   opacity: 0.6;
+}
+
+.landingParent {
+  background-image: url("../../../public/assets/landing_bg.svg"),
 }
 
 .image {
