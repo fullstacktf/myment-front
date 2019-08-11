@@ -3,7 +3,7 @@
     <sign-menu></sign-menu>
 
     <main id="page-wrap">
-      <div class="columns">
+      <div class="columns childWrapper">
         <div class="column is-6">
           <div class="columnContent">
             <figure class="image is-square">
@@ -53,7 +53,16 @@ p {
 }
 
 .landingParent {
-  background-image: url("../../../public/assets/landing_bg.svg"),
+  height: 100vh;
+  background-image: url('../../../public/assets/baack_back.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.childWrapper {
+  height: 100vh;
+  background-image: url('../../../public/assets/back_front.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .image {
