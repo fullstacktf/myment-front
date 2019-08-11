@@ -51,18 +51,24 @@ p {
   text-align: left;
   opacity: 0.6;
 }
+.line-style {
+  background-color: white !important;
+  color: white !important;
+}
 .myment {
   margin-top: -70px;
 }
 .landingParent {
-  height: 100vh;
-  background-image: url('../../../public/assets/back_back.svg');
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../src/assets/back_back.svg');
   background-size: cover;
   background-repeat: no-repeat;
 }
-.childWrapper {
-  height: 100vh;
-  background-image: url('../../../public/assets/back_front.svg');
+#page-wrap {
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../src/assets/back_front.svg');
   background-size: cover;
   background-repeat: no-repeat;
 }
