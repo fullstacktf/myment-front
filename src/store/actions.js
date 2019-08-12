@@ -20,7 +20,7 @@ export default {
       })
       .then(ideas => {
         console.log(ideas[0]);
-        context.commit('ideasfetch', ideas.ideas);
+        context.commit('ideasfetch', ideas);
       });
   },
 };

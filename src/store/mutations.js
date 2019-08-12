@@ -12,6 +12,6 @@ export default {
     state.tagsAdded = !state.tagsAdded;
   },
   ideasfetch(state, response) {
-    state.ideas.push(response);
+    state.ideas = response;
   },
 };

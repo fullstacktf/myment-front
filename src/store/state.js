@@ -4,5 +4,5 @@ export default {
   tagsAdded: false,
   locationAdded: false,
   cities: ['Madrid', 'Barcelona', 'Toledo', 'La Laguna'],
-  ideas: [],
+  ideas: '',
 };
