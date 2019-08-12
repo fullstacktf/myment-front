@@ -46,12 +46,12 @@ export default {
           ],
           'Santa Cruz': ['La Gallega', 'Añaza', 'Llano del Moro'],
         },
+        cities: [],
+        zones: [],
+        selectedCountry: '',
+        selectedCity: '',
+        selectedZone: '',
       },
-      cities: [],
-      zones: [],
-      selectedCountry: '',
-      selectedCity: '',
-      selectedZone: '',
     };
   },
   watch: {

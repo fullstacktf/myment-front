@@ -7,14 +7,12 @@
       <parallax-container class="childWrapper">
         <parallax-element :parallaxStrength="10" :type="'depth'">
           <div class="columns">
-            <div class="column is-6">
+            <div class="column is-5">
               <div class="columnContent">
                 <parallax-container>
                   <parallax-element :parallaxStrength="10" :type="'depth'">
                     <div class="imageWrappergif">
-                      <figure class="image is-square">
-                        <img src="../../assets/giphy.gif" />
-                      </figure>
+                      <img src="../../assets/giphy.gif" />
                     </div>
                   </parallax-element>
                 </parallax-container>
@@ -87,15 +85,19 @@ p {
 }
 
 .imageWrappergif {
+  width: 100%;
+  height: 100%;
   z-index: 0;
   margin-bottom: 100px;
+  background-image: url('../../assets/giphy.gif');
+  background-size: contain;
 }
 .line-style {
   background-color: white !important;
   color: white !important;
 }
 .myment {
-  margin-top: -70px;
+  margin-top: 100px;
 }
 .landingParent {
   width: 100%;
