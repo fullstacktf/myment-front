@@ -8,11 +8,16 @@
       >{{ name }}</button>
       <div class="notification">
         <div class="content">
-          <h3>{{ start }}</h3>:
-          <h3>{{ start }}</h3>
+          <div class="starttime">
+            <span>{{ start[0] }}</span> :
+            <span>{{ start[1] }}</span>
+          </div>
           <p>{{ description }}</p>
           <a class="button is-info" :href="location" target="_blank">location</a>
-          <h3>{{ end }}</h3>
+          <div class="endtime">
+            <span>{{ end[0] }}</span> :
+            <span>{{ end[1] }}</span>
+          </div>
         </div>
       </div>
     </b-collapse>
@@ -54,5 +59,13 @@ export default {
 <style>
 .ideaWrapper {
   padding: 20px;
+}
+
+.starttime {
+  margin: auto;
+}
+
+.endtime {
+  margin-top: 10px;
 }
 </style>
