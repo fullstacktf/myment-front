@@ -58,7 +58,7 @@ module.exports = merge(common, {
       chunksSortMode: 'dependency',
     }),
     new PreloadWebpackPlugin({
-      rel: 'preload',
+      rel: 'prefetch',
       include: 'allChunks',
     }),
     new MiniCSSExtractPlugin({
