@@ -14,4 +14,7 @@ export default {
   ideasfetch(state, response) {
     state.ideas = response;
   },
+  locations(state, response) {
+    state.locations = response;
+  },
 };

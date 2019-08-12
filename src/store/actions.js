@@ -23,4 +23,24 @@ export default {
         context.commit('ideasfetch', ideas);
       });
   },
+  getLocations(context) {
+    const url = 'http://localhost:3000/locations';
+    const data = {};
+    fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(res => res.json())
+
+      .catch(err => {
+        console.log('ERROR: no locations received', err);
+      })
+      .then(ideas => {
+        console.log(ideas[0]);
+        context.commit('ideasfetch', ideas);
+      });
+  },
 };
