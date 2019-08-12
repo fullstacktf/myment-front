@@ -7,7 +7,6 @@ import IdeaAdd from './views/Idea_adder/IdeaAdder.vue';
 Vue.use(Router);
 
 export default new Router({
-  mode: 'hash',
   routes: [
     {
       path: '/',
