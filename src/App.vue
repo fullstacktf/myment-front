@@ -23,9 +23,7 @@ export default {
   width: 100vw;
   height: 100vh;
 }
-html {
-  background-color: rgb(73, 80, 116);
-}
+
 body {
   margin: 0;
 }

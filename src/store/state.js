@@ -3,6 +3,6 @@ export default {
   userHash: '',
   tagsAdded: false,
   locationAdded: false,
-  cities: ['Madrid', 'Barcelona', 'Toledo', 'La Laguna'],
   ideas: '',
+  places: '',
 };
