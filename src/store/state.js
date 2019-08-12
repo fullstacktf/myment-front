@@ -5,4 +5,8 @@ export default {
   locationAdded: false,
   ideas: '',
   places: '',
+  tagsToSend: '',
+  leisureTags: '',
+  lodgingTags: '',
+  foodTags: '',
 };

@@ -1,6 +1,12 @@
 <template>
   <div class="columns bigParent">
-    <div class="column void1">
+    <div class="column void1 is-fullwidth">
+      <router-link to="/home" v-if="true">
+        <a
+          class="delete is-large is-hoverable is-offset-one-third is-hidden-desktop"
+          v-if="userLogged"
+        ></a>
+      </router-link>
       <router-link to="/">
         <img class="is-128x128" src="../../../public/assets/myment-logo.png" alt="MYMENT" />
       </router-link>
@@ -75,7 +81,10 @@
     </div>
     <div class="column void2">
       <router-link to="/home" v-if="true">
-        <a class="delete is-medium is-hoverable is-offset-one-third" v-if="userLogged"></a>
+        <a
+          class="delete is-medium is-hoverable is-offset-one-third is-hidden-mobile"
+          v-if="userLogged"
+        ></a>
       </router-link>
     </div>
   </div>

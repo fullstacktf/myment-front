@@ -14,7 +14,22 @@ export default {
   ideasfetch(state, response) {
     state.ideas = response;
   },
-  locations(state, response) {
+  locationsfetch(state, response) {
     state.locations = response;
+  },
+  tagstosendfetch(state, response) {
+    state.tagsToSend = response;
+  },
+
+  leisuretagsfetch(state, response) {
+    state.leisureTags = response;
+  },
+
+  lodgingtagsfetch(state, response) {
+    state.lodgingTags = response;
+  },
+
+  foodtagsfetch(state, response) {
+    state.foodTags = response;
   },
 };
