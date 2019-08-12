@@ -20,7 +20,7 @@
                 </parallax-container>
 
                 <parallax-container>
-                  <parallax-element :parallaxStrength="50" :type="'depth'">
+                  <parallax-element :parallaxStrength="10" :type="'depth'">
                     <h1 class="title is-1 is-white myment">M Y M E N T</h1>
                   </parallax-element>
                 </parallax-container>
