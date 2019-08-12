@@ -30,10 +30,13 @@
   </div>
 </template>
 <script>
-import { mapActions } from 'vuex';
+import { VueTags } from 'vue-tags-component';
 
 export default {
   name: 'TagAdder',
+  components: {
+    'tag-list': VueTags,
+  },
   data() {
     return {
       isSelectOnly: false,

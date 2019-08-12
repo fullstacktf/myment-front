@@ -214,6 +214,7 @@ export default {
   }
   100% {
     width: 100%;
+    padding-left: 0px;
   }
 }
 .v-sidebar-menu .vsm-header {
