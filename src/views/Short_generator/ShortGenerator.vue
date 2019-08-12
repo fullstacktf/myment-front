@@ -13,11 +13,15 @@
           </div>
           <div class="column is-2 is-gapless">
             <button
-              class="button is-black"
+              class="button is-black is-large"
               v-if="!location"
               @click="addLocationState"
             >search location</button>
-            <button class="button is-black" v-else @click="removeLocationState">remove location</button>
+            <button
+              class="button is-black is-large"
+              v-else
+              @click="removeLocationState"
+            >remove location</button>
           </div>
         </div>
       </b-field>
@@ -29,7 +33,7 @@
               <div class="itineraryComponent" v-if="tags">
                 <div class="ideaTableShort">
                   <idea-item
-                    v-for="idea in ideaStructure"
+                    v-for="idea in ideasReceived"
                     :name="idea.name"
                     :key="idea.id"
                     :description="idea.description"
@@ -58,12 +62,12 @@
           </b-tab-item>
           <b-tab-item label="custom" icon="library-music">
             <div class="ideaTableCustom">
-              <h1>custom itinerary not available</h1>
+              <h3>custom itinerary not available</h3>
             </div>
           </b-tab-item>
           <b-tab-item label="free" icon="video">
             <div class="ideaTableFree">
-              <h1>free itinerary not available</h1>
+              <h3>free itinerary not available</h3>
             </div>
           </b-tab-item>
         </b-tabs>
@@ -71,7 +75,7 @@
     </div>
     <div class="column void2">
       <router-link to="/home" v-if="true">
-        <a class="delete is-medium is-hoverable is-offset-one-third" v-if="userLoged"></a>
+        <a class="delete is-medium is-hoverable is-offset-one-third" v-if="userLogged"></a>
       </router-link>
     </div>
   </div>
@@ -93,73 +97,6 @@ export default {
   },
   data() {
     return {
-      ideaStructure: [
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-          location: 'https://www.google.es',
-        },
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-
-        {
-          name: 'hotel',
-          description: 'lorem ipsum ...',
-          timeStart: 0,
-          timeEnd: 0,
-        },
-      ],
       isComponentModalActive: false,
     };
   },
@@ -169,6 +106,12 @@ export default {
     },
     location() {
       return this.$myStore.state.locationAdded;
+    },
+    userLogged() {
+      return this.$myStore.state.userLogged;
+    },
+    ideasReceived() {
+      return this.$myStore.state.ideas;
     },
   },
 

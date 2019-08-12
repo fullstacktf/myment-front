@@ -1,8 +1,8 @@
 export default {
-  userLogged: false,
+  userLogged: true,
   userHash: '',
   tagsAdded: false,
   locationAdded: false,
-
-  city: ['Madrid', 'Barcelona', 'Toledo', 'La Laguna'],
+  cities: ['Madrid', 'Barcelona', 'Toledo', 'La Laguna'],
+  ideas: '',
 };

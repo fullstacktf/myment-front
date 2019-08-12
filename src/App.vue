@@ -20,13 +20,12 @@ export default {
 
 <style>
 .masterContainer {
-  display: grid;
   width: 100vw;
   height: 100vh;
-  grid-template-rows: 96% 4%;
+}
+html {
   background-color: rgb(73, 80, 116);
 }
-
 body {
   margin: 0;
 }

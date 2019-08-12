@@ -30,22 +30,4 @@ describe('IdeaAdder', () => {
     const button = wrapper.find('button');
     expect(button.text()).toBe('Guachinche Ivan');
   });
-
-  test('check Contents props', () => {
-    const wrapper = shallowMount(IdeaAdder, {
-      localVue,
-      propsData: {
-        ...mock,
-      },
-    });
-    const content = wrapper.find('.content');
-    const Time = content.findAll('h3');
-    const description = content.find('p');
-
-    expect(Time.at(0).text()).toBe('9');
-    expect(Time.at(1).text()).toBe('11');
-    expect(description.text()).toBe(
-      'Go to Guachinche Ivan in La Laguna and take a rabbit',
-    );
-  });
 });

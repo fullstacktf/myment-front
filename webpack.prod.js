@@ -1,6 +1,7 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const HtmlPlugin = require('html-webpack-plugin');
+const PreloadWebpackPlugin = require('@vue/preload-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
@@ -59,6 +60,7 @@ module.exports = merge(common, {
     new PreloadWebpackPlugin({
       rel: 'prefetch',
       include: 'allChunks',
+<<<<<<< HEAD
       as(entry) {
         if (/\.css$/.test(entry)) return 'style';
         if (/\.woff$/.test(entry)) return 'font';
@@ -75,6 +77,8 @@ module.exports = merge(common, {
         if (/\.png$/.test(entry)) return 'image';
         return 'script';
       },
+=======
+>>>>>>> a475dc053a3ca8831303e3cd9c5aa3e34538fea4
     }),
     new MiniCSSExtractPlugin({
       filename: 'css/[name].[hash].css',

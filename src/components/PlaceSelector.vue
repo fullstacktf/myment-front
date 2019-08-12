@@ -2,7 +2,7 @@
   <div class="columns">
     <div class="column is-4">
       <div class="select dropdown">
-        <select v-model="selectedContinent">
+        <select v-model="selectedCountry">
           <option value>Select a Country</option>
           <option
             v-for="(country_obj, country) in places"
@@ -14,29 +14,23 @@
     </div>
     <div class="column is-4">
       <div class="select dropdown">
-        <select :disabled="countries.length == 0" v-model="selectedCountry">
+        <select :disabled="cities.length == 0" v-model="selectedCity">
           <option value>Select a City</option>
-          <option v-for="(city_obj, city) in countries" :key="city.id">{{city}}</option>
+          <option v-for="(city_obj, city) in cities" :key="city.id">{{city}}</option>
         </select>
       </div>
     </div>
     <div class="column is-4">
       <div class="select dropdown">
-        <select :disabled="cities.length == 0" v-model="selectedCity">
+        <select :disabled="zones.length == 0" v-model="selectedZone">
           <option value>Select a Zone</option>
-          <option v-for="city in cities" :key="city.id">{{city}}</option>
+          <option v-for="zone in zones" :key="zone.id">{{zone}}</option>
         </select>
       </div>
     </div>
   </div>
 </template>
 
-
-        <div class="cascading-dropdown">
-            
-            
-            
-        </div>
 
 <script>
 export default {
@@ -45,57 +39,41 @@ export default {
     return {
       places: {
         España: {
-          Madrid: ['Beijing', 'Shanghai', 'Guangzhou', 'Tianjin'],
-          Barcelona: ['New Delhi', 'Mumbai', 'Bangalore', 'Chennai'],
-          Zaragoza: ['Tokyo', 'Kyoto', 'Nagoya', 'Hiroshima'],
-          La_Laguna: ['Singapore'],
-          Santa_Cruz: [
-            'Kuala Lumpur',
-            'Johor Bahru',
-            'George Town',
-            'Kota Kinabalu',
+          'La Laguna': [
+            'Parque Rural de Anaga',
+            'Vega de las mercedes',
+            'Centro Historico',
           ],
-        },
-        Alemania: {
-          Berlin: [
-            'Berlin',
-            'Hamburg',
-            'Munich',
-            'Cologne',
-            'Frankfurt',
-            'Stuttgart',
-          ],
-          Hamburg: ['London', 'Birmingham', 'Liverpool', 'Bristol'],
-          Munich: ['Paris', 'Marseille', 'Bordeaux', 'Toulouse'],
-          Cologne: [],
+          'Santa Cruz': ['La Gallega', 'Añaza', 'Llano del Moro'],
         },
       },
-      countries: [],
       cities: [],
-      selectedContinent: '',
+      zones: [],
       selectedCountry: '',
       selectedCity: '',
+      selectedZone: '',
     };
   },
   watch: {
-    selectedContinent: function() {
-      // Clear previously selected values
-      this.countries = [];
-      this.cities = [];
-      this.selectedCountry = '';
-      this.selectedCity = '';
-      // Populate list of countries in the second dropdown
-      if (this.selectedContinent.length > 0) {
-        this.countries = this.places[this.selectedContinent];
-      }
-    },
     selectedCountry: function() {
       // Clear previously selected values
+
       this.cities = [];
       this.selectedCity = '';
-      // Now we have a continent and country. Populate list of cities in the third dropdown
+      this.selectedZone = '';
+      // Populate list of countries in the second dropdown
       if (this.selectedCountry.length > 0) {
-        this.cities = this.places[this.selectedContinent][this.selectedCountry];
+        console.log('entra en el if');
+        this.cities = this.places[this.selectedCountry];
+      }
+    },
+    selectedCity: function() {
+      // Clear previously selected values
+      this.zones = [];
+      this.selectedZone = '';
+      // Now we have a continent and country. Populate list of cities in the third dropdown
+      if (this.selectedCity.length > 0) {
+        this.zones = this.places[this.selectedCountry][this.selectedCity];
       }
     },
   },

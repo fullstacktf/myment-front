@@ -30,6 +30,8 @@
   </div>
 </template>
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: 'TagAdder',
   data() {
@@ -42,6 +44,7 @@ export default {
       this.$myStore.commit('change');
     },
     turnTrue() {
+      this.$myStore.dispatch('getIdeas');
       this.$myStore.commit('taggated');
     },
   },
