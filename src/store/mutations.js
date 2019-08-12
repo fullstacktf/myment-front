@@ -1,5 +1,5 @@
 export default {
-	changeUserState(state) {
-		state.userLogged = true;
-	}
+  changeUserState(state) {
+    state.userLogged = true;
+  },
 };
