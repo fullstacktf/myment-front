@@ -60,7 +60,6 @@ module.exports = merge(common, {
     new PreloadWebpackPlugin({
       rel: 'prefetch',
       include: 'allChunks',
-<<<<<<< HEAD
       as(entry) {
         if (/\.css$/.test(entry)) return 'style';
         if (/\.woff$/.test(entry)) return 'font';
@@ -77,8 +76,6 @@ module.exports = merge(common, {
         if (/\.png$/.test(entry)) return 'image';
         return 'script';
       },
-=======
->>>>>>> a475dc053a3ca8831303e3cd9c5aa3e34538fea4
     }),
     new MiniCSSExtractPlugin({
       filename: 'css/[name].[hash].css',
