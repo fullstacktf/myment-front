@@ -9,7 +9,9 @@ import router from './router';
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
 import favicon from '../public/assets/favicon.ico';
+import VueMouseParallax from 'vue-mouse-parallax';
 
+Vue.use(VueMouseParallax);
 Vue.use(favicon);
 Vue.use(Buefy);
 Vue.use(Vuex);

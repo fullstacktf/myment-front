@@ -1,3 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IdeaAdder render component 1`] = `"<div class=\\"ideaWrapper\\"><b-collapse-stub animation=\\"fade\\" ariaid=\\"contentIdForA11y1\\"><button aria-controls=\\"contentIdForA11y1\\" class=\\"button is-dark is-rounded is-large is-fullwidth is-focusable\\">Guachinche Ivan</button> <div class=\\"notification\\"><div class=\\"content\\"><h3>9</h3> <p>Go to Guachinche Ivan in La Laguna and take a rabbit</p> <a href=\\"#\\" target=\\"_blank\\" class=\\"button is-info\\">location</a> <h3>11</h3></div></div></b-collapse-stub></div>"`;
+exports[`IdeaAdder render component 1`] = `
+"<div class=\\"ideaWrapper\\"><b-collapse-stub animation=\\"fade\\" ariaid=\\"contentIdForA11y1\\"><button aria-controls=\\"contentIdForA11y1\\" class=\\"button is-dark is-rounded is-large is-fullwidth is-focusable\\">Guachinche Ivan</button> <div class=\\"notification\\"><div class=\\"content\\"><div class=\\"starttime\\"><span></span> :
+          <span></span></div> <p>Go to Guachinche Ivan in La Laguna and take a rabbit</p> <a href=\\"#\\" target=\\"_blank\\" class=\\"button is-info\\">location</a> <div class=\\"endtime\\"><span></span> :
+          <span></span></div></div></div></b-collapse-stub></div>"
+`;
