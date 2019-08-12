@@ -99,7 +99,7 @@ p {
 }
 .landingParent {
   width: 100%;
-  height: 105%;
+  height: 100%;
   background-image: url('../../../src/assets/back_back.svg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -107,15 +107,17 @@ p {
 #page-wrap {
   z-index: 0;
   width: 100%;
-  height: 105%;
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 .childWrapper {
   z-index: 0;
   width: 100%;
-  height: 105%;
+  min-height: 100%;
   background-image: url('../../../src/assets/back_front.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .mustBeOnTop {
