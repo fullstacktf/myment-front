@@ -107,9 +107,6 @@ export default {
   data() {
     return {
       isComponentModalActive: false,
-      selectedZone: '',
-      selectedCity: '',
-      selectedCountry: '',
     };
   },
   computed: {
