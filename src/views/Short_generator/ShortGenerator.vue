@@ -122,6 +122,9 @@ export default {
     ideasReceived() {
       return this.$myStore.state.ideas;
     },
+    selectedZone() {
+      this.$myStore.state.selectedZone = this.selectedZone;
+    },
   },
 
   methods: {
@@ -132,15 +135,20 @@ export default {
         type: 'is-success',
       });
       this.$myStore.commit('change');
+      this.$myStore.dispatch('sendZone', this.$myStore.state.selectedZone);
     },
     removeLocationState() {
       this.$buefy.toast.open({
         message: 'Location removed',
         type: 'is-danger',
       });
-      this.$myStore.commit('falsed');
       this.$myStore.commit('change');
-      this.value = '';
+      this.$myStore.commit('falsed');
+
+      this.$myStore.dispatch('sendZone', '');
+      this.selectedZone = '';
+      this.selectedCity = '';
+      this.selectedCountry = '';
     },
   },
 };

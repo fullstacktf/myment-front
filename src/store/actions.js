@@ -2,6 +2,15 @@ export default {
   getUserState(context) {
     return false;
   },
+  sendCountry(context, country) {
+    context.commit('postcountry', country);
+  },
+  sendCity(context, city) {
+    context.commit('postcity', city);
+  },
+  sendZone(context, zone) {
+    context.commit('postzone', zone);
+  },
   getIdeas(context) {
     const url = 'http://localhost:3000/activities/ideas';
     const data = { category: 'food' };

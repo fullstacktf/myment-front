@@ -52,6 +52,7 @@ export default {
       selectedCountry: '',
       selectedCity: '',
       selectedZone: '',
+      key: 0,
     };
   },
   watch: {
@@ -64,7 +65,9 @@ export default {
       // Populate list of countries in the second dropdown
       if (this.selectedCountry.length > 0) {
         console.log('entra en el if');
+        console.log(this.selectedCountry);
         this.cities = this.places[this.selectedCountry];
+        this.$myStore.dispatch('sendCountry', this.selectedCountry);
       }
     },
     selectedCity: function() {
@@ -74,8 +77,19 @@ export default {
       // Now we have a continent and country. Populate list of cities in the third dropdown
       if (this.selectedCity.length > 0) {
         this.zones = this.places[this.selectedCountry][this.selectedCity];
+        this.$myStore.dispatch('sendCity', this.selectedCity);
       }
     },
+    selectedZone: function() {
+      console.log(this.selectedZone);
+      this.$myStore.dispatch('sendZone', this.selectedZone);
+    },
+  },
+  computed: {
+    //selectedZone: function() {
+    //  console.log(this.selectedZone);
+    //  this.$myStore.dispatch('sendZone', this.selectedZone);
+    //},
   },
 };
 </script>
