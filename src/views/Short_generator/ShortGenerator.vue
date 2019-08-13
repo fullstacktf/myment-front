@@ -107,9 +107,7 @@ export default {
   data() {
     return {
       isComponentModalActive: false,
-      selectedZone: '',
-      selectedCity: '',
-      selectedCountry: '',
+      componentKey: '',
     };
   },
   computed: {
@@ -129,7 +127,9 @@ export default {
       this.$myStore.state.selectedZone = this.selectedZone;
     },
   },
-
+  mounted() {
+    this.componentKey += 1;
+  },
   methods: {
     toast() {},
     addLocationState() {
@@ -144,6 +144,7 @@ export default {
           message: 'zone not selected ! ',
           type: 'is-large is-warning',
         });
+        this.componentKey += 1;
       }
     },
     removeLocationState() {

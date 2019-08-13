@@ -1,3 +1,4 @@
+import axios from 'axios';
 import config from '../server.config.json';
 export default {
   getUrl() {

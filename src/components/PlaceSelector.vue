@@ -16,10 +16,7 @@
       <div class="select dropdown">
         <select :disabled="cities.length == 0" v-model="selectedCity">
           <option value>Select a City</option>
-          <option v-for="(city) in cities"
-           :key="city.id"
-           :value="city.name"
-           >{{city.name}}</option>
+          <option v-for="(city) in cities" :key="city.id" :value="city.name">{{city.name}}</option>
         </select>
       </div>
     </div>
@@ -56,9 +53,10 @@ export default {
       this.cities = [];
       this.selectedCity = '';
       this.selectedZone = '';
+
       // Populate list of countries in the second dropdown
       if (this.selectedCountry.length > 0) {
-        const [real] = this.places
+        const [real] = this.places;
         this.cities = real.cities;
         this.$myStore.dispatch('sendCountry', this.selectedCountry);
       }
@@ -69,7 +67,7 @@ export default {
       this.selectedZone = '';
       // Now we have a continent and country. Populate list of cities in the third dropdown
       if (this.selectedCity.length > 0) {
-        const [real] = this.cities
+        const [real] = this.cities;
         this.zones = real.zones;
         this.$myStore.dispatch('sendCity', this.selectedCity);
       }
@@ -78,10 +76,21 @@ export default {
       console.log(this.selectedZone);
       this.$myStore.dispatch('sendZone', this.selectedZone);
     },
+
+    getAllLocations() {
+      newLocations = this.$myStore.dispatch('getLocations');
+      this.places = newLocations;
+    },
   },
-  created(){
-    const places = this.$myStore.dispatch('getLocations')
-  }
+  methods: {
+    getAllLocations() {
+      newLocations = this.$myStore.dispatch('getLocations');
+      this.places = newLocations;
+    },
+  },
+  mounted() {
+    this.getAllLocations();
+  },
 };
 </script>
 
