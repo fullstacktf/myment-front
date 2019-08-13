@@ -12,7 +12,6 @@
             icon="label"
             maxtags="1"
             placeholder=">"
-            @typing="getFilteredTags"
           ></b-taginput>
         </b-field>
       </div>
@@ -27,7 +26,6 @@
             icon="label"
             placeholder=">"
             maxtags="1"
-            @typing="getFilteredTags"
           ></b-taginput>
         </b-field>
       </div>
@@ -43,7 +41,6 @@
             icon="label"
             placeholder=">"
             maxtags="1"
-            @typing="getFilteredTags"
           ></b-taginput>
         </b-field>
       </div>
@@ -92,7 +89,6 @@ export default {
       console.log(this.leisureTag);
       this.tags.push(this.leisureTag[0]);
       console.log(this.tags);
-      this.$myStore.state.
     },
   },
   methods: {
@@ -100,10 +96,22 @@ export default {
       this.$myStore.commit('change');
     },
     turnTrue() {
-      let zone = this.$myStore.state.selectedZone;
-      let tags = this.$myStore.state.selectedTags
-      this.$myStore.dispatch('getIdeas',);
-      this.$myStore.commit('taggated');
+      if (this.tags.length > 0) {
+        let country = this.$myStore.state.selectedCountry;
+        let city = this.$myStore.state.selectedCity;
+        let zone = this.$myStore.state.selectedZone;
+        let tags = this.$myStore.state.selectedTags;
+
+        console.log(zone, city, country, tags);
+        this.$myStore.commit('taggated');
+        this.$myStore.dispatch('getIdeas', zone, city, country, tags);
+        this.tags = [];
+      } else {
+        this.$buefy.toast.open({
+          message: 'must add tags ! ',
+          type: 'is-large is-warning',
+        });
+      }
     },
   },
   computed: {

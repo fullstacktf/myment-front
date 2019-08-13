@@ -11,9 +11,14 @@ export default {
   sendZone(context, zone) {
     context.commit('postzone', zone);
   },
-  getIdeas(context) {
+  getIdeas(context, zone, city, country, tags) {
     const url = 'http://localhost:3000/activities/ideas';
-    const data = { category: 'food' };
+    const data = {
+      zone: zone,
+      city: city,
+      country: country,
+      tags: tags,
+    };
     fetch(url, {
       method: 'POST',
       body: JSON.stringify(data),

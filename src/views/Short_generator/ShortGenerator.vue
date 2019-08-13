@@ -15,7 +15,7 @@
       <b-field class="topField is-grouped-centered">
         <div class="columns">
           <div class="column is-6 is-gapless">
-            <place-selector></place-selector>
+            <place-selector :key="componentKey"></place-selector>
           </div>
           <div class="column is-2 is-gapless">
             <button
@@ -107,6 +107,9 @@ export default {
   data() {
     return {
       isComponentModalActive: false,
+      selectedZone: '',
+      selectedCity: '',
+      selectedCountry: '',
     };
   },
   computed: {
@@ -130,12 +133,18 @@ export default {
   methods: {
     toast() {},
     addLocationState() {
-      this.$buefy.toast.open({
-        message: 'Location added successfully',
-        type: 'is-success',
-      });
-      this.$myStore.commit('change');
-      this.$myStore.dispatch('sendZone', this.$myStore.state.selectedZone);
+      if (this.$myStore.state.selectedZone) {
+        this.$buefy.toast.open({
+          message: 'Location added successfully',
+          type: 'is-success',
+        });
+        this.$myStore.commit('change');
+      } else {
+        this.$buefy.toast.open({
+          message: 'zone not selected ! ',
+          type: 'is-large is-warning',
+        });
+      }
     },
     removeLocationState() {
       this.$buefy.toast.open({
@@ -146,9 +155,7 @@ export default {
       this.$myStore.commit('falsed');
 
       this.$myStore.dispatch('sendZone', '');
-      this.selectedZone = '';
-      this.selectedCity = '';
-      this.selectedCountry = '';
+      this.componentKey += 1;
     },
   },
 };
