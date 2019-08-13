@@ -56,6 +56,7 @@ export default {
       // Populate list of countries in the second dropdown
       if (this.selectedCountry.length > 0) {
         const [real] = this.places;
+        console.log(real);
         this.cities = real.cities;
       }
     },
@@ -73,12 +74,6 @@ export default {
       console.log(this.selectedZone);
       this.$myStore.dispatch('sendZone', this.selectedZone);
     },
-  },
-  computed: {
-    //selectedZone: function() {
-    //  console.log(this.selectedZone);
-    //  this.$myStore.dispatch('sendZone', this.selectedZone);
-    //},
   },
   created() {
     const places = this.$myStore.dispatch('getLocations');

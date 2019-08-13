@@ -107,6 +107,7 @@ export default {
   data() {
     return {
       isComponentModalActive: false,
+      componentKey: 0,
     };
   },
   computed: {
