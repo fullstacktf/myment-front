@@ -1,4 +1,9 @@
+import axios from 'axios';
+import config from '../server.config.json';
 export default {
+  getUrl() {
+    return;
+  },
   getUserState(context) {
     return false;
   },
@@ -36,9 +41,10 @@ export default {
       });
   },
   getLocations(context) {
-    const url = 'http://localhost:3000/locations/countries';
+    const url = 'http://' + config.url + ':' + config.port;
+    const dir = '/locations/places';
     const data = {};
-    fetch(url, {
+    fetch(url + dir, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {

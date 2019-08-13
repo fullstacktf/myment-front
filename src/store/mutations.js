@@ -24,7 +24,7 @@ export default {
     state.ideas = response;
   },
   locationsfetch(state, response) {
-    state.locations = response;
+    state.places = [response];
   },
   tagstosendfetch(state, response) {
     state.tagsToSend = response;
