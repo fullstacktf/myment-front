@@ -13,7 +13,7 @@
                 <parallax-container>
                   <parallax-element :parallaxStrength="10" :type="'depth'">
                     <div class="imageWrappergif">
-                      <img src="../../assets/giphy.gif" />
+                      <animated-logo></animated-logo>
                     </div>
                   </parallax-element>
                 </parallax-container>
@@ -59,6 +59,7 @@
 
 <script>
 import SignUpMenu from '../../components/SignUpMenu';
+import AnimatedLogo from '../../components/AnimatedLogo';
 import Parallax from 'vue-parallaxy';
 
 export default {
@@ -66,6 +67,7 @@ export default {
   components: {
     'sign-menu': SignUpMenu,
     'parallax-bg': Parallax,
+    'animated-logo': AnimatedLogo,
   },
 };
 </script>
