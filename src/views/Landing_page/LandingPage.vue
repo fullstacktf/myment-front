@@ -7,7 +7,8 @@
       <parallax-container class="childWrapper">
         <parallax-element :parallaxStrength="10" :type="'depth'">
           <div class="columns">
-            <div class="column is-5">
+            <div class="column is-1"></div>
+            <div class="column is-4">
               <div class="columnContent">
                 <parallax-container>
                   <parallax-element :parallaxStrength="10" :type="'depth'">
@@ -24,17 +25,17 @@
                 </parallax-container>
               </div>
             </div>
-            <div class="column is-6">
+            <div class="column is-8">
               <div class="sloganWrapper">
                 <parallax-container>
                   <parallax-element :parallaxStrength="20" :type="'depth'">
-                    <h1 class="title is-2 is-white">Start using the best itinerary generator</h1>
+                    <h1 class="title is-3 is-white">Start using the best itinerary generator</h1>
                   </parallax-element>
                 </parallax-container>
                 <parallax-container>
                   <parallax-element :parallaxStrength="15" :type="'depth'">
                     <h2
-                      class="subtitle is-4 is-white"
+                      class="subtitle is-3 is-white"
                     >Discover that city where you have neber been, now easier with myment, just by adding your preferences. Start now quicker than ever and without loggin.</h2>
                   </parallax-element>
                 </parallax-container>
@@ -85,10 +86,11 @@ p {
 }
 
 .imageWrappergif {
-  width: 100%;
-  height: 100%;
+  margin-top: 50px;
+  width: 90%;
+  height: 90%;
   z-index: 0;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
   background-image: url('../../assets/giphy.gif');
   background-size: contain;
 }
@@ -97,7 +99,7 @@ p {
   color: white !important;
 }
 .myment {
-  margin-top: 100px;
+  margin-top: 30px;
 }
 .landingParent {
   width: 100%;
@@ -121,7 +123,9 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.imageParallax {
+  margin: 0px;
+}
 .mustBeOnTop {
   z-index: 10000;
 }

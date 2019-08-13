@@ -46,6 +46,7 @@ export default {
       selectedCountry: '',
       selectedCity: '',
       selectedZone: '',
+      key: 0,
     };
   },
   watch: {
@@ -59,6 +60,7 @@ export default {
       if (this.selectedCountry.length > 0) {
         const [real] = this.places
         this.cities = real.cities;
+        this.$myStore.dispatch('sendCountry', this.selectedCountry);
       }
     },
     selectedCity: function() {
@@ -69,7 +71,12 @@ export default {
       if (this.selectedCity.length > 0) {
         const [real] = this.cities
         this.zones = real.zones;
+        this.$myStore.dispatch('sendCity', this.selectedCity);
       }
+    },
+    selectedZone: function() {
+      console.log(this.selectedZone);
+      this.$myStore.dispatch('sendZone', this.selectedZone);
     },
   },
   created(){

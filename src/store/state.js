@@ -5,4 +5,11 @@ export default {
   locationAdded: false,
   ideas: '',
   places: '',
+  selectedCountry: '',
+  selectedCity: '',
+  selectedZone: '',
+  tagsToSend: '',
+  leisureTags: ['hola', 'esto', 'va?'],
+  lodgingTags: ['hola', 'esto', 'va?'],
+  foodTags: ['hola', 'esto', 'va?', 'asd', 'asdasd', 'asdasdas'],
 };

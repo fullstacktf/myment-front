@@ -1,4 +1,3 @@
-import axios from 'axios';
 import config from '../server.config.json';
 export default {
   getUrl() {
@@ -7,9 +6,23 @@ export default {
   getUserState(context) {
     return false;
   },
-  getIdeas(context) {
-    const url = 'http://localhost:4000/activities/ideas';
-    const data = { category: 'food' };
+  sendCountry(context, country) {
+    context.commit('postcountry', country);
+  },
+  sendCity(context, city) {
+    context.commit('postcity', city);
+  },
+  sendZone(context, zone) {
+    context.commit('postzone', zone);
+  },
+  getIdeas(context, zone, city, country, tags) {
+    const url = 'http://localhost:3000/activities/ideas';
+    const data = {
+      zone: zone,
+      city: city,
+      country: country,
+      tags: tags,
+    };
     fetch(url, {
       method: 'POST',
       body: JSON.stringify(data),
@@ -23,7 +36,6 @@ export default {
         console.log('ERROR: no ideas received', err);
       })
       .then(ideas => {
-        console.log(ideas[0]);
         context.commit('ideasfetch', ideas);
       });
   },
@@ -43,8 +55,86 @@ export default {
       .catch(err => {
         console.log('ERROR: no locations received', err);
       })
-      .then(data => {
-        context.commit('locations', data);
+      .then(locations => {
+        context.commit('locationsfetch', locations);
+      });
+  },
+  getLeisureTags(context) {
+    const url = 'http://localhost:3000/tags/leisure';
+    const data = {};
+    fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(res => res.json())
+
+      .catch(err => {
+        console.log('ERROR: no leisure tags received', err);
+      })
+      .then(leisuretags => {
+        context.commit('leisuretagsfetch', leisuretags);
+      });
+  },
+
+  getLodgingTags(context) {
+    const url = 'http://localhost:3000/tags/lodging';
+    const data = {};
+    fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(res => res.json())
+
+      .catch(err => {
+        console.log('ERROR: no lodging tags received', err);
+      })
+      .then(lodgingtags => {
+        context.commit('lodgingtagsfetch', lodgingtags);
+      });
+  },
+
+  getFoodTags(context) {
+    const url = 'http://localhost:3000/tags/food';
+    const data = {};
+    fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(res => res.json())
+
+      .catch(err => {
+        console.log('ERROR: no food tags received', err);
+      })
+      .then(foodtags => {
+        context.commit('foodtagsfetch', foodtags);
+      });
+  },
+  sendTags(context) {
+    const url = 'http://localhost:3000/tags/send';
+    const data = {};
+    fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(res => res.json())
+
+      .catch(err => {
+        console.log('ERROR: no tags sended', err);
+      })
+      .then(tags => {
+        context.commit('tagstosendfetch', tags);
       });
   },
 };
