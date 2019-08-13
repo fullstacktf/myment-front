@@ -1,10 +1,14 @@
 import axios from 'axios';
+import config from '../server.config.json';
 export default {
+  getUrl() {
+    return;
+  },
   getUserState(context) {
     return false;
   },
   getIdeas(context) {
-    const url = 'http://localhost:3000/activities/ideas';
+    const url = 'http://localhost:4000/activities/ideas';
     const data = { category: 'food' };
     fetch(url, {
       method: 'POST',
@@ -24,9 +28,10 @@ export default {
       });
   },
   getLocations(context) {
-    const url = 'http://localhost:3000/locations';
+    const url = 'http://' + config.url + ':' + config.port;
+    const dir = '/locations/places';
     const data = {};
-    fetch(url, {
+    fetch(url + dir, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -38,9 +43,8 @@ export default {
       .catch(err => {
         console.log('ERROR: no locations received', err);
       })
-      .then(ideas => {
-        console.log(ideas[0]);
-        context.commit('ideasfetch', ideas);
+      .then(data => {
+        context.commit('locations', data);
       });
   },
 };

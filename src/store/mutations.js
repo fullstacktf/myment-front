@@ -15,6 +15,6 @@ export default {
     state.ideas = response;
   },
   locations(state, response) {
-    state.locations = response;
+    state.places = [response];
   },
 };
