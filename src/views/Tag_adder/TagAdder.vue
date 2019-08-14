@@ -26,6 +26,7 @@
             icon="label"
             placeholder=">"
             maxtags="1"
+            :disabled="isLodgingSelected"
           ></b-taginput>
         </b-field>
       </div>
@@ -41,6 +42,7 @@
             icon="label"
             placeholder=">"
             maxtags="1"
+            :disabled="isFoodSelected"
           ></b-taginput>
         </b-field>
       </div>
@@ -69,6 +71,9 @@ export default {
     return {
       isSelectOnly: false,
       allowNew: false,
+
+      isFoodSelected: true,
+      isLodgingSelected: true,
       leisureTag: [],
       lodgingTag: [],
       foodTag: [],
@@ -79,9 +84,11 @@ export default {
     lodgingTag: function() {
       console.log(this.lodgingTag);
       this.tags.push(this.lodgingTag[0]);
+      this.isLodgingSelected = false;
     },
 
     foodTag: function() {
+      this.isFoodSelected = false;
       console.log(this.foodTag);
       this.tags.push(this.foodTag[0]);
     },
@@ -105,7 +112,7 @@ export default {
 
         console.log(zone, city, country, tags);
         this.$myStore.commit('taggated');
-        this.$myStore.dispatch('getIdeas', { zone, city, country, tags });
+        this.$myStore.dispatch('getIdeas', zone, city, country, tags);
         this.tags = [];
       } else {
         this.$buefy.toast.open({
