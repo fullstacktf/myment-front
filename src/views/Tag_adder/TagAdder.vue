@@ -119,7 +119,7 @@ export default {
       return this.$myStore.state.locationAdded;
     },
     lodging() {
-      return this.$myStore.state.lodgingTags;
+      return this.$myStore.dispatch('getLeisureTags');
     },
     leisure() {
       return this.$myStore.state.leisureTags;

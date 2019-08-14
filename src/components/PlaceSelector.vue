@@ -84,8 +84,7 @@ export default {
   },
   methods: {
     getAllLocations() {
-      newLocations = this.$myStore.dispatch('getLocations');
-      this.places = newLocations;
+      this.$myStore.dispatch('getLocations');
     },
   },
   mounted() {

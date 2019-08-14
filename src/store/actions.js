@@ -1,4 +1,3 @@
-import axios from 'axios';
 import config from '../server.config.json';
 export default {
   getUrl() {
@@ -61,9 +60,10 @@ export default {
       });
   },
   getLeisureTags(context) {
-    const url = 'http://localhost:3000/tags/leisure';
-    const data = {};
-    fetch(url, {
+    const url = 'http://' + config.url + ':' + config.port;
+    const dir = '/tags/category';
+    const data = { category: 'leisure' };
+    fetch(url + dir, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -81,9 +81,10 @@ export default {
   },
 
   getLodgingTags(context) {
-    const url = 'http://localhost:3000/tags/lodging';
-    const data = {};
-    fetch(url, {
+    const url = 'http://' + config.url + ':' + config.port;
+    const dir = '/tags/category';
+    const data = { category: 'lodging' };
+    fetch(url + dir, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -101,9 +102,10 @@ export default {
   },
 
   getFoodTags(context) {
-    const url = 'http://localhost:3000/tags/food';
-    const data = {};
-    fetch(url, {
+    const url = 'http://' + config.url + ':' + config.port;
+    const dir = '/tags/category';
+    const data = { category: 'food' };
+    fetch(url + dir, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
