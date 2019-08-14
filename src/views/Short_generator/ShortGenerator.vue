@@ -43,8 +43,8 @@
                     :name="idea.name"
                     :key="idea.id"
                     :description="idea.description"
-                    :start="idea.timeStart"
-                    :end="idea.timeEnd"
+                    :start="idea.startTime"
+                    :end="idea.endTime"
                     :location="idea.location"
                   ></idea-item>
                 </div>

@@ -15,7 +15,7 @@ export default {
   sendZone(context, zone) {
     context.commit('postzone', zone);
   },
-  getIdeas(context, zone, city, country, tags) {
+  getIdeas(context, { zone, city, country, tags }) {
     const url = 'http://' + config.url + ':' + config.port;
     const dir = '/activities/find';
     const data = {

@@ -98,6 +98,7 @@ export default {
       console.log(this.tags);
       this.$myStore.state.selectedTags = this.tags;
     },
+
   },
   methods: {
     changeLocationState() {
@@ -112,7 +113,7 @@ export default {
 
         console.log(zone, city, country, tags);
         this.$myStore.commit('taggated');
-        this.$myStore.dispatch('getIdeas', zone, city, country, tags);
+        this.$myStore.dispatch('getIdeas',{ zone, city, country, tags});
         this.tags = [];
       } else {
         this.$buefy.toast.open({
@@ -121,6 +122,7 @@ export default {
         });
       }
     },
+
   },
   computed: {
     location() {
