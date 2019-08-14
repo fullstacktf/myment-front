@@ -9,14 +9,14 @@
       <div class="notification">
         <div class="content">
           <div class="starttime">
-            <span>{{ start[0] }}</span> :
-            <span>{{ start[1] }}</span>
+            <span>{{ start.hour }}</span> :
+            <span>{{ start.minutes }}</span>
           </div>
           <p>{{ description }}</p>
           <a class="button is-info" :href="location" target="_blank">location</a>
           <div class="endtime">
-            <span>{{ end[0] }}</span> :
-            <span>{{ end[1] }}</span>
+            <span>{{ end.hour }}</span> :
+            <span>{{ end.minutes }}</span>
           </div>
         </div>
       </div>
@@ -38,12 +38,12 @@ export default {
       default: 'no description added',
     },
     start: {
-      type: [Number],
+      type: Object,
       required: false,
       default: '00',
     },
     end: {
-      type: [Number],
+      type: Object,
       required: false,
       default: '00',
     },

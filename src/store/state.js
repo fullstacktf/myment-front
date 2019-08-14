@@ -12,4 +12,5 @@ export default {
   leisureTags: [],
   lodgingTags: [],
   foodTags: [],
+  selectedTags: [],
 };

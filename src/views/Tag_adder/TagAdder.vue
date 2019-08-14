@@ -89,6 +89,7 @@ export default {
       console.log(this.leisureTag);
       this.tags.push(this.leisureTag[0]);
       console.log(this.tags);
+      this.$myStore.state.selectedTags = this.tags;
     },
   },
   methods: {
@@ -104,7 +105,7 @@ export default {
 
         console.log(zone, city, country, tags);
         this.$myStore.commit('taggated');
-        this.$myStore.dispatch('getIdeas', zone, city, country, tags);
+        this.$myStore.dispatch('getIdeas', { zone, city, country, tags });
         this.tags = [];
       } else {
         this.$buefy.toast.open({
@@ -119,12 +120,15 @@ export default {
       return this.$myStore.state.locationAdded;
     },
     lodging() {
-      return this.$myStore.dispatch('getLeisureTags');
+      this.$myStore.dispatch('getLodgingTags');
+      return this.$myStore.state.lodgingTags;
     },
     leisure() {
+      this.$myStore.dispatch('getLeisureTags');
       return this.$myStore.state.leisureTags;
     },
     food() {
+      this.$myStore.dispatch('getFoodTags');
       return this.$myStore.state.foodTags;
     },
   },

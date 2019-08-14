@@ -16,7 +16,7 @@ export default {
     context.commit('postzone', zone);
   },
   getIdeas(context, zone, city, country, tags) {
-    const url = 'http://localhost:3000/activities/ideas';
+    const url = 'http://localhost:4000/activities/all';
     const data = {
       zone: zone,
       city: city,
