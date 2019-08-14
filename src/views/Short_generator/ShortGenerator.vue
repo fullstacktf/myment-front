@@ -15,7 +15,7 @@
       <b-field class="topField is-grouped-centered">
         <div class="columns">
           <div class="column is-6 is-gapless">
-            <place-selector></place-selector>
+            <place-selector :key="componentKey"></place-selector>
           </div>
           <div class="column is-2 is-gapless">
             <button
@@ -107,6 +107,7 @@ export default {
   data() {
     return {
       isComponentModalActive: false,
+      componentKey: '',
     };
   },
   computed: {
@@ -122,25 +123,40 @@ export default {
     ideasReceived() {
       return this.$myStore.state.ideas;
     },
+    selectedZone() {
+      this.$myStore.state.selectedZone = this.selectedZone;
+    },
   },
-
+  mounted() {
+    this.componentKey += 1;
+  },
   methods: {
     toast() {},
     addLocationState() {
-      this.$buefy.toast.open({
-        message: 'Location added successfully',
-        type: 'is-success',
-      });
-      this.$myStore.commit('change');
+      if (this.$myStore.state.selectedZone) {
+        this.$buefy.toast.open({
+          message: 'Location added successfully',
+          type: 'is-success',
+        });
+        this.$myStore.commit('change');
+      } else {
+        this.$buefy.toast.open({
+          message: 'zone not selected ! ',
+          type: 'is-large is-warning',
+        });
+        this.componentKey += 1;
+      }
     },
     removeLocationState() {
       this.$buefy.toast.open({
         message: 'Location removed',
         type: 'is-danger',
       });
-      this.$myStore.commit('falsed');
       this.$myStore.commit('change');
-      this.value = '';
+      this.$myStore.commit('falsed');
+
+      this.$myStore.dispatch('sendZone', '');
+      this.componentKey += 1;
     },
   },
 };

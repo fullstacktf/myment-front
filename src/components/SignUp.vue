@@ -1,7 +1,7 @@
 <template lang="html">
     <section>
         <b-field label="Name">
-            <b-input v-model="name"></b-input>
+            <b-input ></b-input>
         </b-field>
 
         <b-field label="Email">

@@ -1,10 +1,28 @@
+import config from '../server.config.json';
 export default {
+  getUrl() {
+    return;
+  },
   getUserState(context) {
     return false;
   },
-  getIdeas(context) {
+  sendCountry(context, country) {
+    context.commit('postcountry', country);
+  },
+  sendCity(context, city) {
+    context.commit('postcity', city);
+  },
+  sendZone(context, zone) {
+    context.commit('postzone', zone);
+  },
+  getIdeas(context, zone, city, country, tags) {
     const url = 'http://localhost:3000/activities/ideas';
-    const data = { category: 'food' };
+    const data = {
+      zone: zone,
+      city: city,
+      country: country,
+      tags: tags,
+    };
     fetch(url, {
       method: 'POST',
       body: JSON.stringify(data),
@@ -22,9 +40,10 @@ export default {
       });
   },
   getLocations(context) {
-    const url = 'http://localhost:3000/locations/countries';
+    const url = 'http://' + config.url + ':' + config.port;
+    const dir = '/locations/places';
     const data = {};
-    fetch(url, {
+    fetch(url + dir, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -41,9 +60,10 @@ export default {
       });
   },
   getLeisureTags(context) {
-    const url = 'http://localhost:3000/tags/leisure';
-    const data = {};
-    fetch(url, {
+    const url = 'http://' + config.url + ':' + config.port;
+    const dir = '/tags/category';
+    const data = { category: 'leisure' };
+    fetch(url + dir, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -61,9 +81,10 @@ export default {
   },
 
   getLodgingTags(context) {
-    const url = 'http://localhost:3000/tags/lodging';
-    const data = {};
-    fetch(url, {
+    const url = 'http://' + config.url + ':' + config.port;
+    const dir = '/tags/category';
+    const data = { category: 'lodging' };
+    fetch(url + dir, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -81,9 +102,10 @@ export default {
   },
 
   getFoodTags(context) {
-    const url = 'http://localhost:3000/tags/food';
-    const data = {};
-    fetch(url, {
+    const url = 'http://' + config.url + ':' + config.port;
+    const dir = '/tags/category';
+    const data = { category: 'food' };
+    fetch(url + dir, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {

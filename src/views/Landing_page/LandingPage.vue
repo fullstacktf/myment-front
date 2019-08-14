@@ -36,15 +36,15 @@
                   <parallax-element :parallaxStrength="15" :type="'depth'">
                     <h2
                       class="subtitle is-3 is-white"
-                    >Discover that city where you have neber been, now easier with myment, just by adding your preferences. Start now quicker than ever and without loggin.</h2>
+                    >Discover that city where you have never been, now easier with myment, just by adding your preferences. Start now quicker than ever and without loggin.</h2>
                   </parallax-element>
                 </parallax-container>
                 <parallax-container>
                   <parallax-element :parallaxStrength="15" :type="'depth'">
                     <router-link to="/short">
-                      <a
+                      <button
                         class="button main is-large is-fullwidth is-warning is-rounded is-focused"
-                      >LET'S GO FOR IT</a>
+                      >LET'S GO FOR IT</button>
                     </router-link>
                   </parallax-element>
                 </parallax-container>
