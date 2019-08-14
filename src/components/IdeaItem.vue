@@ -5,7 +5,7 @@
         class="button is-dark is-rounded is-large is-fullwidth is-focusable"
         slot="trigger"
         aria-controls="contentIdForA11y1"
-      >{{ name }}</button>
+      >{{ category }} idea: {{ name }}</button>
       <div class="notification">
         <div class="content">
           <div class="starttime">
@@ -25,10 +25,16 @@
 </template>
 
 <script>
+import { Stream } from 'stream';
 export default {
   name: 'IdeaItem',
+
   props: {
     name: {
+      type: String,
+      required: true,
+    },
+    category: {
       type: String,
       required: true,
     },
