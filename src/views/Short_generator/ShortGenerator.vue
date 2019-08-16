@@ -40,6 +40,7 @@
                 <div class="ideaTableShort">
                   <idea-item
                     v-for="idea in ideasReceived"
+                    :category="idea.category"
                     :name="idea.name"
                     :key="idea.id"
                     :description="idea.description"
