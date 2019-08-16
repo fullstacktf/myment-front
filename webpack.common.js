@@ -20,7 +20,7 @@ module.exports = {
         process.env.NODE_ENV === 'development'
           ? 'vue/dist/vue.js'
           : 'vue/dist/vue.min.js',
-      '@': path.resolve(__dirname + '/src'),
+      '@': path.resolve(__dirname + 'src/'),
     },
   },
 

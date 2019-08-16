@@ -104,7 +104,7 @@ p {
 .landingParent {
   width: 100%;
   height: 100%;
-  background-image: url('../../../src/assets/back_back.svg');
+  background-image: url('../../assets/back_back.svg');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -119,7 +119,7 @@ p {
   z-index: 0;
   width: 100%;
   min-height: 100%;
-  background-image: url('../../../src/assets/back_front.svg');
+  background-image: url('../../assets/back_front.svg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -140,7 +140,6 @@ p {
   display: grid;
   grid-template-rows: 40% 20% 20% 20%;
   align-items: end;
-  background-image: url();
   color: white;
   height: 100%;
   width: 65%;
